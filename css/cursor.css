@@ -1,0 +1,26 @@
+body{
+  cursor:none;
+}
+
+#cursor,#cursorB{
+  position:fixed;
+  /* top:-5em;
+  left:-5em; */
+  transform:translate(-50%,-50%);
+  width:8%;
+  height:auto;
+  transition:0.1s;
+
+  transition:width 1s;
+  z-index:-5;
+}
+#cursorB{
+  width:13%;
+  opacity: 0%;
+
+  transition:opacity 0.2s;
+  transition-delay: 1s;
+}
+li{
+  font-size: 2em;
+}

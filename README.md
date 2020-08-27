@@ -275,7 +275,7 @@ our content.
 
 ##### ● Hosting​ options which we are looking into:
 
-##### ○ Github Pages
+##### ● Github Pages
 
 ```
 ○ Infinity Free
