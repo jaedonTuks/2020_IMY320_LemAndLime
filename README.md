@@ -281,9 +281,7 @@ our content.
 ○ Infinity Free
 ○ 000webhost
 ```
-##### ● Fonts:
 
-###### ○
 
 ## References:
 
@@ -313,21 +311,22 @@ https://jmswrnr.com/ (Accessed: 26 August 2020).
 ```
 ● Mav Farm ​ (2020). Available at: https://mav.farm/ (Accessed: 26 August 2020).
 ```
-
+```
 ● Works ⇢ The Digital Panda (2020). Available at:
 https://www.thedigitalpanda.com/works (Accessed: 26 August 2020).
+```
+```
 ● Effects of the Color Purple on Mood and Behavior (2020). Available at:
 https://www.verywellmind.com/the-color-psychology-of-purple-2795820#:~:text=Color
 %20psychology%20suggests%20that%20colors,our%20moods%20and%20even%
 0behaviors.&text=People%20often%20describe%20this%20color,viewed%20as%20r
 are%20and%20intriguing. (Accessed: 26 August 2020).
+```
+```
 ● The Color Gold (2020). Available at:
 https://www.empower-yourself-with-color-psychology.com/color-gold.html (Accessed:
 26 August 2020).
-
-● _Packaging Colors_ ​ (2020). Available at:
-
 ```
-https://www.empower-yourself-with-color-psychology.com/packaging-colors.html
-(Accessed: 26 August 2020).
+```
+● _Packaging Colors_ ​ (2020). Available at:https://www.empower-yourself-with-color-psychology.com/packaging-colors.html (Accessed: 26 August 2020).
 ```
