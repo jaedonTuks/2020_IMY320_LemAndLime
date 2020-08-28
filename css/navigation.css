@@ -1,0 +1,47 @@
+body{
+  background-image: url('./../media/tempBackground/tempBack.jpg');
+  background-size: cover;
+  overflow-x: hidden;
+  height:2000px;
+  scrollbar-width:none;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+nav{
+  position:fixed;
+}
+#burger{
+  margin-top:4em;
+  margin-left:4em;
+  
+}
+
+.burgerLine{
+    border:2px solid black;
+    margin-top:0.5em;
+    transition:1s;
+    border-radius:3px;
+  }
+.topLine{
+  width:35px;
+}
+.midLine{
+  width:45px;
+}
+.botLine{
+  width:25px;
+}
+#burger:hover .highlightRed{
+  border-color:red;
+  width:50px;
+}
+#burger:hover .highlightBlue{
+  border-color:rgb(3, 173, 252);
+  width:50px;
+}
+#burger:hover .highlightPurple{
+  border-color:rgb(223, 3, 252);
+  width:50px;
+}
