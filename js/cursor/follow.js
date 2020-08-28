@@ -1,7 +1,10 @@
+//written by jaedon heger for lem and lime
+//cursor svg made in blender
 let cursor=$("#cursor");
 let highlight=$("#cursorB");
 $(()=>{
   $(window).mousemove(followMouse);
+  $(window).on("mouseleave",hideCursor);
   $(".hover").on("mouseenter",growCursor);
   $(".hover").on("mouseleave",shrinkCursor);
 });
@@ -17,8 +20,6 @@ function growCursor(){
 
   highlight.css("width","13%");
   highlight.css("opacity","100%");
-
-
 }
 function shrinkCursor(){
 
@@ -26,4 +27,9 @@ function shrinkCursor(){
   cursor.css("width","8%");
   highlight.css("opacity","0%");
   highlight.css("width","8%");
+}
+
+function hideCursor(){
+  cursor.css({left: -10,top:-10 });
+  highlight.css({left: -10,top:-10 });
 }
