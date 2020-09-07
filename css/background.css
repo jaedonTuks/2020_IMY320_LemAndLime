@@ -7,10 +7,13 @@
 body{
   font-family: sans-serif;
   overflow:hidden;
+  background:#292929; 
+
 }
 
 .scene,canvas{
   position:absolute;
   width:100%;
   height:100%;
+  z-index:-10;
 }

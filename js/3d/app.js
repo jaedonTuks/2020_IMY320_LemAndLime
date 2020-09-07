@@ -19,6 +19,20 @@ var bloom = {
   threshold: 0,
   radius: 1
 };
+let mouse={
+  x:null,
+  y:null,
+  target:new THREE.Vector3(),
+  windowHalfX: window.innerWidth / 2,
+  windowHalfY: window.innerHeight / 2
+};
+
+//particle system geometry
+let particleSystem;
+let particleCount;
+let particles;
+let pMaterial;
+
 init();
 
 function init(){
@@ -61,21 +75,26 @@ function init(){
   bloomPass.strength = bloom.strength;
   bloomPass.radius = bloom.radius;
   //effect composer
-  composer = new EffectComposer( renderer );
+  let width = window.innerWidth || 1;
+  let height = window.innerHeight || 1;
+  let parameters = { minFilter: THREE.LinearFilter, magFilter: THREE.LinearFilter, format: THREE.RGBAFormat, stencilBuffer: false };
+
+  let renderTarget = new THREE.WebGLRenderTarget( width, height, parameters );
+  composer = new EffectComposer( renderer ,renderTarget);
   composer.addPass( renderScene );
   composer.addPass( bloomPass );
 
   //load model
   let loader=new GLTFLoader();
-  loader.load('./3d/jellyfishT3.glb',(gltf)=>{
-
+  loader.load('./media/3dModels/jellyfishT3.glb',(gltf)=>{
+    //console.log(gltf.scene);
     model = gltf.scene;
 
      setMaterialBodyJelly();
      setMaterialBigTentacles();
      setMaterialSmallTentacles();
     scene.add(model);
-    console.log( gltf.scene.children);
+    //console.log( gltf.scene.children);
   //  for(let i=3;i<14;i++){ scene.add( gltf.scene.children[2]);}
 
     //bloom effect
@@ -95,9 +114,9 @@ function onResize() {
 
 }
 function setMaterialBodyJelly(){
-  console.log(model.children[0].name);
+  //console.log(model.children[0].name);
   let material=model.children[0].children[0].material;
-  console.log(model.children[0].material);
+//  console.log(model.children[0].material);
   material.transparent=true;
   material.opacity=0.75;
 
@@ -127,56 +146,10 @@ function setMaterialSmallTentacles(){
     material.emissiveIntensity=5;
     material.dithering=true;
 }
-
-
-
-
-window.addEventListener("mousemove", onDocumentMouseMove, false);
-
-//animation
-let mouse={
-  x:null,
-  y:null,
-  target:new THREE.Vector3(),
-  windowHalfX: window.innerWidth / 2,
-  windowHalfY: window.innerHeight / 2
-};
-function onDocumentMouseMove( event ) {
-    mouse.x = ( event.clientX - mouse.windowHalfX );
-    mouse.y = ( event.clientY - mouse.windowHalfY );
-
-}
-
-function animate(){
-  requestAnimationFrame(animate);
-
-  // mouse.target.x=(mouse.x-mouse.target.x)*0.2;
-  //  mouse.target.y=(mouse.y-mouse.target.y)*-0.2;
-   // mouse.target.z=camera.position.z;//+(mouse.x-mouse.target.x)*0.1+(mouse.y-mouse.target.y)*-0.1;
-   // mouse.target.x=camera.position.z;
-   //  mouse.target.y=(mouse.x-mouse.target.x)*0.2;
-
-
-//  model.lookAt(mouse.target);
-  // renderer.render(scene,camera);
-   particleSystem.rotation.z += 0.0005;
-
-
-
-
-
-
-
-  composer.render();
-}
-let particleSystem;
-let particleCount;
-let particles;
-let pMaterial;
 function addParticles(){
     particleCount = 1800;
     particles = new THREE.Geometry();
-    let sprite = new THREE.TextureLoader().load( './Textures/spark1.png' );
+    let sprite = new THREE.TextureLoader().load( './media/Textures/spark1.png' );
     let pPhong=new THREE.MeshPhongMaterial({
       color: 0xc95b00,
       map:sprite
@@ -190,17 +163,15 @@ function addParticles(){
       size: 1.5
     });
 
-    // now create the individual particles
+
     let color = new THREE.Color( 0xffffff );
     let color2 = new THREE.Color( 0xffffff );
-    console.log(color);
-    console.log(particles);
+
     let from=250;
     let to=125;
     for (var p = 0; p < particleCount; p++) {
 
-      // create a particle with random
-      // position values, -250 -> 250
+      // create a particle with random position values
       var pX = Math.random() * from - to,
           pY = Math.random() * from - to,
           pZ = Math.random() * from - to,
@@ -208,21 +179,29 @@ function addParticles(){
 
       // add it to the geometry
       particles.vertices.push(particle);
-      // if(p<particleCount/2)
-      //   particles.colors.push(color);
-      // else
-      //   particles.colors.push(color2);
-    }
-    console.log(particles);
-    // create the particle system
-     particleSystem = new THREE.Points(
-        particles,
-      //  pPhong);
-      pMaterial);
-    //  particleSystem.material.vertexColors=true;
-      console.log(particleSystem);
 
-        particleSystem.sortParticles = true;
-        // add it to the scene
-        scene.add(particleSystem);
+    }
+
+     particleSystem = new THREE.Points( particles,pMaterial);
+    //  particleSystem.material.vertexColors=true;
+    particleSystem.sortParticles = true;
+    scene.add(particleSystem);
+}
+
+
+
+window.addEventListener("mousemove", onDocumentMouseMove, false);
+
+//animation
+function onDocumentMouseMove( event ) {
+    mouse.x = ( event.clientX - mouse.windowHalfX );
+    mouse.y = ( event.clientY - mouse.windowHalfY );
+
+}
+
+function animate(){
+  requestAnimationFrame(animate);
+
+  particleSystem.rotation.z += 0.0005;
+  composer.render();
 }
