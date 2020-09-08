@@ -1,0 +1,35 @@
+/*TRANSITIONS*/
+.transition-next{
+  transition: .5s ease;
+  opacity: 1;
+}
+html.is-animating .transition-next{
+  transform: translateY(200px);
+  opacity: 0;
+}
+html.is-leaving .transition-next{
+  transform: translateY(-200px);
+}
+
+.transition-prev{
+  transition: .5s ease;
+  opacity: 1;
+}
+html.is-animating .transition-prev{
+  transform: translateY(-200px);
+  opacity: 0;
+}
+html.is-leaving .transition-prev{
+  transform: translateY(200px);
+}
+html.is-rendering .transition-prev{
+  transform: translateY(-200px);
+}
+
+.transition-fade{
+  transition: .2s ease;
+  opacity: 1;
+}
+html.is-animating .transition-fade{
+  opacity: 0;;
+}

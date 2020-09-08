@@ -1,27 +1,17 @@
-body{
-  background-image: url('./../media/tempBackground/tempBack.jpg');
-  background-size: cover;
-  overflow-x: hidden;
-  height:2000px;
-  scrollbar-width:none;
-}
+/* navigation menu */
 
-::-webkit-scrollbar {
-  width: 0px;
-}
 nav{
   position:fixed;
 }
 #burger{
   margin-top:4em;
   margin-left:4em;
-  
 }
 
 .burgerLine{
-    border:2px solid black;
+    border:1px solid white;
     margin-top:0.5em;
-    transition:1s;
+    transition:0.5s;
     border-radius:3px;
   }
 .topLine{
