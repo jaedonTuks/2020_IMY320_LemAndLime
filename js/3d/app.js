@@ -3,6 +3,8 @@ import { GLTFLoader } from './threeModules/GLTFLoader.js';
 import { EffectComposer } from './threeModules/EffectComposer.js';
 import { RenderPass } from './threeModules/RenderPass.js';
 import { UnrealBloomPass } from './threeModules/UnrealBloomPass.js';
+import { ShaderPass } from './postprocessing/ShaderPass.js';
+import { FXAAShader } from './shaders/FXAAShader.js';
 
 //setup vars
 let container;
@@ -11,6 +13,7 @@ let renderer;
 let scene;
 let model;
 let composer;
+let antialiasPass;
 
 //objects fopr storing params
 var bloom = {
@@ -37,11 +40,10 @@ init();
 
 function init(){
 
-
   container=document.querySelector('.scene');
   //create the scene
   scene=new THREE.Scene();
-  	scene.fog = new THREE.FogExp2( 0x000000, 0.001 );
+  //scene.fog = new THREE.FogExp2( 0x000000, 0.001 );
   //setup camera
   const fov =35;
   const aspect=container.clientWidth/container.clientHeight;
@@ -74,7 +76,16 @@ function init(){
   bloomPass.threshold = bloom.threshold;
   bloomPass.strength = bloom.strength;
   bloomPass.radius = bloom.radius;
-  //effect composer
+
+  //anti aliaising pass shaders using fxaa
+  antialiasPass=new ShaderPass(FXAAShader);
+  let pixelRatio = renderer.getPixelRatio();
+
+  antialiasPass.material.uniforms[ 'resolution' ].value.x = 1 / ( container.offsetWidth * pixelRatio );
+  antialiasPass.material.uniforms[ 'resolution' ].value.y = 1 / ( container.offsetHeight * pixelRatio );
+
+
+  //make the effect composer
   let width = window.innerWidth || 1;
   let height = window.innerHeight || 1;
   let parameters = { minFilter: THREE.LinearFilter, magFilter: THREE.LinearFilter, format: THREE.RGBAFormat, stencilBuffer: false };
@@ -83,35 +94,27 @@ function init(){
   composer = new EffectComposer( renderer ,renderTarget);
   composer.addPass( renderScene );
   composer.addPass( bloomPass );
+  composer.addPass( antialiasPass );
+
+
 
   //load model
   let loader=new GLTFLoader();
   loader.load('./media/3dModels/jellyfishT3.glb',(gltf)=>{
     //console.log(gltf.scene);
-    model = gltf.scene;
-
+      model = gltf.scene;
+      //set materials
      setMaterialBodyJelly();
      setMaterialBigTentacles();
      setMaterialSmallTentacles();
-    scene.add(model);
-    //console.log( gltf.scene.children);
-  //  for(let i=3;i<14;i++){ scene.add( gltf.scene.children[2]);}
+     scene.add(model);
 
-    //bloom effect
 
-addParticles();
+     addParticles();
 
-    animate();
+     animate();
 
   });
-}
-window.addEventListener( 'resize', onResize, false );
-function onResize() {
-
-  camera.aspect = window.innerWidth / window.innerHeight;
-  camera.updateProjectionMatrix();
-  renderer.setSize( window.innerWidth, window.innerHeight );
-
 }
 function setMaterialBodyJelly(){
   //console.log(model.children[0].name);
@@ -189,19 +192,39 @@ function addParticles(){
 }
 
 
+//EVENT HANDLERS
+window.addEventListener( 'resize', onResize, false );
+function onResize() {
 
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+
+  renderer.setSize( window.innerWidth, window.innerHeight );
+
+  let pixelRatio = renderer.getPixelRatio();
+
+  antialiasPass.material.uniforms[ 'resolution' ].value.x = 1 / ( container.offsetWidth * pixelRatio );
+  antialiasPass.material.uniforms[ 'resolution' ].value.y = 1 / ( container.offsetHeight * pixelRatio );
+
+}
 window.addEventListener("mousemove", onDocumentMouseMove, false);
-
 //animation
 function onDocumentMouseMove( event ) {
     mouse.x = ( event.clientX - mouse.windowHalfX );
     mouse.y = ( event.clientY - mouse.windowHalfY );
 
+    mouse.x*=-0.0001;
+    mouse.y*=-0.0001;
+  //  console.log(mouse);
 }
+
+
+//animation function
 
 function animate(){
   requestAnimationFrame(animate);
-
+  model.rotation.z=mouse.x;
+  model.rotation.x=mouse.y;
   particleSystem.rotation.z += 0.0005;
   composer.render();
 }
