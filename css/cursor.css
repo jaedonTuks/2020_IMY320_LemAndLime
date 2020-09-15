@@ -13,7 +13,7 @@ body{
   height:auto;
   transition:0.1s;
   transition:opacity 0s;
-  transition:width 1s;
+  transition:width 0.5s;
   z-index:-5;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -22,11 +22,7 @@ body{
   user-select: none;
 }
 #cursorB{
-
   opacity: 0%;
-}
-li{
-  font-size: 2em;
 }
 
 #cursorCenter{

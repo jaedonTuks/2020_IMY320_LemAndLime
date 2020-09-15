@@ -1,0 +1,97 @@
+
+@font-face{
+	font-family: 'roboto';
+	src: url('../media/fonts/roboto.ttf');
+}
+
+@font-face{
+	font-family: 'roboto-thin';
+	src: url('../media/fonts/roboto-thin.ttf');
+}
+
+@font-face{
+	font-family: 'alata';
+	src: url('../media/fonts/alata.ttf');
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+*{
+  box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+html {
+  height: 100%;
+}
+body{
+  font-family: 'roboto-thin', sans-serif;
+  background-image: url('./../media/tempBackground/tempBack.jpg');
+  background-size: cover;
+  overflow-x: hidden;
+  min-height: 100%;
+  scrollbar-width:none;
+}
+
+.logo{
+  float:right;
+  margin-top:4em;
+  margin-right:4em;
+  text-align: right;
+}
+.logo div{
+  color: white;
+}
+
+.logo img{
+  filter: grayscale(100%);
+  transition:1s;
+  width: 50px;
+}
+
+.logo img:hover{
+  filter: grayscale(50%);
+}
+
+.page-indicator{
+  position: fixed;
+  margin-top: 3em;
+}
+.page-indicator ul{
+  padding: 0;
+  text-align: center;
+  list-style: none;
+}
+.unfilled{
+  width: 8%
+}
+.line{
+  width: 18%;
+}
+.filled{
+  width: 8%;
+}
+
+.more{
+  margin-top: 18em;
+}
+.more a{
+	display: block;
+	font-size: 110%;
+	writing-mode: vertical-rl;
+	text-orientation: mixed;
+	color: white;
+}
+.more a:hover{
+	text-decoration: none;
+}
+.arrow{
+  width: 16%;
+}
+
+.more-down{
+	position: relative;
+	left: 1.5em;
+	bottom: 1em;
+}

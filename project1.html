@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Lem & Lime Studios</title>
+
+  <meta charset="utf-8">
+  <meta name="author" content="Jonathan Bertram" />
+  <meta name="author" content="Jaedon Heger" />
+  <meta name="description" content="The official website and porfolio of Lem and Lime Studios" />
+  <meta name="keywords" content="LemAndLimeStudios, Lem and Lime, studios, Jaedon Heger, Jonathan Bertram, Portfolio, Graphic design, design, designer, illustrator, modelling, animation, animator, 3D model, UI, UX, video editing, editing, video effects, South Africa, South African" />
+  <link rel="shortcut icon" href="media/logo.ico" type="image/x-icon" />
+
+  <!-- styling -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="./css/general.css">
+  <link rel="stylesheet" href="./css/cursor.css">
+  <link rel="stylesheet" href="./css/navigation.css">
+  <link rel="stylesheet" href="./css/transitions.css">
+
+</head>
+<body>
+  <div class="contianer">
+    <div class="row">
+
+      <div class="col-sm-2">
+        <nav>
+          <div id="burger" class="hover">
+            <div class="topLine burgerLine highlightPurple">
+            </div>
+            <div class="midLine burgerLine highlightPurple">
+            </div>
+            <div class="botLine burgerLine highlightPurple">
+            </div>
+          </div>
+        </nav>
+      </div>
+      <!-- spacing div -->
+      <div class="col-sm-8"></div>
+
+      <div class="col-sm-2">
+        <div class="logo">
+          <img src="media/images/lemAndLimeLogo.png" alt="Lem and Lime logo"/>
+          <div>Lem & Lime <br /> Studios</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-2">
+        <div class="page-indicator">
+          <ul>
+            <li><img class="unfilled" src="media/images/unfilled-circle.svg" /></li>
+            <li><img class="line" src="media/images/line.svg" /></li>
+            <li><img class="filled" src="media/images/filled-circle.svg" /></li>
+            <li><img class="line" src="media/images/line.svg" /></li>
+            <li><img  class="filled"src="media/images/filled-circle.svg" /></li>
+            <li><img class="line" src="media/images/line.svg" /></li>
+            <li><img class="filled" src="media/images/filled-circle.svg" /></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- main content -->
+      <main id="swup" class="transition-next col-sm-10">
+        <div class="row">
+          <div class="col-sm-10">
+            <h1>This is the project 1 page</h1>
+
+
+            <div class="content-home">Here is a block of content</div>
+          </div>
+
+          <div class="col-sm-2">
+            <div class="more transition-fade">
+              <div class="more-up">
+                <img class="arrow" src="media/images/up-arrow.svg" alt="Up-facing arrow"/>
+                <a class="anchor-up" href="/IMY320/LemAndLime/index.html">prev</a>
+              </div>
+              <div class="more-down">
+                <a class="anchor-down" href="/IMY320/LemAndLime/project2.html">next</a>
+                <img class="arrow" src="media/images/down-arrow.svg" alt="Down-facing arrow"/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+    </div>
+  </div>
+
+
+  <img src="./media/cursor/c-black.svg" alt="" id="cursor">
+  <img src="./media/cursor/c-highlightPurple.svg" alt="" id="cursorB" style="opacity:0%">
+  <!-- <div id="cursorCenter"></div> -->
+
+  <!--javascript-->
+  <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="./js/cursor/follow.js">  </script>
+  <script src="./js/transitions/scrollTransition.js"></script>
+  <script>
+     const swup = new Swup();
+  </script>
+</body>
+</html>

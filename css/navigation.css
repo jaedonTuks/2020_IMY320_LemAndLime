@@ -1,14 +1,5 @@
-body{
-  background-image: url('./../media/tempBackground/tempBack.jpg');
-  background-size: cover;
-  overflow-x: hidden;
-  height:2000px;
-  scrollbar-width:none;
-}
+/* navigation menu */
 
-::-webkit-scrollbar {
-  width: 0px;
-}
 nav{
   position:fixed;
 }
@@ -19,9 +10,16 @@ nav{
 }
 
 .burgerLine{
+    border:1px solid white;
+
+
+}
+
+.burgerLine{
     border:2px solid rgb(219,219,219);
+
     margin-top:0.5em;
-    transition:1s;
+    transition:0.5s;
     border-radius:3px;
   }
 .topLine{
