@@ -26,5 +26,6 @@ $(()=>{
       }
     }
   });
+
   console.log("scrollTranstion loaded");
 });

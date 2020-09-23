@@ -9,9 +9,15 @@
 	src: url('../media/fonts/roboto-thin.ttf');
 }
 
+/* PROJECT FONTS */
 @font-face{
-	font-family: 'alata';
-	src: url('../media/fonts/alata.ttf');
+	font-family: 'pacifico';
+	src: url('../media/fonts/pacifico.ttf');
+}
+
+@font-face{
+	font-family: 'varela';
+	src: url('../media/fonts/varela-round.ttf');
 }
 
 ::-webkit-scrollbar {
@@ -21,6 +27,7 @@
 *{
   box-sizing: border-box;
 	scroll-behavior: smooth;
+	cursor:none;
 }
 html {
   height: 100%;
@@ -30,10 +37,10 @@ body{
   background-image: url('./../media/tempBackground/tempBack.jpg');
   background-size: cover;
   overflow-x: hidden;
+	overflow-y: hidden;
   min-height: 100%;
-  scrollbar-width:none;
+  scrollbar-width: none;
 }
-
 .logo{
   float:right;
   margin-top:4em;
@@ -53,28 +60,48 @@ body{
 .logo img:hover{
   filter: grayscale(50%);
 }
-
+.page-content{
+	color: white;
+	font-size: 85%;
+	width: 100%;
+	height: 92%;
+}
 .page-indicator{
-  position: fixed;
-  margin-top: 3em;
+  margin-top: 4em;
 }
 .page-indicator ul{
   padding: 0;
   text-align: center;
   list-style: none;
 }
+.page-indicator span{
+	font-size: 90%;
+	color: white;
+	writing-mode: vertical-rl;
+  text-align: center;
+}
+.page-indicator-label{
+	position: relative;
+	left: 4em;
+	bottom: 8em;
+}
+.proj-indicator-label{
+	position: relative;
+	left: 4em;
+	bottom: 13.5em;
+}
 .unfilled{
-  width: 8%
+  width: 16px;
 }
 .line{
-  width: 18%;
+  width: 32px;
 }
 .filled{
-  width: 8%;
+  width: 16px;
 }
 
 .more{
-  margin-top: 18em;
+	margin-top: 18em;
 }
 .more a{
 	display: block;
@@ -83,15 +110,91 @@ body{
 	text-orientation: mixed;
 	color: white;
 }
-.more a:hover{
+a:hover{
 	text-decoration: none;
 }
 .arrow{
   width: 16%;
 }
-
+.more-up{
+	position: relative;
+	bottom: 2em;
+	transition:0.5s;
+}
 .more-down{
 	position: relative;
 	left: 1.5em;
-	bottom: 1em;
+	bottom: 3em;
+}
+.more-single-link{
+	margin-left: 1em;
+}
+
+a.anchor-down{
+	font-weight: bold;
+	transition:0.5s;
+}
+a.anchor-down:hover{
+	color: rgb(223, 3, 252);
+}
+a.anchor-up{
+	font-weight: bold;
+	transition:0.5s;
+}
+a.anchor-up:hover{
+	color: rgb(223, 3, 252);
+}
+
+.scroll-down-indicator{
+	margin-left: 24em;
+}
+
+/*		FUD PAGE		*/
+#fud-app-heading{
+	font-family: 'pacifico', sans-serif;
+}
+.fud-img{
+	display: inline-block;
+	height: 12%;
+	transition: .5s ease;
+}
+.fud-img:hover{
+	height: 12.3%;
+}
+#fud-home{
+	z-index: -1;
+	position: relative;
+	bottom: 5em;
+	left: 2em;
+}
+#fud-login{
+	z-index: 0;
+	position: relative;
+	bottom: 3em;
+	right: 4em;
+}
+
+/*		ADVENTURE TRAVELS		*/
+#adventure-travels-heading{
+	  font-family: 'roboto', sans-serif;
+		font-weight: bold;
+}
+.adventure-trav-img{
+	display: inline-block;
+	height: 32%;
+	transition: .5s ease;
+}
+
+/*		WORK IN PROGRESS		*/
+#wip-heading{
+	font-weight: bold;
+}
+.wip-img{
+	margin-left: 4em;
+	height: 30%;
+}
+
+/*		ABOUT 		*/
+#wip-heading{
+	font-weight: bold;
 }
