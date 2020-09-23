@@ -14,6 +14,10 @@ let scene;
 let model;
 let composer;
 let antialiasPass;
+let modelAnims;
+
+let mixer;
+let prevTime=Date.now();
 
 //objects fopr storing params
 var bloom = {
@@ -36,8 +40,8 @@ let particleCount;
 let particles;
 let pMaterial;
 
-init();
 
+//initialisiation functions
 function init(){
 
   container=document.querySelector('.scene');
@@ -52,8 +56,10 @@ function init(){
 
   camera=new THREE.PerspectiveCamera(fov,aspect,nearPlane,farPlane);
 
-  camera.position.set(15,-1,-0.5);
-  camera.lookAt(0,-1,-0.5);
+  camera.position.set(18,-1,-0.5);
+  camera.lookAt(0,-0,-0.5);
+  // camera.position.set(-5,-0,0);
+  // camera.lookAt(0,-0,0);
   //adding lights
   const ambient=new THREE.AmbientLight(0xf0f0f0,0.8);
   scene.add(ambient);
@@ -100,22 +106,21 @@ function init(){
 
   //load model
   let loader=new GLTFLoader();
-  loader.load('./media/3dModels/jellyfishT3.glb',(gltf)=>{
-    //console.log(gltf.scene);
+  loader.load('./media/3dModels/float4.gltf',(gltf)=>{
+
       model = gltf.scene;
-      //set materials
-     setMaterialBodyJelly();
-     setMaterialBigTentacles();
-     setMaterialSmallTentacles();
-     scene.add(model);
+      modelAnims=gltf.animations;
 
+      setAnimations();
+      scene.add(model);
 
-     addParticles();
-
-     animate();
+      addParticles();
+       animate();
 
   });
 }
+
+
 function setMaterialBodyJelly(){
   //console.log(model.children[0].name);
   let material=model.children[0].children[0].material;
@@ -136,19 +141,37 @@ function setMaterialBodyJelly(){
   material2.emissiveIntensity=5;
 }
 function setMaterialBigTentacles(){
-  let material=model.children[1].material;
-
+  let material=model.children[4].material;
   material.color={r: 163 /255, g: 49/255, b: 0/255};
   material.emissiveIntensity=9;
   material.dithering=true;
-  // material.transmission=0.4;
+   material.transmission=0.4;
+
+   material=model.children[11].material;
+   model.children[1]
+  material.emissiveIntensity=9;
+  material.dithering=true;
+  material.transmission=0.4;
 }
 function setMaterialSmallTentacles(){
     let material=model.children[2].material;
     material.color={r: 163 /255, g: 49/255, b: 0/255};
     material.emissiveIntensity=5;
     material.dithering=true;
+
+     material=model.children[7].material;
+    material.color={r: 163 /255, g: 49/255, b: 0/255};
+    material.emissiveIntensity=5;
+    material.dithering=true;
 }
+
+function setAnimations(){
+  console.log(model.children);
+  mixer = new THREE.AnimationMixer(model);
+  for(let i=0;i<modelAnims.length;i++)
+    mixer.clipAction( modelAnims[i] ).setDuration(1).play();
+}
+
 function addParticles(){
     particleCount = 1800;
     particles = new THREE.Geometry();
@@ -172,10 +195,10 @@ function addParticles(){
 
     let from=250;
     let to=125;
-    for (var p = 0; p < particleCount; p++) {
+    for (let p = 0; p < particleCount; p++) {
 
       // create a particle with random position values
-      var pX = Math.random() * from - to,
+      let pX = Math.random() * from - to,
           pY = Math.random() * from - to,
           pZ = Math.random() * from - to,
           particle = new THREE.Vector3 (pX, pY, pZ);
@@ -191,9 +214,72 @@ function addParticles(){
     scene.add(particleSystem);
 }
 
+const modelAnimRestriction={
+  max:{
+    x:0,
+    y:1.5,
+    z:0.5
+  },
+  min:{
+      x:0,
+      y:-0.5,
+      z:-0.5
+    },
+  speed:{
+        x:0,
+        y:0.00005,
+        z:0.00005
+      },
+  directionPos:{
+        x:true,
+        y:true,
+        z:true
+    }
+}
+//animation function
+function animate(){
 
-//EVENT HANDLERS
-window.addEventListener( 'resize', onResize, false );
+  requestAnimationFrame(animate);
+
+  if (mixer){
+    let time = Date.now();
+    mixer.update( ( time - prevTime ) * 0.00005 );
+    prevTime = time;
+  }
+
+
+  //y float movement
+  if(modelAnimRestriction.directionPos.y){
+    model.position.y+=modelAnimRestriction.speed.y;
+    if(model.position.y>=modelAnimRestriction.max.y){
+      modelAnimRestriction.directionPos.y=false;
+    }
+  }else{
+    model.position.y-=modelAnimRestriction.speed.y;
+    if(model.position.y<=modelAnimRestriction.min.y){
+      modelAnimRestriction.directionPos.y=true;
+    }
+  }
+  //z float movement
+  if(modelAnimRestriction.directionPos.z){
+
+    model.position.z+=modelAnimRestriction.speed.z;
+    if(model.position.z>=modelAnimRestriction.max.z){
+      modelAnimRestriction.directionPos.z=false;
+    }
+  }else{
+    model.position.z-=modelAnimRestriction.speed.z;
+    if(model.position.z<=modelAnimRestriction.min.z){
+      modelAnimRestriction.directionPos.z=true;
+    }
+  }
+  model.rotation.x=mouse.y*0.5;
+  model.rotation.y=mouse.x;
+  particleSystem.rotation.z += 0.00025;
+  composer.render();
+}
+
+// Changing pages
 function onResize() {
 
   camera.aspect = window.innerWidth / window.innerHeight;
@@ -207,8 +293,6 @@ function onResize() {
   antialiasPass.material.uniforms[ 'resolution' ].value.y = 1 / ( container.offsetHeight * pixelRatio );
 
 }
-window.addEventListener("mousemove", onDocumentMouseMove, false);
-//animation
 function onDocumentMouseMove( event ) {
     mouse.x = ( event.clientX - mouse.windowHalfX );
     mouse.y = ( event.clientY - mouse.windowHalfY );
@@ -217,14 +301,50 @@ function onDocumentMouseMove( event ) {
     mouse.y*=-0.0001;
   //  console.log(mouse);
 }
+function changeMaterial(event){
+    //decide what color to switch tolet
+    let currPage=document.location.pathname.match(/[^\/]+$/)[0];
+    let bodycolor,tentaclesColor,particlesColor;
+
+    let scrollUp=true;
+    let shouldChange=false;
+    if(event.originalEvent.wheelDelta >= 0){
+      scrollUp=true;
+    }else{
+       scrollUp=false;
+     }
 
 
-//animation function
-
-function animate(){
-  requestAnimationFrame(animate);
-  model.rotation.z=mouse.x;
-  model.rotation.x=mouse.y;
-  particleSystem.rotation.z += 0.0005;
-  composer.render();
+    switch(currPage){
+      case "index.html":
+        if(!scrollUp){
+          bodycolor={r: 148 /255, g: 60/255, b: 163/255};
+          shouldChange=true;
+        }
+        break;
+      case "index.html":
+        if(!scrollUp){
+          bodycolor={r: 0 /255, g: 0/255, b: 255/255};
+          shouldChange=true;
+        }
+        break;
+      default:
+        console.log("nothome");
+        break;
+    }
+    //change body
+    if(shouldChange){
+      let material=model.children[0].children[0].material;
+      material.color=bodycolor;
+    }
+    //change tentacles
+    //change particles
 }
+//bind event HANDLERS
+$(window).bind('mousewheel',changeMaterial);
+window.addEventListener( 'resize', onResize, false );
+window.addEventListener("mousemove", onDocumentMouseMove, false);
+//onload
+$(()=>{
+  init();
+});
