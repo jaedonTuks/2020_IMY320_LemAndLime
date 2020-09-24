@@ -6,10 +6,18 @@ nav{
 #burger{
   margin-top:4em;
   margin-left:4em;
+
 }
 
 .burgerLine{
     border:1px solid white;
+
+
+}
+
+.burgerLine{
+    border:2px solid rgb(219,219,219);
+
     margin-top:0.5em;
     transition:0.5s;
     border-radius:3px;
@@ -23,8 +31,8 @@ nav{
 .botLine{
   width:25px;
 }
-#burger:hover .highlightRed{
-  border-color:red;
+#burger:hover .highlightOrange{
+  border-color:rgb(255, 140, 27);
   width:50px;
 }
 #burger:hover .highlightBlue{
