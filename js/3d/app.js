@@ -43,7 +43,7 @@ let pMaterial;
 
 //initialisiation functions
 function init(){
-
+  console.log("init");
   container=document.querySelector('.scene');
   //create the scene
   scene=new THREE.Scene();
@@ -147,7 +147,7 @@ function setMaterialBodyJelly(){
   material2.emissiveIntensity=5;
 }
 function setMaterialBigTentacles(){
-  console.log(model.children);
+  // console.log(model.children);
   let material=model.children[1].material;
   material.color={r: 163 /255, g: 49/255, b: 0/255};
   material.emissiveIntensity=9;
@@ -188,7 +188,7 @@ function switchAllColors(color){
 }
 
 function setAnimations(){
-  console.log(model.children);
+  // console.log(model.children);
   mixer = new THREE.AnimationMixer(model);
   for(let i=0;i<modelAnims.length;i++)
     mixer.clipAction( modelAnims[i] ).setDuration(1).play();
@@ -366,6 +366,4 @@ $(window).bind('mousewheel',changeMaterial);
 window.addEventListener( 'resize', onResize, false );
 window.addEventListener("mousemove", onDocumentMouseMove, false);
 //onload
-$(()=>{
   init();
-});

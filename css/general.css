@@ -131,6 +131,7 @@ a:hover{
 }
 
 a.anchor-down{
+	
 	font-weight: bold;
 	transition:0.5s;
 }
