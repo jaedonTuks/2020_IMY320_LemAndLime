@@ -174,18 +174,6 @@ function setMaterialSmallTentacles(){
 }
 
 
-function switchAllColors(color){
-  model.children.forEach((child) => {
-    if(child.material)
-      child.material.color=color;
-    });
-    //switch body
-  let material=model.children[0].children[0].material;
-  material.color=color;
-
-  material=model.children[0].children[1].material;
-  material.color=color;
-}
 
 function setAnimations(){
   // console.log(model.children);
@@ -198,11 +186,7 @@ function addParticles(){
     particleCount = 1800;
     particles = new THREE.Geometry();
     let sprite = new THREE.TextureLoader().load( './media/Textures/spark1.png' );
-    let pPhong=new THREE.MeshPhongMaterial({
-      color: 0xc95b00,
-      map:sprite
 
-    });
     pMaterial = new THREE.PointsMaterial({
       color: 0xc95b00,
       alphaTest: 0.5,
@@ -323,9 +307,57 @@ function onDocumentMouseMove( event ) {
     mouse.y*=-0.0001;
   //  console.log(mouse);
 }
+
+const pageInfo={
+  index:{
+    bodycolor:{r: 163 /255, g: 49/255, b: 0/255},
+    particleColor:{r: 201 /255, g: 91/255, b: 0/255},
+    cameraPosition:[18,-1,-0.5],
+    cursorHighlightSrc:"./media/cursor/c-highlightPurple.svg"
+  },
+  p1:{
+    bodycolor:{r: 21 /255, g: 71/255, b: 158/255},
+    particleColor:{r: 52 /255, g: 119/255, b: 235/255},
+    cameraPosition:[18,-1,-0.5],
+    cursorHighlightSrc:"./media/cursor/c-highlightOrange.svg"
+    },
+  p2:{
+    bodycolor:{r: 21 /255, g: 71/255, b: 158/255},
+    particleColor:{r: 52 /255, g: 119/255, b: 235/255},
+    cameraPosition:[18,-1,-0.5],
+    cursorHighlightSrc:"./media/cursor/c-highlightOrange.svg"
+    },
+  p3:{
+    bodycolor:{r: 21 /255, g: 71/255, b: 158/255},
+    particleColor:{r: 52 /255, g: 119/255, b: 235/255},
+    cameraPosition:[18,-1,-0.5],
+    cursorHighlightSrc:"./media/cursor/c-highlightOrange.svg"
+  },
+  p4:{
+    bodycolor:{r: 21 /255, g: 71/255, b: 158/255},
+    particleColor:{r: 52 /255, g: 119/255, b: 235/255},
+    cameraPosition:[18,-1,-0.5],
+    cursorHighlightSrc:"./media/cursor/c-highlightOrange.svg"
+  },
+  p5:{
+    bodycolor:{r: 21 /255, g: 71/255, b: 158/255},
+    particleColor:{r: 52 /255, g: 119/255, b: 235/255},
+    cameraPosition:[18,-1,-0.5],
+    cursorHighlightSrc:"./media/cursor/c-highlightOrange.svg"
+  },
+  about:{
+      bodycolor:{r: 41 /255, g: 7/255, b: 97/255},
+      particleColor:{r: 139 /255, g: 0/255, b: 194/255},
+      cameraPosition:[18,-1,-0.5],
+      cursorHighlightSrc:"./media/cursor/c-highlightPurple.svg"
+    }
+}
+
+
 function changeMaterial(event){
     //decide what color to switch tolet
     let currPage=document.location.pathname.match(/[^\/]+$/)[0];
+    console.log(currPage);
     let bodycolor,tentaclesColor,particlesColor;
 
     let scrollUp=true;
@@ -336,34 +368,110 @@ function changeMaterial(event){
        scrollUp=false;
      }
 
-
+    let cursorHighlight=$("#cursorB");
     switch(currPage){
       case "index.html":
         if(!scrollUp){
-          bodycolor={r: 148 /255, g: 60/255, b: 163/255};
+          bodycolor=pageInfo.p1.bodycolor;
+          particlesColor=pageInfo.p1.particleColor;
           shouldChange=true;
         }
         break;
-      case "index.html":
+      case "project1.html":
         if(!scrollUp){
-          bodycolor={r: 0 /255, g: 0/255, b: 255/255};
+          bodycolor=pageInfo.p2.bodycolor;
+          particlesColor=pageInfo.p2.particleColor;
+          shouldChange=true;
+        }else{
+          bodycolor=pageInfo.index.bodycolor;
+          particlesColor=pageInfo.index.particleColor;
           shouldChange=true;
         }
         break;
+      case "project2.html":
+        if(!scrollUp){
+          bodycolor=pageInfo.p3.bodycolor;
+          particlesColor=pageInfo.p3.particleColor;
+          shouldChange=true;
+        }else{
+          bodycolor=pageInfo.p1.bodycolor;
+          particlesColor=pageInfo.p1.particleColor;
+          shouldChange=true;
+        }
+        break;
+      case "project3.html":
+        if(!scrollUp){
+          bodycolor=pageInfo.p4.bodycolor;
+          particlesColor=pageInfo.p4.particleColor;
+          shouldChange=true;
+        }else{
+          bodycolor=pageInfo.p2.bodycolor;
+          particlesColor=pageInfo.p2.particleColor;
+          shouldChange=true;
+        }
+        break;
+      case "project4.html":
+          if(!scrollUp){
+            bodycolor=pageInfo.p5.bodycolor;
+            particlesColor=pageInfo.p5.particleColor;
+            shouldChange=true;
+          }else{
+            bodycolor=pageInfo.p3.bodycolor;
+            particlesColor=pageInfo.p3.particleColor;
+            shouldChange=true;
+          }
+          break;
+
+      case "project5.html":
+          if(!scrollUp){
+            bodycolor=pageInfo.about.bodycolor;
+            particlesColor=pageInfo.about.particleColor;
+            shouldChange=true;
+          }else{
+            bodycolor=pageInfo.p4.bodycolor;
+            particlesColor=pageInfo.p4.particleColor;
+            shouldChange=true;
+          }
+          break;
+
+      case "about.html":
+          if(scrollUp){
+            bodycolor=pageInfo.p5.bodycolor;
+            particlesColor=pageInfo.p5.particleColor;
+            shouldChange=true;
+          }
+          break;
       default:
         console.log("nothome");
         break;
     }
     //change body
     if(shouldChange){
-      switchAllColors(bodycolor);
+      switchAllColors(bodycolor,particlesColor);
+
     }
-    //change tentacles
-    //change particles
 }
+function switchAllColors(color,particlesColor){
+  model.children.forEach((child) => {
+
+    if(child.material){
+      child.material.color=color;
+      child.material.emissive=color;
+    }
+  });
+    //switch body
+  let material=model.children[0].children[0].material;
+  material.color=color;
+
+  material=model.children[0].children[1].material;
+  material.color=color;
+  if(pMaterial)
+    pMaterial.color=particlesColor;
+}
+
 //bind event HANDLERS
 $(window).bind('mousewheel',changeMaterial);
 window.addEventListener( 'resize', onResize, false );
 window.addEventListener("mousemove", onDocumentMouseMove, false);
 //onload
-  init();
+init();

@@ -70,6 +70,12 @@ nav{
   font-size: 1.2rem;
   padding: 15px 20px;
   position: relative;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 /* hover effect adapted from https://codepen.io/francisco-risi-rosselot/pen/pogJmgV*/
 #burgerMenuBox div a:after {

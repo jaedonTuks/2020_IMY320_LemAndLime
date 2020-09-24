@@ -104,7 +104,7 @@ body{
 }
 
 .more{
-	margin-top: 18em;
+	margin-top: 30em;
 }
 .more a{
 	display: block;
@@ -130,7 +130,7 @@ a:hover{
 	bottom: 3em;
 }
 .more-single-link{
-	margin-left: 1em;
+	margin-left: 20%;
 }
 
 a.anchor-down{
@@ -138,7 +138,10 @@ a.anchor-down{
 	font-weight: bold;
 	transition:0.5s;
 }
-a.anchor-down:hover{
+a.anchor-down-home:hover{
+	color: rgb(223, 3, 252);
+}
+a.anchor-down-home:hover{
 	color: rgb(223, 3, 252);
 }
 a.anchor-up{
@@ -150,9 +153,46 @@ a.anchor-up:hover{
 }
 
 .scroll-down-indicator{
-	margin-left: 24em;
+	margin-left: 45%;
+	margin-top: 2%;
+}
+/* Index page */
+
+.studioName h1{
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	font-size: 12rem;
+	font-family:  'roboto', sans-serif;
+	line-height: 110%;
 }
 
+.studioName h2{
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	font-size: 5rem;
+
+	font-family:  'roboto', sans-serif;
+	line-height: 0%;
+}
+.studioName:nth-child(1){
+	margin-left:8rem;
+}
+
+.studioName:nth-child(2){
+	margin-left:26rem;
+}
+
+.studioName:nth-child(3){
+	margin-left:32rem;
+}
 /*		FUD PAGE		*/
 #fud-app-heading{
 	font-family: 'pacifico', sans-serif;
