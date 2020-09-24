@@ -59,7 +59,7 @@ nav{
 }
 #burgerMenuBox div{
   display:block;
-  margin:1rem;
+  margin:3rem;
   margin-left:4em;
 
   text-transform: uppercase;
@@ -67,12 +67,7 @@ nav{
 
 #burgerMenuBox div a {
   color:rgb(219,219,219);
-  text-transform: uppercase;
-  text-decoration: none;
-  letter-spacing: 0.15em;
-
   font-size: 1.2rem;
-  display: inline-block;
   padding: 15px 20px;
   position: relative;
 }
@@ -85,17 +80,21 @@ nav{
   height: 2px;
   left: 100%;
   position: absolute;
-  background:  rgb(219,219,219);
+  background:  rgba(255, 140, 27,0.5);
+  border-radius: 7px;
   transition: width 0.3s, left 0.3s;
 }
 
  #burgerMenuBox div a:hover:after {
   width:80%;
   left:10%;
+
+}
+a.active{
+  color:rgb(255, 140, 27) !important;
 }
 
-
-#burgerMenuBox div:hover{
+#burgerMenuBox div:hover a{
   color:rgb(255, 140, 27);
 }
 

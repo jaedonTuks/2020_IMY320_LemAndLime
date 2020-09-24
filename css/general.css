@@ -67,7 +67,10 @@ body{
 	height: 92%;
 }
 .page-indicator{
-  margin-top: 4em;
+  margin-top: 50%;
+}
+.page-indicator.small{
+	  margin-top: 80%;
 }
 .page-indicator ul{
   padding: 0;
@@ -131,7 +134,7 @@ a:hover{
 }
 
 a.anchor-down{
-	
+
 	font-weight: bold;
 	transition:0.5s;
 }
