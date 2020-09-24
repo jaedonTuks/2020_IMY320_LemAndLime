@@ -184,6 +184,9 @@ a.anchor-up:hover{
 	height: 32%;
 	transition: .5s ease;
 }
+.adventure-trav-img:hover{
+	height: 32.5%;
+}
 
 /*		WORK IN PROGRESS		*/
 #wip-heading{
