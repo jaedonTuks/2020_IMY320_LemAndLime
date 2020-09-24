@@ -114,12 +114,18 @@ function init(){
       setAnimations();
       scene.add(model);
 
+      setMaterials();
       addParticles();
-       animate();
+      animate();
 
   });
 }
-
+function setMaterials(){
+  setMaterialBodyJelly();
+  setMaterialBigTentacles();
+  setMaterialSmallTentacles();
+  switchAllColors({r: 163 /255, g: 49/255, b: 0/255});
+}
 
 function setMaterialBodyJelly(){
   //console.log(model.children[0].name);
@@ -141,28 +147,44 @@ function setMaterialBodyJelly(){
   material2.emissiveIntensity=5;
 }
 function setMaterialBigTentacles(){
-  let material=model.children[4].material;
+  console.log(model.children);
+  let material=model.children[1].material;
   material.color={r: 163 /255, g: 49/255, b: 0/255};
   material.emissiveIntensity=9;
   material.dithering=true;
-   material.transmission=0.4;
+  material.transmission=0.4;
 
-   material=model.children[11].material;
+   material=model.children[3].material;
    model.children[1]
   material.emissiveIntensity=9;
   material.dithering=true;
   material.transmission=0.4;
 }
 function setMaterialSmallTentacles(){
-    let material=model.children[2].material;
+    let material=model.children[7].material;
     material.color={r: 163 /255, g: 49/255, b: 0/255};
     material.emissiveIntensity=5;
     material.dithering=true;
 
-     material=model.children[7].material;
+
+    material=model.children[8].material;
     material.color={r: 163 /255, g: 49/255, b: 0/255};
     material.emissiveIntensity=5;
     material.dithering=true;
+}
+
+
+function switchAllColors(color){
+  model.children.forEach((child) => {
+    if(child.material)
+      child.material.color=color;
+    });
+    //switch body
+  let material=model.children[0].children[0].material;
+  material.color=color;
+
+  material=model.children[0].children[1].material;
+  material.color=color;
 }
 
 function setAnimations(){
@@ -334,8 +356,7 @@ function changeMaterial(event){
     }
     //change body
     if(shouldChange){
-      let material=model.children[0].children[0].material;
-      material.color=bodycolor;
+      switchAllColors(bodycolor);
     }
     //change tentacles
     //change particles
