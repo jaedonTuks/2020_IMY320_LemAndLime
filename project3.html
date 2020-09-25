@@ -19,23 +19,36 @@
   <link rel="stylesheet" href="./css/cursor.css">
   <link rel="stylesheet" href="./css/navigation.css">
   <link rel="stylesheet" href="./css/transitions.css">
+  <link rel="stylesheet" type="text/css" href="./css/background.css">
 
 </head>
 <body>
+  <div class="scene">
+  </div>
+  <nav>
+    <div id="burger" class="hover">
+      <div class="topLine burgerLine highlightOrange">
+      </div>
+      <div class="midLine burgerLine highlightOrange">
+      </div>
+      <div class="botLine burgerLine highlightOrange">
+      </div>
+    </div>
+    <div id="burgerMenuBox" class="hover">
+      <div><a class="active" id="home">Home</a></div>
+      <div><a href="/2020_IMY320_LemAndLime/project1.html" id="fud">Fud Application Design</a></div>
+      <div><a href="/2020_IMY320_LemAndLime/project2.html" id="adventure">Adventure Travel Website</a></div>
+      <div><a href="/2020_IMY320_LemAndLime/project3.html" id="hex">Hex Game</a></div>
+      <div><a href="/2020_IMY320_LemAndLime/project4.html" id="promo">American Authors Promotional Video</a></div>
+      <div><a href="/2020_IMY320_LemAndLime/project5.html" id="horror">Horror Short film</a></div>
+      <div><a href="/2020_IMY320_LemAndLime/about.html" id="aboutBurger">About us</a></div>
+    </div>
+  </nav>
   <div class="contianer">
     <div class="row">
 
       <div class="col-sm-2">
-        <nav>
-          <div id="burger" class="hover">
-            <div class="topLine burgerLine highlightPurple">
-            </div>
-            <div class="midLine burgerLine highlightPurple">
-            </div>
-            <div class="botLine burgerLine highlightPurple">
-            </div>
-          </div>
-        </nav>
+
       </div>
       <!-- spacing div -->
       <div class="col-sm-8"></div>
@@ -51,6 +64,7 @@
     </div>
 
     <main id="swup">
+
       <div class="row">
         <div class="transition-left col-sm-2">
           <div class="page-indicator">
@@ -129,5 +143,10 @@
   <script>
      const swup = new Swup();
   </script>
+  <script src="./js/nav/nav.js">  </script>
+  <!-- backgrounds -->
+  <script src="./js/3d/three/three.min.js"></script>
+  <script src="./js/3d/app.js" type="module"></script>
+
 </body>
 </html>

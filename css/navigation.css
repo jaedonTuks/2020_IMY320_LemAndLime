@@ -2,11 +2,14 @@
 
 nav{
   position:fixed;
+  z-index:100;
+  /* background-color: #292929; */
+  padding:15px;
 }
 #burger{
   margin-top:4em;
   margin-left:4em;
-
+  margin-bottom:4em;
 }
 
 .burgerLine{
@@ -28,6 +31,7 @@ nav{
 .midLine{
   width:45px;
 }
+
 .botLine{
   width:25px;
 }
@@ -42,4 +46,109 @@ nav{
 #burger:hover .highlightPurple{
   border-color:rgb(223, 3, 252);
   width:50px;
+}
+
+#burgerMenuBox{
+
+  top:0;
+  left:-15rem;
+  width:150%;
+  z-index:100;
+  transition: 1s;
+  display:none;
+}
+#burgerMenuBox div{
+  display:block;
+  margin:3rem;
+  margin-left:4em;
+
+  text-transform: uppercase;
+}
+
+#burgerMenuBox div a {
+  color:rgb(219,219,219);
+  font-size: 1.2rem;
+  padding: 15px 20px;
+  position: relative;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* hover effect adapted from https://codepen.io/francisco-risi-rosselot/pen/pogJmgV*/
+#burgerMenuBox div a:after {
+  bottom: 0.8rem;
+  width: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 100%;
+  position: absolute;
+  background:  rgba(255, 140, 27,0.5);
+  border-radius: 7px;
+  transition: width 0.3s, left 0.3s;
+}
+
+ #burgerMenuBox div a:hover:after {
+  width:80%;
+  left:10%;
+
+}
+a.active{
+  color:rgb(255, 140, 27) !important;
+}
+
+#burgerMenuBox div:hover a{
+  color:rgb(255, 140, 27);
+}
+
+/* Transition for burger */
+#burger.open div.burgerLine:nth-child(1) {
+  top: 0px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+#burger.open div.burgerLine:nth-child(2) {
+  top: 18px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+#burger.open div.burgerLine:nth-child(3) {
+  top: 36px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+#burger.open div.burgerLine:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: -3px;
+  left: 8px;
+
+}
+
+#burger.open div.burgerLine:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+#burger.open div.burgerLine:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 39px;
+  left: 8px;
 }
