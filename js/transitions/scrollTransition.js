@@ -36,3 +36,7 @@ $(()=>{
 
   console.log("scrollTranstion loaded");
 });
+
+
+
+swup.on('contentReplaced', function(){ alreadyScrolling=false; });
