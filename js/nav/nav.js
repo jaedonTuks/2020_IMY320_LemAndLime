@@ -70,6 +70,7 @@ const pageInfo={
 function switchPage(){
   //ensure hiding of burger if open
   hide();
+  alreadyScrolling=true;
   let newCursorSrc;
   let currElement;
   let projectPage=false;
@@ -82,6 +83,7 @@ function switchPage(){
       $("#burger div").addClass("highlightOrange");
       $("#burgerMenuBox div a").addClass("hoverOrange");
       currElement=$("#home");
+      $(".logo a").attr("href","/2020_IMY320_LemAndLime/about.html");
       break;
     case "project1.html":
       newCursorSrc=pageInfo.p1.cursorHighlightSrc;
@@ -89,6 +91,7 @@ function switchPage(){
       $("#burgerMenuBox div a").addClass("hoverBlue");
       currElement=$("#fud");
       projectPage=true;
+      $(".logo a").attr("href","/2020_IMY320_LemAndLime/about.html");
       break;
     case "project2.html":
       newCursorSrc=pageInfo.p2.cursorHighlightSrc;
@@ -96,6 +99,7 @@ function switchPage(){
       $("#burgerMenuBox div a").addClass("hoverBlue");
       currElement=$("#adventure");
       projectPage=true;
+      $(".logo a").attr("href","/2020_IMY320_LemAndLime/about.html");
       break;
     case "project3.html":
       newCursorSrc=pageInfo.p3.cursorHighlightSrc;
@@ -103,6 +107,7 @@ function switchPage(){
       $("#burgerMenuBox div a").addClass("hoverBlue");
       currElement=$("#hex");
       projectPage=true;
+      $(".logo a").attr("href","/2020_IMY320_LemAndLime/about.html");
       break;
     case "project4.html":
       newCursorSrc=pageInfo.p4.cursorHighlightSrc;
@@ -110,6 +115,7 @@ function switchPage(){
       $("#burgerMenuBox div a").addClass("hoverBlue");
       currElement=$("#promo");
       projectPage=true;
+      $(".logo a").attr("href","/2020_IMY320_LemAndLime/about.html");
       break;
     case "project5.html":
       newCursorSrc=pageInfo.p5.cursorHighlightSrc;
@@ -117,18 +123,21 @@ function switchPage(){
       $("#burgerMenuBox div a").addClass("hoverBlue");
       currElement=$("#horror");
       projectPage=true;
+      $(".logo a").attr("href","/2020_IMY320_LemAndLime/about.html");
       break;
     case "about.html":
       newCursorSrc=pageInfo.about.cursorHighlightSrc;
       $("#burger div").addClass("highlightPurple");
       $("#burgerMenuBox div a").addClass("hoverPurple");
       currElement=$("#aboutBurger");
+      $(".logo a").attr("href","/2020_IMY320_LemAndLime/index.html");
       break;
     default:
       newCursorSrc=pageInfo.index.cursorHighlightSrc;
       $("#burger div").addClass("highlightOrange");
       $("#burgerMenuBox div a").addClass("hoverOrange");
       currElement=$("#home");
+      $(".logo a").attr("href","/2020_IMY320_LemAndLime/index.html");
       break;
   }
 
