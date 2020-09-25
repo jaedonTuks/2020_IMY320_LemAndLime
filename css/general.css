@@ -20,6 +20,16 @@
 	src: url('../media/fonts/varela-round.ttf');
 }
 
+@font-face{
+	font-family: 'eight-bit';
+	src: url('../media/fonts/eight-bit-limit.ttf');
+}
+
+@font-face{
+	font-family: 'digital-dream';
+	src: url('../media/fonts/digital-dream.ttf');
+}
+
 ::-webkit-scrollbar {
   width: 0px;
 }
@@ -231,6 +241,33 @@ a.anchor-up:hover{
 .adventure-trav-img:hover{
 	height: 32.5%;
 }
+
+
+/*		HEX 		*/
+#hex-heading{
+	  font-family: 'eight-bit', serif;
+}
+.hex-img{
+	display: inline-block;
+	height: 32%;
+	transition: .5s ease;
+}
+.hex-img:hover{
+	height: 32.5%;
+}
+/*		NEIGHBOURHOOD 		*/
+#neighbourhoood-heading{
+	  font-family: 'digital-dream', serif;
+}
+.neighbourhoood-img{
+	display: inline-block;
+	height: 32%;
+	transition: .5s ease;
+}
+.neighbourhoood-img:hover{
+	height: 32.5%;
+}
+
 
 /*		WORK IN PROGRESS		*/
 #wip-heading{
