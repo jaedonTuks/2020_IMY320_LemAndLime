@@ -11,7 +11,7 @@ $(()=>{
      return;
 
    alreadyScrolling=true;
-  
+   setTimeout(function(){ alreadyScrolling=false; }, 2000);
 
    if(event.originalEvent.wheelDelta >= 0) {
      console.log('Scroll up');
