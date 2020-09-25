@@ -451,6 +451,62 @@ function changeMaterial(event){
 
     }
 }
+
+
+function changeMaterialsSwup(){
+    //decide what color to switch tolet
+    let currPage=document.location.pathname.match(/[^\/]+$/)[0];
+
+    let bodycolor,tentaclesColor,particlesColor;
+    let shouldChange=false;
+
+    switch(currPage){
+      case "index.html":
+          bodycolor=pageInfo.index.bodycolor;
+          particlesColor=pageInfo.index.particleColor;
+          shouldChange=true;
+        break;
+      case "project1.html":
+          bodycolor=pageInfo.p1.bodycolor;
+          particlesColor=pageInfo.p1.particleColor;
+          shouldChange=true;
+        break;
+      case "project2.html":
+          bodycolor=pageInfo.p2.bodycolor;
+          particlesColor=pageInfo.p2.particleColor;
+          shouldChange=true;
+        break;
+      case "project3.html":
+          bodycolor=pageInfo.p3.bodycolor;
+          particlesColor=pageInfo.p3.particleColor;
+          shouldChange=true;
+        break;
+      case "project4.html":
+            bodycolor=pageInfo.p4.bodycolor;
+            particlesColor=pageInfo.p4.particleColor;
+            shouldChange=true;
+          break;
+      case "project5.html":
+            bodycolor=pageInfo.p5.bodycolor;
+            particlesColor=pageInfo.p5.particleColor;
+            shouldChange=true;
+          break;
+      case "about.html":
+            bodycolor=pageInfo.about.bodycolor;
+            particlesColor=pageInfo.about.particleColor;
+            shouldChange=true;
+          break;
+      default:
+        console.log("nothome");
+        break;
+    }
+    //change body
+    if(shouldChange){
+      switchAllColors(bodycolor,particlesColor);
+    }
+}
+
+
 function switchAllColors(color,particlesColor){
   model.children.forEach((child) => {
 
@@ -468,9 +524,10 @@ function switchAllColors(color,particlesColor){
   if(pMaterial)
     pMaterial.color=particlesColor;
 }
+swup.on('contentReplaced', changeMaterialsSwup);
 
 //bind event HANDLERS
-$(window).bind('mousewheel',changeMaterial);
+// $(window).bind('mousewheel',changeMaterial);
 window.addEventListener( 'resize', onResize, false );
 window.addEventListener("mousemove", onDocumentMouseMove, false);
 //onload
