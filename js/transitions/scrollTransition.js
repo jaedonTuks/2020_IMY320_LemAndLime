@@ -5,13 +5,13 @@ $(()=>{
   console.log("scrollTranstion loaded");
 });
 
-let onScrollEvent=debounce(
-  function(event) {
+// let onScrollEvent=debounce(
+  function onScrollEvent(event) {
    if(alreadyScrolling)
      return;
 
    alreadyScrolling=true;
-   setTimeout(function(){ alreadyScrolling=false; }, 1200);
+  
 
    if(event.originalEvent.wheelDelta >= 0) {
      console.log('Scroll up');
@@ -38,7 +38,8 @@ let onScrollEvent=debounce(
        console.log("can't scroll down");
      }
    }
- },300,true);
+ }
+ // ,300,true);
 
 // debounce from underscore.js
 function debounce(func, wait, immediate) {
