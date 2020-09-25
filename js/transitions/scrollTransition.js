@@ -1,5 +1,12 @@
+let alreadyScrolling=false;
 $(()=>{
   $(window).bind('mousewheel', function(event) {
+    if(alreadyScrolling)
+      return;
+
+    alreadyScrolling=true;
+    setTimeout(function(){ alreadyScrolling=false; }, 1200);
+
     if(event.originalEvent.wheelDelta >= 0) {
       console.log('Scroll up');
       if($("a.anchor-up").length){
