@@ -70,7 +70,7 @@ const pageInfo={
 function switchPage(){
   //ensure hiding of burger if open
   hide();
-  alreadyScrolling=true;
+  alreadyScrolling=false;
   let newCursorSrc;
   let currElement;
   let projectPage=false;
