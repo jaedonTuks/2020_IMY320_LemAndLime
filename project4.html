@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <title>Lem & Lime Studios</title>
@@ -19,30 +19,45 @@
   <link rel="stylesheet" href="./css/cursor.css">
   <link rel="stylesheet" href="./css/navigation.css">
   <link rel="stylesheet" href="./css/transitions.css">
+  <link rel="stylesheet" type="text/css" href="./css/background.css">
 
 </head>
 <body>
+  <div class="scene">
+  </div>
+  <div id="navBack">
+  </div>
+  <nav>
+    <div id="burger" class="hover">
+      <div class="topLine burgerLine highlightOrange">
+      </div>
+      <div class="midLine burgerLine highlightOrange">
+      </div>
+      <div class="botLine burgerLine highlightOrange">
+      </div>
+    </div>
+    <div id="burgerMenuBox" class="hover">
+      <div><a class="active" id="home">Home</a></div>
+      <div><a href="/2020_IMY320_LemAndLime/project1.html" id="fud">Fud Application Design</a></div>
+      <div><a href="/2020_IMY320_LemAndLime/project2.html" id="adventure">Adventure Travel Website</a></div>
+      <div><a href="/2020_IMY320_LemAndLime/project3.html" id="hex">Hex Game</a></div>
+      <div><a href="/2020_IMY320_LemAndLime/project4.html" id="promo">American Authors Promotional Video</a></div>
+      <div><a href="/2020_IMY320_LemAndLime/project5.html" id="horror">Horror Short film</a></div>
+      <div><a href="/2020_IMY320_LemAndLime/about.html" id="aboutBurger">About us</a></div>
+    </div>
+  </nav>
   <div class="contianer">
     <div class="row">
 
       <div class="col-sm-2">
-        <nav>
-          <div id="burger" class="hover">
-            <div class="topLine burgerLine highlightPurple">
-            </div>
-            <div class="midLine burgerLine highlightPurple">
-            </div>
-            <div class="botLine burgerLine highlightPurple">
-            </div>
-          </div>
-        </nav>
+
       </div>
       <!-- spacing div -->
       <div class="col-sm-8"></div>
 
       <div class="col-sm-2">
         <div class="logo hover">
-          <a href="/IMY320/LemAndLime/about.html">
+          <a href="/2020_IMY320_LemAndLime/about.html">
             <img src="media/images/lemAndLimeLogo.png" alt="Lem and Lime logo"/>
             <div>Lem & Lime <br /> Studios</div>
           </a>
@@ -51,6 +66,7 @@
     </div>
 
     <main id="swup">
+
       <div class="row">
         <div class="transition-left col-sm-2">
           <div class="page-indicator">
@@ -76,15 +92,24 @@
             <div class="col-sm-10">
               <div class="page-content">
                 <div class="row">
-                  <div class="col-sm-5">
-                    <h2 id="wip-heading">We're still working here!</h2>
-                    <div>This page of the site is still under construction.
-                      Sadly, there's nothing more to see here but you could
-                      always stare at our cool jellyfish for a while...
+                  <div class="col-sm-4">
+                    <h2 id="neighbourhoood-heading">Neighbourhood</h2>
+                    <div> <b>Project dates:</b> Jul ‘19 - Sep ’19 <br />
+                      <b>Type:</b> 3nd year individual project<br /> <br />
+                    </div>
+                    <div><b>Spec:</b> Create a lyric video for any song. The lyric
+                      video should be presented via a aesthetically matching interface
+                      that should promote the album the song is from and create a mood
+                      matching that of the song.<br /> <br />
+
+                      For this project, the song Neighbourhood by American Athors was chosen.
+                      It is a nostalgic song that comments on the heartache that can come from
+                      missing the places one lived in the past and how those palces are linked
+                      to both good and bad memories.
                     </div>
                   </div>
-                  <div class="col-sm-7">
-                    <img class="wip-img" src="media/images/wip.svg" alt="Work in progress image" />
+                  <div class="col-sm-8">
+                    <a href=""><img class="neighbourhoood-img" id="neighbourhoood-home" src="media/images/neighbourhood-home.png" alt="Hex game tutorial screenshot" /></a>
                   </div>
                 </div>
               </div>
@@ -94,10 +119,10 @@
               <div class="more transition-fade">
                 <div class="more-up">
                   <img class="arrow" src="media/images/up-arrow.svg" alt="Up-facing arrow"/>
-                  <a class="anchor-up" href="/IMY320/LemAndLime/project3.html">prev</a>
+                  <a class="anchor-up hoverBlue" href="/2020_IMY320_LemAndLime/project3.html">prev</a>
                 </div>
                 <div class="more-down">
-                  <a class="anchor-down" href="/IMY320/LemAndLime/project5.html">next</a>
+                  <a class="anchor-down hoverBlue" href="/2020_IMY320_LemAndLime/project5.html">next</a>
                   <img class="arrow" src="media/images/down-arrow.svg" alt="Down-facing arrow"/>
                 </div>
               </div>
@@ -122,5 +147,10 @@
   <script>
      const swup = new Swup();
   </script>
+  <script src="./js/nav/nav.js">  </script>
+  <!-- backgrounds -->
+  <script src="./js/3d/three/three.min.js"></script>
+  <script src="./js/3d/app.js" type="module"></script>
+
 </body>
 </html>
