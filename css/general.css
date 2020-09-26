@@ -75,7 +75,7 @@ body{
 	font-size: 85%;
 	width: 100%;
 	height: 92%;
-	margin-top:8%;
+	/* margin-top:0%; */
 }
 
 .page-indicator{
@@ -166,7 +166,7 @@ a.anchor-up:hover{
 
 .scroll-down-indicator{
 	margin-left: 45%;
-	margin-top: -5%;
+	/* margin-top: -2%; */
 }
 /* Index page */
 
