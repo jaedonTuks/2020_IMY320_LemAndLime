@@ -166,7 +166,7 @@ a.anchor-up:hover{
 
 .scroll-down-indicator{
 	margin-left: 45%;
-	margin-top: -2%;
+	margin-top: -5%;
 }
 /* Index page */
 
@@ -195,16 +195,17 @@ a.anchor-up:hover{
 	line-height: 0%;
 }
 .studioName:nth-child(1){
-	margin-left:8rem;
+	margin-left:8%;
 }
 
 .studioName:nth-child(2){
-	margin-left:26rem;
+	margin-left:34%;
 }
 
 .studioName:nth-child(3){
-	margin-left:32rem;
+	margin-left:40%;
 }
+
 /*		FUD PAGE		*/
 #fud-app-heading{
 	font-family: 'pacifico', sans-serif;
