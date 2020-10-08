@@ -21,22 +21,19 @@ nav{
   margin-top:4em;
   margin-left:4em;
   margin-bottom:4em;
+  min-width:100%;
+  margin-right: 0;
   z-index:0;
 }
 
 .burgerLine{
     border:1px solid white;
-
-
-}
-
-.burgerLine{
     border:2px solid rgb(219,219,219);
-
     margin-top:0.5em;
     transition:0.5s;
     border-radius:3px;
-  }
+}
+
 .topLine{
   width:35px;
 }
@@ -152,46 +149,30 @@ a.hoverPurple:hover{
   color:rgb(223, 3, 252);
 }
 /* Transition for burger */
-#burger.open div.burgerLine:nth-child(1) {
+.burgerLine{
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+#burger div.topLine.open {
   top: 0px;
-  -webkit-transform-origin: left center;
-  -moz-transform-origin: left center;
-  -o-transform-origin: left center;
-  transform-origin: left center;
-}
-
-#burger.open div.burgerLine:nth-child(2) {
-  top: 18px;
-  -webkit-transform-origin: left center;
-  -moz-transform-origin: left center;
-  -o-transform-origin: left center;
-  transform-origin: left center;
-}
-
-#burger.open div.burgerLine:nth-child(3) {
-  top: 36px;
-  -webkit-transform-origin: left center;
-  -moz-transform-origin: left center;
-  -o-transform-origin: left center;
-  transform-origin: left center;
-}
-
-#burger.open div.burgerLine:nth-child(1) {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
   top: -3px;
   left: 8px;
-
 }
 
-#burger.open div.burgerLine:nth-child(2) {
+#burger div.midLine.open {
+  top: 18px;
   width: 0%;
   opacity: 0;
 }
 
-#burger.open div.burgerLine:nth-child(3) {
+#burger div.botLine.open {
+  top: 36px;
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);

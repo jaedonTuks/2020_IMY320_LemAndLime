@@ -6,8 +6,8 @@ body{
 
 #cursor,#cursorB{
   position:fixed;
-  top:-5em;
-  left:-5em;
+  top:-10em;
+  left:-500px;
   transform:translate(-50%,-50%);
   width:8%;
   height:auto;

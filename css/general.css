@@ -37,7 +37,7 @@
 *{
   box-sizing: border-box;
 	scroll-behavior: smooth;
-	cursor:none;
+	/* cursor:none; */
 }
 html {
   height: 100%;

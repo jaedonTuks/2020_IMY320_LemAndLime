@@ -4,15 +4,19 @@ let cursor=$("#cursor");
 let highlight=$("#cursorB");
 $(()=>{
   $(window).mousemove(followMouse);
-  $(window).on("mouseleave",hideCursor);
+  // $(window).on("mouseleave",hideCursor);
   $(".hover").on("mouseenter",growCursor);
   $(".hover").on("mouseleave",shrinkCursor);
+  highlightBug();
 });
 
 function followMouse(e){
   let y=e.clientY;
-  cursor.css({left: e.clientX,top:e.clientY });
-  highlight.css({left: e.clientX,top:e.clientY });
+
+  cursor.css({left: e.clientX+"px",top:e.clientY +"px"});
+  highlight.css({left: e.clientX+"px",top:e.clientY+"px" });
+
+// console.log(highlight.css("left"));
 }
 function growCursor(){
   cursor.css("opacity","0%");
@@ -32,4 +36,9 @@ function shrinkCursor(){
 function hideCursor(){
   cursor.css({left: -10,top:-10 });
   highlight.css({left: -10,top:-10 });
+}
+function highlightBug(){
+  if(highlight.css("left")=="-10px")
+    console.log("oh no");
+  // requestAnimationFrame(highlightBug);
 }
