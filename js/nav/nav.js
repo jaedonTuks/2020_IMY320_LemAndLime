@@ -47,7 +47,8 @@ function showMenu(){
   }
 function hide(){
   $("#burgerMenuBox").animate({
-    width:"0%"
+    width:"0%",
+    top:"0"
   },200,"linear",()=>{
     console.log("backnow");
     $("#navBack").css({

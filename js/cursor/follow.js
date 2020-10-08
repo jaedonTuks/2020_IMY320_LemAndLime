@@ -4,10 +4,8 @@ let cursor=$("#cursor");
 let highlight=$("#cursorB");
 $(()=>{
   $(window).mousemove(followMouse);
-  // $(window).on("mouseleave",hideCursor);
   $(".hover").on("mouseenter",growCursor);
   $(".hover").on("mouseleave",shrinkCursor);
-  highlightBug();
 });
 
 function followMouse(e){
@@ -36,9 +34,4 @@ function shrinkCursor(){
 function hideCursor(){
   cursor.css({left: -10,top:-10 });
   highlight.css({left: -10,top:-10 });
-}
-function highlightBug(){
-  if(highlight.css("left")=="-10px")
-    console.log("oh no");
-  // requestAnimationFrame(highlightBug);
 }
