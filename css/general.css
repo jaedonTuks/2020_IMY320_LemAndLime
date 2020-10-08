@@ -181,7 +181,13 @@ a.anchor-up:hover{
 	font-family:  'roboto', sans-serif;
 	line-height: 110%;
 }
-
+div{
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
 .studioName h2{
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
@@ -290,4 +296,11 @@ a.anchor-up:hover{
 /*		ABOUT 		*/
 #wip-heading{
 	font-weight: bold;
+}
+
+/* Jaedons styling */
+#JaedonDescription ul li{
+	margin-left:3em;
+	font-size:1rem;
+	/* font-weight:bold; */
 }
