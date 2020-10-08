@@ -2,7 +2,8 @@ let open=false;
 $(()=>{
   // $("#burgerMenuBox").hide();
 });
-$("#burger").on("click",()=>{
+$("#burger").on("click",(e)=>{
+  highlight.css({left: e.clientX,top:e.clientY });
   if(open)
     hide();
   else
@@ -12,7 +13,6 @@ $("nav #burgerMenuBox div a").on("click",hide);
 
 
 function showMenu(){
-
   $("#burgerMenuBox").animate({
     width:"100%"
   },200);
