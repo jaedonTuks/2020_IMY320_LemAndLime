@@ -30,6 +30,11 @@
 	src: url('../media/fonts/digital-dream.ttf');
 }
 
+@font-face{
+	font-family: 'impact-label-reversed';
+	src: url('../media/fonts/impact-label-reversed.ttf');
+}
+
 ::-webkit-scrollbar {
   width: 0px;
 }
@@ -75,9 +80,7 @@ body{
 	font-size: 85%;
 	width: 100%;
 	height: 92%;
-	/* margin-top:0%; */
 }
-
 .page-indicator{
   margin-top: 50%;
 }
@@ -166,7 +169,7 @@ a.anchor-up:hover{
 
 .scroll-down-indicator{
 	margin-left: 45%;
-	/* margin-top: -2%; */
+	margin-top: 2%;
 }
 /* Index page */
 
@@ -181,13 +184,7 @@ a.anchor-up:hover{
 	font-family:  'roboto', sans-serif;
 	line-height: 110%;
 }
-div{
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-}
+
 .studioName h2{
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
@@ -201,17 +198,16 @@ div{
 	line-height: 0%;
 }
 .studioName:nth-child(1){
-	margin-left:8%;
+	margin-left:8rem;
 }
 
 .studioName:nth-child(2){
-	margin-left:34%;
+	margin-left:26rem;
 }
 
 .studioName:nth-child(3){
-	margin-left:40%;
+	margin-left:32rem;
 }
-
 /*		FUD PAGE		*/
 #fud-app-heading{
 	font-family: 'pacifico', sans-serif;
@@ -220,7 +216,6 @@ div{
 	display: inline-block;
 	height: 12%;
 	transition: .5s ease;
-	z-index: -6!important;
 }
 .fud-img:hover{
 	height: 12.3%;
@@ -247,15 +242,11 @@ div{
 	display: inline-block;
 	height: 32%;
 	transition: .5s ease;
-
 }
-
 .adventure-trav-img:hover{
 	height: 32.5%;
 }
-.image-behind{
-	z-index: -6!important;
-}
+
 /*		HEX 		*/
 #hex-heading{
 	  font-family: 'eight-bit', serif;
@@ -277,9 +268,21 @@ div{
 	display: inline-block;
 	height: 32%;
 	transition: .5s ease;
-		z-index: -6!important;
+	z-index: -6!important;
 }
 .neighbourhoood-img:hover{
+	height: 32.5%;
+}
+/*		AFTER HOURS 		*/
+#after-hours-heading{
+	  font-family: 'impact-label-reversed', serif;
+}
+.after-hours-img{
+	display: inline-block;
+	height: 32%;
+	transition: .5s ease;
+}
+.after-hours-img:hover{
 	height: 32.5%;
 }
 
@@ -293,13 +296,25 @@ div{
 }
 
 /*		ABOUT 		*/
-#wip-heading{
+#about-heading{
 	font-weight: bold;
 }
-
-/* Jaedons styling */
-#JaedonDescription ul li{
-	margin-left:3em;
-	font-size:1rem;
-	/* font-weight:bold; */
+.about-list{
+	list-style-position: inside;
+}
+.about-img{
+	display: inline-block;
+	height: 150px;
+}
+.social-media-img{
+	transition:0.5s;
+	display: inline-block;
+	height: 20px;
+	margin-right: 7%;;
+}
+.social-media-img:hover{
+	transform: scale(1.2);
+}
+.social-media-container{
+	padding-top: 3%;
 }
