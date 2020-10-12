@@ -75,7 +75,9 @@ body{
 	font-size: 85%;
 	width: 100%;
 	height: 92%;
+	/* margin-top:0%; */
 }
+
 .page-indicator{
   margin-top: 50%;
 }
@@ -164,7 +166,7 @@ a.anchor-up:hover{
 
 .scroll-down-indicator{
 	margin-left: 45%;
-	margin-top: 2%;
+	/* margin-top: -2%; */
 }
 /* Index page */
 
@@ -179,7 +181,13 @@ a.anchor-up:hover{
 	font-family:  'roboto', sans-serif;
 	line-height: 110%;
 }
-
+div{
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
 .studioName h2{
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
@@ -193,16 +201,17 @@ a.anchor-up:hover{
 	line-height: 0%;
 }
 .studioName:nth-child(1){
-	margin-left:8rem;
+	margin-left:8%;
 }
 
 .studioName:nth-child(2){
-	margin-left:26rem;
+	margin-left:34%;
 }
 
 .studioName:nth-child(3){
-	margin-left:32rem;
+	margin-left:40%;
 }
+
 /*		FUD PAGE		*/
 #fud-app-heading{
 	font-family: 'pacifico', sans-serif;
@@ -211,6 +220,7 @@ a.anchor-up:hover{
 	display: inline-block;
 	height: 12%;
 	transition: .5s ease;
+	z-index: -6!important;
 }
 .fud-img:hover{
 	height: 12.3%;
@@ -237,15 +247,15 @@ a.anchor-up:hover{
 	display: inline-block;
 	height: 32%;
 	transition: .5s ease;
+
 }
+
 .adventure-trav-img:hover{
 	height: 32.5%;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> b9443ce55706b62a4d68fdceb24d7dc56191d749
-
+.image-behind{
+	z-index: -6!important;
+}
 /*		HEX 		*/
 #hex-heading{
 	  font-family: 'eight-bit', serif;
@@ -254,6 +264,7 @@ a.anchor-up:hover{
 	display: inline-block;
 	height: 32%;
 	transition: .5s ease;
+	z-index: -6!important;
 }
 .hex-img:hover{
 	height: 32.5%;
@@ -266,14 +277,11 @@ a.anchor-up:hover{
 	display: inline-block;
 	height: 32%;
 	transition: .5s ease;
+		z-index: -6!important;
 }
 .neighbourhoood-img:hover{
 	height: 32.5%;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> b9443ce55706b62a4d68fdceb24d7dc56191d749
 
 /*		WORK IN PROGRESS		*/
 #wip-heading{
@@ -287,4 +295,11 @@ a.anchor-up:hover{
 /*		ABOUT 		*/
 #wip-heading{
 	font-weight: bold;
+}
+
+/* Jaedons styling */
+#JaedonDescription ul li{
+	margin-left:3em;
+	font-size:1rem;
+	/* font-weight:bold; */
 }

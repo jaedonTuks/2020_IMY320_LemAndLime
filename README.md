@@ -11,6 +11,9 @@ We are Lem and Lime Studios. Our members are:
 
 Together we bring innovative and creative ideas to life.
 
+## See the site for yourself
+https://u18058737.github.io/2020_IMY320_LemAndLime/index.html
+
 ## Goal of the website:
 
 We aim to showcase some of the best work created by Lem and Lime studios across a

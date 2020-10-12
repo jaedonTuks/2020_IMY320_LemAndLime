@@ -5,26 +5,35 @@ nav{
   z-index:100;
   /* background-color: #292929; */
   padding:15px;
+  z-index:50;
+}
+#navBack{
+  position:absolute;
+  background-color: rgba(41,41,41,0.9);
+  filter: blur(8px);
+ -webkit-filter: blur(8px);
+  min-width: 0%;
+  min-height:100%;
+  z-index:5;
+  transition:min-width 0.8s;
 }
 #burger{
   margin-top:4em;
   margin-left:4em;
-  margin-bottom:4em;
+  /* //margin-bottom:4em; */
+  max-width:2em;
+  margin-right: 0;
+  z-index:0;
 }
 
 .burgerLine{
     border:1px solid white;
-
-
-}
-
-.burgerLine{
     border:2px solid rgb(219,219,219);
-
     margin-top:0.5em;
     transition:0.5s;
     border-radius:3px;
-  }
+}
+
 .topLine{
   width:35px;
 }
@@ -50,12 +59,17 @@ nav{
 
 #burgerMenuBox{
 
-  top:0;
+  top:0!important;
+  margin-top: 0;
   left:-15rem;
   width:150%;
   z-index:100;
   transition: 1s;
-  display:none;
+  /* display:none; */
+
+  z-index:0;
+  width:0%;
+  /* transition:width 1s; */
 }
 #burgerMenuBox div{
   display:block;
@@ -63,6 +77,10 @@ nav{
   margin-left:4em;
 
   text-transform: uppercase;
+  overflow-x: hidden;
+  white-space: nowrap;
+  overflow-x: hidden;
+
 }
 
 #burgerMenuBox div a {
@@ -86,65 +104,76 @@ nav{
   height: 2px;
   left: 100%;
   position: absolute;
-  background:  rgba(255, 140, 27,0.5);
   border-radius: 7px;
   transition: width 0.3s, left 0.3s;
 }
-
+#burgerMenuBox div a.hoverOrange:after{
+  background:  rgba(255, 140, 27,0.5);
+}
+#burgerMenuBox div a.hoverBlue:after{
+  background:  rgba(3, 173, 252,0.5);
+}
+#burgerMenuBox div a.hoverPurple:after{
+  background:  rgba(223, 3, 252,0.5);
+}
  #burgerMenuBox div a:hover:after {
   width:80%;
   left:10%;
-
 }
-a.active{
-  color:rgb(255, 140, 27) !important;
+a.active.hoverOrange{
+  color:rgba(255, 140, 27,0.8) !important;
+}
+a.active.hoverBlue{
+  color:rgba(3, 173, 252,0.8) !important;
+}
+a.active.hoverPurple{
+  color:rgba(223, 3, 252,0.8) !important;
 }
 
-#burgerMenuBox div:hover a{
+#burgerMenuBox div:hover a.hoverOrange{
   color:rgb(255, 140, 27);
 }
+#burgerMenuBox div:hover a.hoverBlue{
+  color:rgb(3, 173, 252);
+}
+#burgerMenuBox div:hover a.hoverPurple{
+  color:rgb(223, 3, 252);
+}
 
+a.hoverOrange:hover{
+    color:rgb(255, 140, 27);
+}
+ a.hoverBlue:hover{
+  color:rgb(3, 173, 252);
+}
+a.hoverPurple:hover{
+  color:rgb(223, 3, 252);
+}
 /* Transition for burger */
-#burger.open div.burgerLine:nth-child(1) {
+.burgerLine{
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+#burger div.topLine.open {
   top: 0px;
-  -webkit-transform-origin: left center;
-  -moz-transform-origin: left center;
-  -o-transform-origin: left center;
-  transform-origin: left center;
-}
-
-#burger.open div.burgerLine:nth-child(2) {
-  top: 18px;
-  -webkit-transform-origin: left center;
-  -moz-transform-origin: left center;
-  -o-transform-origin: left center;
-  transform-origin: left center;
-}
-
-#burger.open div.burgerLine:nth-child(3) {
-  top: 36px;
-  -webkit-transform-origin: left center;
-  -moz-transform-origin: left center;
-  -o-transform-origin: left center;
-  transform-origin: left center;
-}
-
-#burger.open div.burgerLine:nth-child(1) {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
   top: -3px;
   left: 8px;
-
 }
 
-#burger.open div.burgerLine:nth-child(2) {
+#burger div.midLine.open {
+  top: 18px;
   width: 0%;
   opacity: 0;
 }
 
-#burger.open div.burgerLine:nth-child(3) {
+#burger div.botLine.open {
+  top: 36px;
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
