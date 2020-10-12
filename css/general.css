@@ -253,9 +253,7 @@ div{
 .adventure-trav-img:hover{
 	height: 32.5%;
 }
-
 .image-behind{
-
 	z-index: -6!important;
 }
 /*		HEX 		*/
@@ -284,7 +282,6 @@ div{
 .neighbourhoood-img:hover{
 	height: 32.5%;
 }
-
 
 /*		WORK IN PROGRESS		*/
 #wip-heading{
