@@ -247,7 +247,6 @@ div{
 	display: inline-block;
 	height: 32%;
 	transition: .5s ease;
-	z-index: -6!important;
 
 }
 
@@ -255,7 +254,10 @@ div{
 	height: 32.5%;
 }
 
+.image-behind{
 
+	z-index: -6!important;
+}
 /*		HEX 		*/
 #hex-heading{
 	  font-family: 'eight-bit', serif;
