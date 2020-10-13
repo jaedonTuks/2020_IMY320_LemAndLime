@@ -4,15 +4,17 @@ let cursor=$("#cursor");
 let highlight=$("#cursorB");
 $(()=>{
   $(window).mousemove(followMouse);
-  $(window).on("mouseleave",hideCursor);
   $(".hover").on("mouseenter",growCursor);
   $(".hover").on("mouseleave",shrinkCursor);
 });
 
 function followMouse(e){
   let y=e.clientY;
-  cursor.css({left: e.clientX,top:e.clientY });
-  highlight.css({left: e.clientX,top:e.clientY });
+
+  cursor.css({left: e.clientX+"px",top:e.clientY +"px"});
+  highlight.css({left: e.clientX+"px",top:e.clientY+"px" });
+
+// console.log(highlight.css("left"));
 }
 function growCursor(){
   cursor.css("opacity","0%");
@@ -22,7 +24,7 @@ function growCursor(){
   highlight.css("opacity","100%");
 }
 function shrinkCursor(){
-
+  
   cursor.css("opacity","100%");
   cursor.css("width","8%");
   highlight.css("opacity","0%");

@@ -1,45 +1,122 @@
 let open=false;
+let canClick=true;
 $(()=>{
-  // $("#burgerMenuBox").hide();
+
+  $("#burger").on("click",burgerClick);
 });
-$("#burger").on("click",(e)=>{
+
+
+
+function burgerClick(e){
   highlight.css({left: e.clientX,top:e.clientY });
+  if(!canClick){return;}
+
+  canClick=false;
   if(open)
     hide();
   else
     showMenu();
-});
+}
 $("nav #burgerMenuBox div a").on("click",hide);
 
 
 function showMenu(){
-  $("#burgerMenuBox").animate({
-    width:"100%"
-  },200);
-  $(".page-indicator").hide();
 
-  $("#burger").addClass("open");
+    $("#burgerMenuBox").show();
+  $(".page-indicator").hide();
+//
   $("#cursor,#cursorB").css({
     "z-index":10
   });
-  $("#navBack").css({
-    "min-width":"40%"
-  });
-  open=true;
-}
+  $("#navBack")
+  .animate({
+      "min-width":"50%"
+    },200,"linear",
+    ()=>{
+      console.log("this anim finished next one");
+      $("#burgerMenuBox").animate({
+        width:"100%"
+      },200);
+    }
+  );
+  burgerCross();
+  //  $(".burgerLine").addClass("open"); //problem here
+  setTimeout(()=>{
+    canClick=true;
+  },1000);
+    open=true;
+  }
 function hide(){
+  $("#burgerMenuBox").hide();
   $("#burgerMenuBox").animate({
-    width:"0%"
-  },0);
-  $(".page-indicator").show();
-  $("#burger").removeClass("open");
-  $("#cursor,#cursorB").css({
-    "z-index":-5
+    width:"0%",
+    top:"0"
+  },200,"linear",()=>{
+    console.log("backnow");
+    $("#navBack").css({
+      "min-width":"0%"
+    });
+
   });
-  $("#navBack").css({
-    "min-width":"0%"
-  });
+  // $(".burgerLine").removeClass("open"); //problem here
+  burgerNormal();
+  setTimeout(()=>{
+    $("#cursor,#cursorB").css({
+      "z-index":-5
+    });
+    $(".page-indicator").show();
+    canClick=true;
+  },1000);
+
   open=false;
+}
+function burgerCross(){
+  console.log("makignCross");
+  $(".topLine").css({
+    "-webkit-transform": "rotate(45deg)",
+    "-moz-transform": "rotate(45deg)",
+    "-o-transform": "rotate(45deg)",
+    "transform": "rotate(45deg)",
+    "top": "-3px",
+    "left": "8px"
+  });
+  $(".botLine").css({
+    "-webkit-transform": "rotate(-45deg)",
+    "-moz-transform": "rotate(-45deg)",
+    "-o-transform": "rotate(-45deg)",
+    "transform": "rotate(-45deg)",
+    "top": "39px",
+    "left": "8px"
+  });
+  $(".midLine").css({
+    "top": "18px",
+    "width": "0%",
+    "opactiy":"0"
+  });
+}
+
+function burgerNormal(){
+  $(".topLine").css({
+    "-webkit-transform": "rotate(0deg)",
+    "-moz-transform": "rotate(0deg)",
+    "-o-transform": "rotate(0deg)",
+    "transform": "rotate(0deg)",
+    "top": "-3px",
+    "left": "8px"
+  });
+  $(".botLine").css({
+    "-webkit-transform": "rotate(0deg)",
+    "-moz-transform": "rotate(0deg)",
+    "-o-transform": "rotate(0deg)",
+    "transform": "rotate(0deg)",
+    "top": "39px",
+    "left": "8px"
+  });
+  $(".midLine").css({
+    "top": "18px",
+    "width": "45px",
+    "opactiy":"1"
+  });
 }
 
 swup.on('contentReplaced', switchPage);
