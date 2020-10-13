@@ -2,6 +2,7 @@ let open=false;
 let canClick=true;
 $(()=>{
 
+  $("#burgerMenuBox").hide();
   $("#burger").on("click",burgerClick);
 });
 
@@ -145,8 +146,13 @@ const pageInfo={
     }
 }
 function switchPage(){
+
   //ensure hiding of burger if open
   hide();
+
+  $(".hover").on("mouseenter",growCursor);
+  $(".hover").on("mouseleave",shrinkCursor);
+  $("a").on("click",  shrinkCursor);
  // setTimeout(function(){ alreadyScrolling=false; }, 1000);
   let newCursorSrc;
   let currElement;
