@@ -16,6 +16,8 @@ let composer;
 let antialiasPass;
 let modelAnims;
 
+let loaderReadyToRemove=false;
+
 let mixer;
 let prevTime=Date.now();
 
@@ -107,13 +109,17 @@ function init(){
   //load model
   let loader=new GLTFLoader();
   loader.load('./media/3dModels/float4.gltf',(gltf)=>{
-      $("#loadingScreen").remove();
+      //$("#loadingScreen").remove();
+
+      loaderReadyToRemove=true;
       model = gltf.scene;
       modelAnims=gltf.animations;
 
       setAnimations();
       scene.add(model);
-
+      setTimeout(()=>{
+          $("#loadingScreen").remove();
+      },1500);
       setMaterials();
       addParticles();
       animate();

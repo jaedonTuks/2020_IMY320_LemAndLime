@@ -35,7 +35,7 @@ body{
     font-size:4em;
     display: absolute;
     text-align:center;
-    margin-top:45%;
+    margin-top:5%;
 }
 /* loading animation adapted from free front end.com */
 #loadingAnim {
@@ -51,8 +51,8 @@ body{
 }
 
 .stroke-animation {
-  -webkit-animation: stroke-spacing 1.2s linear, stroke-color 4.8s linear;
-          animation: stroke-spacing 1.2s linear, stroke-color 4.8s linear;
+  -webkit-animation: stroke-spacing 1.2s ease-in, stroke-color 4.8s linear;
+          animation: stroke-spacing 1.2s ease-in, stroke-color 4.8s linear;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   -webkit-animation-delay: 0;
