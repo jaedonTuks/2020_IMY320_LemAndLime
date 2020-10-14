@@ -124,7 +124,7 @@ function setMaterials(){
   setMaterialBodyJelly();
   setMaterialBigTentacles();
   setMaterialSmallTentacles();
-  switchAllColors({r: 163 /255, g: 49/255, b: 0/255});
+  changeMaterialsSwup();
 }
 
 function setMaterialBodyJelly(){
