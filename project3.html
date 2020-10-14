@@ -23,27 +23,37 @@
 
 </head>
 <body>
+  <div id="loadingScreen">
+
+    <svg width="200" height="200" viewBox="0 0 100 100" id="loadingAnim">
+      <polyline class="line-cornered stroke-still" points="0,0 100,0 100,100" stroke-width="10" fill="none"></polyline>
+      <polyline class="line-cornered stroke-still" points="0,0 0,100 100,100" stroke-width="10" fill="none"></polyline>
+      <polyline class="line-cornered stroke-animation" points="0,0 100,0 100,100" stroke-width="10" fill="none"></polyline>
+      <polyline class="line-cornered stroke-animation" points="0,0 0,100 100,100" stroke-width="10" fill="none"></polyline>
+    </svg>
+      <h1>Lem And Lime</h1>
+  </div>
   <div class="scene">
   </div>
   <div id="navBack">
   </div>
   <nav>
     <div id="burger" class="hover">
-      <div class="topLine burgerLine highlightOrange">
+      <div class="topLine burgerLine highlightBlue">
       </div>
-      <div class="midLine burgerLine highlightOrange">
+      <div class="midLine burgerLine highlightBlue">
       </div>
-      <div class="botLine burgerLine highlightOrange">
+      <div class="botLine burgerLine highlightBlue">
       </div>
     </div>
     <div id="burgerMenuBox" class="hover">
-      <div><a class="active" id="home">Home</a></div>
-      <div><a href="/2020_IMY320_LemAndLime/project1.html" id="fud">Fud Application Design</a></div>
-      <div><a href="/2020_IMY320_LemAndLime/project2.html" id="adventure">Adventure Travel Website</a></div>
-      <div><a href="/2020_IMY320_LemAndLime/project3.html" id="hex">Hex Game</a></div>
-      <div><a href="/2020_IMY320_LemAndLime/project4.html" id="promo">American Authors Promotional Video</a></div>
-      <div><a href="/2020_IMY320_LemAndLime/project5.html" id="horror">Horror Short film</a></div>
-      <div><a href="/2020_IMY320_LemAndLime/about.html" id="aboutBurger">About us</a></div>
+      <div><a href="/2020_IMY320_LemAndLime/index.html" id="home" class="hoverBlue">Home</a></div>
+      <div><a href="/2020_IMY320_LemAndLime/project1.html" id="fud" class="hoverBlue">Fud Application Design</a></div>
+      <div><a href="/2020_IMY320_LemAndLime/project2.html" id="adventure" class="hoverBlue">Adventure Travel Website</a></div>
+      <div><a  id="hex" class="active hoverBlue">Hex Game</a></div>
+      <div><a href="/2020_IMY320_LemAndLime/project4.html" id="promo" class="hoverBlue">American Authors Promotional Video</a></div>
+      <div><a href="/2020_IMY320_LemAndLime/project5.html" id="horror" class="hoverBlue">Horror Short film</a></div>
+      <div><a href="/2020_IMY320_LemAndLime/about.html" id="aboutBurger" class="hoverBlue">About us</a></div>
     </div>
   </nav>
   <div class="contianer">
@@ -134,7 +144,7 @@
 
 
   <img src="./media/cursor/c-black.svg" alt="" id="cursor">
-  <img src="./media/cursor/c-highlightPurple.svg" alt="" id="cursorB" style="opacity:0%">
+  <img src="./media/cursor/c-highlightBlue.svg" alt="" id="cursorB" style="opacity:0%">
   <!-- <div id="cursorCenter"></div> -->
 
   <!--javascript-->
