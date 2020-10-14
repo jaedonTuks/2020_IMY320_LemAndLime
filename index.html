@@ -23,6 +23,18 @@
 
 </head>
 <body>
+  <div id="loadingScreen">
+
+    <!-- <img src="./media/loaders/loader3.svg" alt="Loading animation" >
+    <!-- <img src="./media/cursor/c-highlightOrange.svg" alt="" id="loadingAnim" > --> -->
+    <svg width="200" height="200" viewBox="0 0 100 100" id="loadingAnim">
+      <polyline class="line-cornered stroke-still" points="0,0 100,0 100,100" stroke-width="10" fill="none"></polyline>
+      <polyline class="line-cornered stroke-still" points="0,0 0,100 100,100" stroke-width="10" fill="none"></polyline>
+      <polyline class="line-cornered stroke-animation" points="0,0 100,0 100,100" stroke-width="10" fill="none"></polyline>
+      <polyline class="line-cornered stroke-animation" points="0,0 0,100 100,100" stroke-width="10" fill="none"></polyline>
+    </svg>
+      <h1>Lem And Lime</h1>
+  </div>
   <img src="./media/cursor/c-black.svg" alt="" id="cursor">
   <img src="./media/cursor/c-highlightOrange.svg" alt="" id="cursorB" style="opacity:0%">
 
@@ -142,5 +154,10 @@
 
   <script src="./js/3d/three/three.min.js"></script>
   <script src="./js/3d/app.js" type="module"></script>
+  <script>
+    window.addEventListener('scroll', () =>{
+      console.log("screee");
+    });
+  </script>
 </body>
 </html>

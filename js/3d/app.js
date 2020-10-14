@@ -107,7 +107,7 @@ function init(){
   //load model
   let loader=new GLTFLoader();
   loader.load('./media/3dModels/float4.gltf',(gltf)=>{
-
+      $("#loadingScreen").remove();
       model = gltf.scene;
       modelAnims=gltf.animations;
 
