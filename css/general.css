@@ -45,7 +45,8 @@
 	cursor:none;
 }
 html {
-  height: 100%;
+  min-height: 100%;
+	height: 100%;
 }
 body{
   font-family: 'roboto-thin', sans-serif;
@@ -54,13 +55,27 @@ body{
   overflow-x: hidden;
 	overflow-y: hidden;
   min-height: 100%;
+	height: 100%;
   scrollbar-width: none;
 }
+.contianer{
+	height: inherit;
+}
+.nav-row{
+	height: 20%;
+}
+main{
+	height: 80%;
+}
+.content-row{
+	height: 100%;
+}
+
 .logo{
-  float:right;
-  margin-top:4em;
-  margin-right:4em;
-  text-align: right;
+	position: absolute;
+	top: 4em;
+	right: 35%;
+	text-align: right;
 }
 .logo div{
   color: white;
@@ -77,11 +92,12 @@ body{
 }
 .page-content{
 	color: white;
-	font-size: 85%;
 	width: 100%;
-	height: 92%;
+	height: 100%;
 	z-index:1;
-	margin-top: 8%;
+}
+.landingPageText{
+	width: 100%;
 }
 .page-indicator{
   margin-top: 50%;
@@ -89,8 +105,12 @@ body{
 .page-indicator.small{
 	  margin-top: 80%;
 }
+.page-indicator-content{
+	margin-left: 3em;
+}
 .page-indicator ul{
   padding: 0;
+	margin: 0;
   text-align: center;
   list-style: none;
 }
@@ -121,7 +141,10 @@ body{
 }
 
 .more{
-	margin-top: 30em;
+position: absolute;
+bottom: 15%;
+right: 35%;
+
 }
 .more a{
 	display: block;
@@ -134,7 +157,7 @@ a:hover{
 	text-decoration: none;
 }
 .arrow{
-  width: 16%;
+  width: 24px;
 }
 .more-up{
 	position: relative;
@@ -180,41 +203,6 @@ div{
 	-khtml-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
-}
-.studioName h1{
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	font-size: 12rem;
-	font-family:  'roboto', sans-serif;
-	line-height: 110%;
-}
-
-.studioName h2{
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	font-size: 5rem;
-
-	font-family:  'roboto', sans-serif;
-	line-height: 0%;
-}
-.studioName:nth-child(1){
-	margin-left:8rem;
-}
-
-.studioName:nth-child(2){
-	margin-left:26rem;
-}
-
-.studioName:nth-child(3){
-	margin-left:32rem;
 }
 /*		FUD PAGE		*/
 #fud-app-heading{
