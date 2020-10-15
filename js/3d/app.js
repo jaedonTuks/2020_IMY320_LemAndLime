@@ -119,7 +119,7 @@ function init(){
       scene.add(model);
       setTimeout(()=>{
           $("#loadingScreen").remove();
-      },1500);
+      },1600);
       setMaterials();
       addParticles();
       animate();
@@ -309,8 +309,8 @@ function onDocumentMouseMove( event ) {
     mouse.x = ( event.clientX - mouse.windowHalfX );
     mouse.y = ( event.clientY - mouse.windowHalfY );
 
-    mouse.x*=-0.0001;
-    mouse.y*=-0.0001;
+    mouse.x*=-0.0002;
+    mouse.y*=-0.0002;
   //  console.log(mouse);
 }
 
@@ -352,7 +352,7 @@ const pageInfo={
     cursorHighlightSrc:"./media/cursor/c-highlightOrange.svg"
   },
   about:{
-      bodycolor:{r: 41 /255, g: 7/255, b: 97/255},
+      bodycolor:{r: 108 /255, g: 16/255, b: 161/255},
       particleColor:{r: 139 /255, g: 0/255, b: 194/255},
       cameraPosition:[18,-1,-0.5],
       cursorHighlightSrc:"./media/cursor/c-highlightPurple.svg"
