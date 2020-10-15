@@ -41,27 +41,37 @@
 
 </head>
 <body>
+  <div id="loadingScreen">
+
+    <svg width="200" height="200" viewBox="0 0 100 100" id="loadingAnim">
+      <polyline class="line-cornered stroke-still" points="0,0 100,0 100,100" stroke-width="10" fill="none"></polyline>
+      <polyline class="line-cornered stroke-still" points="0,0 0,100 100,100" stroke-width="10" fill="none"></polyline>
+      <polyline class="line-cornered stroke-animation" points="0,0 100,0 100,100" stroke-width="10" fill="none"></polyline>
+      <polyline class="line-cornered stroke-animation" points="0,0 0,100 100,100" stroke-width="10" fill="none"></polyline>
+    </svg>
+      <h1>Lem And Lime</h1>
+  </div>
   <div class="scene">
   </div>
   <div id="navBack">
   </div>
   <nav>
     <div id="burger" class="hover">
-      <div class="topLine burgerLine highlightOrange">
+      <div class="topLine burgerLine highlightPurple">
       </div>
-      <div class="midLine burgerLine highlightOrange">
+      <div class="midLine burgerLine highlightPurple">
       </div>
-      <div class="botLine burgerLine highlightOrange">
+      <div class="botLine burgerLine highlightPurple">
       </div>
     </div>
     <div id="burgerMenuBox" class="hover">
-      <div><a class="active" id="home">Home</a></div>
-      <div><a href="/2020_IMY320_LemAndLime/project1.html" id="fud">Fud Application Design</a></div>
-      <div><a href="/2020_IMY320_LemAndLime/project2.html" id="adventure">Adventure Travel Website</a></div>
-      <div><a href="/2020_IMY320_LemAndLime/project3.html" id="hex">Hex Game</a></div>
-      <div><a href="/2020_IMY320_LemAndLime/project4.html" id="promo">American Authors Promotional Video</a></div>
-      <div><a href="/2020_IMY320_LemAndLime/project5.html" id="horror">Horror Short film</a></div>
-      <div><a href="/2020_IMY320_LemAndLime/about.html" id="aboutBurger">About us</a></div>
+      <div><a href="/2020_IMY320_LemAndLime/index.html" id="home" class="hoverPurple">Home</a></div>
+      <div><a href="/2020_IMY320_LemAndLime/project1.html" id="fud" class="hoverPurple">Fud Application Design</a></div>
+      <div><a href="/2020_IMY320_LemAndLime/project2.html" id="adventure" class="hoverPurple">Adventure Travel Website</a></div>
+      <div><a href="/2020_IMY320_LemAndLime/project3.html" id="hex" class="hoverPurple">Hex Game</a></div>
+      <div><a href="/2020_IMY320_LemAndLime/project4.html" id="promo" class="hoverPurple">American Authors Promotional Video</a></div>
+      <div><a href="/2020_IMY320_LemAndLime/project5.html" id="horror" class="hoverPurple">Horror Short film</a></div>
+      <div><a id="aboutBurger"  class="active hoverPurple">About us</a></div>
     </div>
   </nav>
   <div class="contianer">
@@ -89,9 +99,9 @@
         <div class="transition-left col-sm-2">
           <div class="page-indicator small">
             <ul>
-              <li><img class="filled" src="media/images/filled-circle.svg" /></li>
+              <li><a href="/2020_IMY320_LemAndLime/index.html" class="hover"><img class="filled" src="media/images/filled-circle-p.svg" /></a></li>
               <li><img class="line" src="media/images/line.svg" /></li>
-              <li><img  class="filled"src="media/images/filled-circle.svg" /></li>
+              <li><a href="/2020_IMY320_LemAndLime/project3.html" class="hover"><img class="filled" src="media/images/filled-circle-p.svg" /></a></li>
               <li><img class="line" src="media/images/line.svg" /></li>
               <li><img class="unfilled" src="media/images/unfilled-circle.svg" /></li>
             </ul>
@@ -118,8 +128,9 @@
                             <b>Top skills:</b><br />
                             <ul class="about-list">
                               <li>Front-end web development</li>
+                              <li>Game design</li>
+                              <li>Computer Graphics</li>
                               <li>UX testing & design</li>
-                              <li>graphic design & layout</li>
                             </ul>
                           </div>
                         </div>
@@ -129,12 +140,12 @@
                         <div class="col-sm-12">
                           Hi, I'm Jaedon and I'm currently completing my degree in
                           BIS Multimedia. I enjoy web design, experimenting with webgl and game design.
-                          When you can't find me by a computer, I'll propably be longboarding or making some coffee.
+                          When you can't find me by a computer I'll propably be longboarding or making some coffee but using social media works too...
                         </div>
                         <div class="col-sm-12 social-media-container">
-                          <img class="social-media-img hover" src="media/images/instagram-brands.svg" alt="instagram icon"/>
-                          <img class="social-media-img hover" src="media/images/linkedin-in-brands.svg" alt="linkedIn icon"/>
-                          <img class="social-media-img hover" src="media/images/envelope-regular.svg" alt="email icon"/>
+                          <a href="https://www.instagram.com/baedon_the_boron/?hl=en" class="hover"><img class="social-media-img hover" src="media/images/instagram-brands-g.svg" alt="instagram icon"/></a>
+                          <a href="https://www.linkedin.com/in/jaedon-heger-8778b1185" class="hover"><img class="social-media-img hover" src="media/images/linkedin-in-brands-g.svg" alt="linkedIn icon"/></a>
+                          <a href="mailto:jaedon.heger@gmail.com" class="hover"><img class="social-media-img hover" src="media/images/envelope-regular-g.svg" alt="email icon"/></a>
                         </div>
                       </div>
                     </div>
@@ -165,9 +176,9 @@
                           like spending my weekends out and about and under the sun.
                       </div>
                       <div class="col-sm-12 social-media-container">
-                        <a href="https://www.instagram.com/jono_bertram/?hl=en"><img class="social-media-img hover" src="media/images/instagram-brands.svg" alt="instagram icon"/></a>
-                        <a href="https://www.linkedin.com/in/jonathan-bertram-8492a915b/"><img class="social-media-img hover" src="media/images/linkedin-in-brands.svg" alt="linkedIn icon"/></a>
-                        <a href="mailto:jonathan23bertram@gmail.com"><img class="social-media-img hover" src="media/images/envelope-regular.svg" alt="email icon"/></a>
+                        <a href="https://www.instagram.com/jono_bertram/?hl=en" class="hover"><img class="social-media-img " src="media/images/instagram-brands-y.svg" alt="instagram icon"/></a>
+                        <a href="https://www.linkedin.com/in/jonathan-bertram-8492a915b/" class="hover"><img class="social-media-img hover" src="media/images/linkedin-in-brands-y.svg" alt="linkedIn icon"/></a>
+                        <a href="mailto:jonathan23bertram@gmail.com" class="hover"><img class="social-media-img hover" src="media/images/envelope-regular-y.svg" alt="email icon"/></a>
                       </div>
                     </div>
                   </div>

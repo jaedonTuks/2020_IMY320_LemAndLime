@@ -2,6 +2,7 @@ let open=false;
 let canClick=true;
 $(()=>{
 
+  $("#burgerMenuBox").hide();
   $("#burger").on("click",burgerClick);
 });
 
@@ -22,6 +23,7 @@ $("nav #burgerMenuBox div a").on("click",hide);
 
 function showMenu(){
 
+    $("#burgerMenuBox").show();
   $(".page-indicator").hide();
 //
   $("#cursor,#cursorB").css({
@@ -46,6 +48,7 @@ function showMenu(){
     open=true;
   }
 function hide(){
+  $("#burgerMenuBox").hide();
   $("#burgerMenuBox").animate({
     width:"0%",
     top:"0"
@@ -143,8 +146,13 @@ const pageInfo={
     }
 }
 function switchPage(){
+
   //ensure hiding of burger if open
   hide();
+
+  $(".hover").on("mouseenter",growCursor);
+  $(".hover").on("mouseleave",shrinkCursor);
+  $("a").on("click",  shrinkCursor);
  // setTimeout(function(){ alreadyScrolling=false; }, 1000);
   let newCursorSrc;
   let currElement;

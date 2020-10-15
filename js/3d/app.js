@@ -16,6 +16,8 @@ let composer;
 let antialiasPass;
 let modelAnims;
 
+let loaderReadyToRemove=false;
+
 let mixer;
 let prevTime=Date.now();
 
@@ -107,13 +109,17 @@ function init(){
   //load model
   let loader=new GLTFLoader();
   loader.load('./media/3dModels/float4.gltf',(gltf)=>{
+      //$("#loadingScreen").remove();
 
+      loaderReadyToRemove=true;
       model = gltf.scene;
       modelAnims=gltf.animations;
 
       setAnimations();
       scene.add(model);
-
+      setTimeout(()=>{
+          $("#loadingScreen").remove();
+      },1600);
       setMaterials();
       addParticles();
       animate();
@@ -124,7 +130,7 @@ function setMaterials(){
   setMaterialBodyJelly();
   setMaterialBigTentacles();
   setMaterialSmallTentacles();
-  switchAllColors({r: 163 /255, g: 49/255, b: 0/255});
+  changeMaterialsSwup();
 }
 
 function setMaterialBodyJelly(){
@@ -303,8 +309,8 @@ function onDocumentMouseMove( event ) {
     mouse.x = ( event.clientX - mouse.windowHalfX );
     mouse.y = ( event.clientY - mouse.windowHalfY );
 
-    mouse.x*=-0.0001;
-    mouse.y*=-0.0001;
+    mouse.x*=-0.0002;
+    mouse.y*=-0.0002;
   //  console.log(mouse);
 }
 
@@ -346,7 +352,7 @@ const pageInfo={
     cursorHighlightSrc:"./media/cursor/c-highlightOrange.svg"
   },
   about:{
-      bodycolor:{r: 41 /255, g: 7/255, b: 97/255},
+      bodycolor:{r: 108 /255, g: 16/255, b: 161/255},
       particleColor:{r: 139 /255, g: 0/255, b: 194/255},
       cameraPosition:[18,-1,-0.5],
       cursorHighlightSrc:"./media/cursor/c-highlightPurple.svg"

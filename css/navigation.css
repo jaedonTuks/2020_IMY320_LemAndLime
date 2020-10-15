@@ -82,10 +82,12 @@ nav{
   overflow-x: hidden;
 
 }
-
+#burgerMenuBox{
+  padding-top: 5%;
+}
 #burgerMenuBox div a {
   color:rgb(219,219,219);
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   padding: 15px 20px;
   position: relative;
   -webkit-touch-callout: none;
@@ -120,6 +122,9 @@ nav{
   width:80%;
   left:10%;
 }
+
+
+
 a.active.hoverOrange{
   color:rgba(255, 140, 27,0.8) !important;
 }
@@ -180,4 +185,14 @@ a.hoverPurple:hover{
   transform: rotate(-45deg);
   top: 39px;
   left: 8px;
+}
+
+/* Page indicators */
+.page-indicator ul li a img,.page-indicator ul li img{
+  transition:0.2s;
+  filter:grayscale(100%);
+}
+.page-indicator ul li a img.filled:hover{
+
+  filter:grayscale(0%);
 }

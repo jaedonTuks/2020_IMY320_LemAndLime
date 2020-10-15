@@ -23,27 +23,37 @@
 
 </head>
 <body>
+  <div id="loadingScreen">
+
+    <svg width="200" height="200" viewBox="0 0 100 100" id="loadingAnim">
+      <polyline class="line-cornered stroke-still" points="0,0 100,0 100,100" stroke-width="10" fill="none"></polyline>
+      <polyline class="line-cornered stroke-still" points="0,0 0,100 100,100" stroke-width="10" fill="none"></polyline>
+      <polyline class="line-cornered stroke-animation" points="0,0 100,0 100,100" stroke-width="10" fill="none"></polyline>
+      <polyline class="line-cornered stroke-animation" points="0,0 0,100 100,100" stroke-width="10" fill="none"></polyline>
+    </svg>
+      <h1>Lem And Lime</h1>
+  </div>
   <div class="scene">
   </div>
   <div id="navBack">
   </div>
   <nav>
     <div id="burger" class="hover">
-      <div class="topLine burgerLine highlightOrange">
+      <div class="topLine burgerLine highlightBlue">
       </div>
-      <div class="midLine burgerLine highlightOrange">
+      <div class="midLine burgerLine highlightBlue">
       </div>
-      <div class="botLine burgerLine highlightOrange">
+      <div class="botLine burgerLine highlightBlue">
       </div>
     </div>
     <div id="burgerMenuBox" class="hover">
-      <div><a class="active" id="home">Home</a></div>
-      <div><a href="/2020_IMY320_LemAndLime/project1.html" id="fud">Fud Application Design</a></div>
-      <div><a href="/2020_IMY320_LemAndLime/project2.html" id="adventure">Adventure Travel Website</a></div>
-      <div><a href="/2020_IMY320_LemAndLime/project3.html" id="hex">Hex Game</a></div>
-      <div><a href="/2020_IMY320_LemAndLime/project4.html" id="promo">American Authors Promotional Video</a></div>
-      <div><a href="/2020_IMY320_LemAndLime/project5.html" id="horror">Horror Short film</a></div>
-      <div><a href="/2020_IMY320_LemAndLime/about.html" id="aboutBurger">About us</a></div>
+      <div><a href="/2020_IMY320_LemAndLime/index.html" id="home" class="hoverBlue">Home</a></div>
+      <div><a href="/2020_IMY320_LemAndLime/project1.html" id="fud" class="hoverBlue">Fud Application Design</a></div>
+      <div><a href="/2020_IMY320_LemAndLime/project2.html" id="adventure" class="hoverBlue">Adventure Travel Website</a></div>
+      <div><a href="/2020_IMY320_LemAndLime/project3.html"id="hex" class="hoverBlue">Hex Game</a></div>
+      <div><a href="/2020_IMY320_LemAndLime/project4.html" id="promo" class="hoverBlue">American Authors Promotional Video</a></div>
+      <div><a  id="horror" class="active hoverBlue">Horror Short film</a></div>
+      <div><a href="/2020_IMY320_LemAndLime/about.html" id="aboutBurger" class="hoverBlue">About us</a></div>
     </div>
   </nav>
   <div class="contianer">
@@ -71,13 +81,13 @@
         <div class="transition-left col-sm-2">
           <div class="page-indicator">
             <ul>
-              <li><img class="filled" src="media/images/filled-circle.svg" /></li>
+              <li><a href="/2020_IMY320_LemAndLime/project1.html" class="hover" ><img class="filled" src="media/images/filled-circle.svg" /></a></li>
               <li><img class="line" src="media/images/line.svg" /></li>
-              <li><img  class="filled"src="media/images/filled-circle.svg" /></li>
+              <li><a href="/2020_IMY320_LemAndLime/project2.html" class="hover" ><img  class="filled"src="media/images/filled-circle.svg" /></a></li>
               <li><img class="line" src="media/images/line.svg" /></li>
-              <li><img class="filled" src="media/images/filled-circle.svg" /></li>
+              <li><a href="/2020_IMY320_LemAndLime/project3.html" class="hover" ><img class="filled" src="media/images/filled-circle.svg" /></a></li>
               <li><img class="line" src="media/images/line.svg" /></li>
-              <li><img  class="filled"src="media/images/filled-circle.svg" /></li>
+              <li><a href="/2020_IMY320_LemAndLime/project4.html" class="hover" ><img  class="filled"src="media/images/filled-circle.svg" /></a></li>
               <li><img class="line" src="media/images/line.svg" /></li>
               <li><img class="unfilled" src="media/images/unfilled-circle.svg" /></li>
             </ul>
@@ -93,7 +103,7 @@
               <div class="page-content">
                 <div class="row">
                   <div class="col-sm-4">
-                    <h1 id="after-hours-heading">After Hours</h1>
+                    <h1 id="after-hours-heading" class="heading hover "><a href="#" class="hoverBlue">After Hours</a></h1>
                     <div> <b>Project dates:</b> Jul ‘20 - Oct ’20<br />
                       <b>Type:</b> 3rd year group project<br /> <br />
                     </div>
@@ -120,10 +130,10 @@
               <div class="more transition-fade">
                 <div class="more-up">
                   <img class="arrow" src="media/images/up-arrow.svg" alt="Up-facing arrow"/>
-                  <a class="anchor-up" href="/2020_IMY320_LemAndLime/project4.html">prev</a>
+                  <a class="anchor-up hoverBlue hover" href="/2020_IMY320_LemAndLime/project4.html">prev</a>
                 </div>
                 <div class="more-down">
-                  <a class="anchor-down" href="/2020_IMY320_LemAndLime/about.html">next</a>
+                  <a class="anchor-down hoverBlue hover" href="/2020_IMY320_LemAndLime/about.html">next</a>
                   <img class="arrow" src="media/images/down-arrow.svg" alt="Down-facing arrow"/>
                 </div>
               </div>
@@ -137,7 +147,7 @@
 
 
   <img src="./media/cursor/c-black.svg" alt="" id="cursor">
-  <img src="./media/cursor/c-highlightPurple.svg" alt="" id="cursorB" style="opacity:0%">
+  <img src="./media/cursor/c-highlightBlue.svg" alt="" id="cursorB" style="opacity:0%">
   <!-- <div id="cursorCenter"></div> -->
 
   <!--javascript-->

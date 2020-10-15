@@ -1,19 +1,18 @@
 let alreadyScrolling=false;
 $(()=>{
-  $(window).bind('mousewheel',onScrollEvent);
-
-  console.log("scrollTranstion loaded");
+  $(window).bind('wheel',onScrollEvent);
+  console.log("scrollTranstion loaded boi");
 });
 
 // let onScrollEvent=debounce(
-  function onScrollEvent(event) {
+function onScrollEvent(event) {
+
    if(alreadyScrolling)
      return;
-
    alreadyScrolling=true;
    setTimeout(function(){ alreadyScrolling=false; }, 2000);
 
-   if(event.originalEvent.wheelDelta >= 0) {
+   if(event.originalEvent.deltaY <= 0) {
      console.log('Scroll up');
      if($("a.anchor-up").length){
        var currClass = $('#swup').attr("class");
