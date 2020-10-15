@@ -49,7 +49,7 @@ html {
 }
 body{
   font-family: 'roboto-thin', sans-serif;
-  background-image: url('./../media/tempBackground/tempBack.jpg');
+  /* background-image: url('./../media/tempBackground/tempBack.jpg'); */
   background-size: cover;
   overflow-x: hidden;
 	overflow-y: hidden;
@@ -360,4 +360,26 @@ h1.heading a.hoverBlue:after{
 }
 h1.heading:hover a.hoverBlue{
   color:rgb(3, 173, 252);
+}
+
+
+.limeColor,#about-jaedon b{
+	color:#69bf73!important;
+}
+
+.lemColor,#about-jono b{
+		color:#e3dd71!important;
+}
+div.blurBack{
+	position:absolute;
+	top:80px;
+	left:-10px;
+	z-index:0;
+	background-color:rgba(20, 20, 20, .50);
+	border-radius: 5px;
+	filter:blur(5px);
+	height:42%;
+	min-width: 100%;
+
+	min-height:35%;
 }
