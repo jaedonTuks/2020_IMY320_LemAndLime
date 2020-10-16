@@ -24,19 +24,16 @@
 </head>
 <body>
   <div id="loadingScreen">
-
     <svg width="200" height="200" viewBox="0 0 100 100" id="loadingAnim">
       <polyline class="line-cornered stroke-still" points="0,0 100,0 100,100" stroke-width="10" fill="none"></polyline>
       <polyline class="line-cornered stroke-still" points="0,0 0,100 100,100" stroke-width="10" fill="none"></polyline>
       <polyline class="line-cornered stroke-animation" points="0,0 100,0 100,100" stroke-width="10" fill="none"></polyline>
       <polyline class="line-cornered stroke-animation" points="0,0 0,100 100,100" stroke-width="10" fill="none"></polyline>
     </svg>
-      <h1>Lem And Lime</h1>
+    <h1>Lem And Lime</h1>
   </div>
-  <div class="scene">
-  </div>
-  <div id="navBack">
-  </div>
+  <div class="scene"></div>
+  <div id="navBack"></div>
   <nav>
     <div id="burger" class="hover">
       <div class="topLine burgerLine highlightBlue">
@@ -57,14 +54,10 @@
     </div>
   </nav>
   <div class="contianer">
-    <div class="row">
-
-      <div class="col-sm-2">
-
-      </div>
+    <div class="row nav-row">
+      <div class="col-sm-2"></div>
       <!-- spacing div -->
       <div class="col-sm-8"></div>
-
       <div class="col-sm-2">
         <div class="logo hover">
           <a href="/2020_IMY320_LemAndLime/about.html">
@@ -76,69 +69,71 @@
     </div>
 
     <main id="swup">
-
-      <div class="row">
-        <div class="transition-left col-sm-2">
+      <div class="row content-row">
+        <div class="transition-left col-sm-2 set-height">
           <div class="page-indicator">
-            <ul>
-              <li><a href="/2020_IMY320_LemAndLime/project1.html" class="hover"><img class="filled" src="media/images/filled-circle.svg" /></a></li>
-              <li><img class="line" src="media/images/line.svg" /></li>
-              <li><img class="unfilled" src="media/images/unfilled-circle.svg" /></li>
-              <li><img class="line" src="media/images/line.svg" /></li>
-              <li><a href="/2020_IMY320_LemAndLime/project3.html" class="hover"><img  class="filled"src="media/images/filled-circle.svg" /></a></li>
-              <li><img class="line" src="media/images/line.svg" /></li>
-              <li><a href="/2020_IMY320_LemAndLime/project4.html" class="hover"><img class="filled" src="media/images/filled-circle.svg" /></a></li>
-              <li><img class="line" src="media/images/line.svg" /></li>
-              <li><a href="/2020_IMY320_LemAndLime/project5.html" class="hover"><img  class="filled"src="media/images/filled-circle.svg" /></a></li>
-            </ul>
-            <span class="proj-indicator-label">p r o j e c t s</span>
+            <div class="page-indicator-content">
+              <ul>
+                <li><a href="/2020_IMY320_LemAndLime/project1.html" class="hover"><img class="filled" src="media/images/filled-circle.svg" /></a></li>
+                <li><img class="line" src="media/images/line.svg" /></li>
+                <li><img class="unfilled" src="media/images/unfilled-circle.svg" /></li>
+                <li><img class="line" src="media/images/line.svg" /></li>
+                <li><a href="/2020_IMY320_LemAndLime/project3.html" class="hover"><img  class="filled"src="media/images/filled-circle.svg" /></a></li>
+                <li><img class="line" src="media/images/line.svg" /></li>
+                <li><a href="/2020_IMY320_LemAndLime/project4.html" class="hover"><img class="filled" src="media/images/filled-circle.svg" /></a></li>
+                <li><img class="line" src="media/images/line.svg" /></li>
+                <li><a href="/2020_IMY320_LemAndLime/project5.html" class="hover"><img  class="filled"src="media/images/filled-circle.svg" /></a></li>
+              </ul>
+              <span class="proj-indicator-label">p r o j e c t s</span>
+            </div>
           </div>
         </div>
 
         <!-- main content -->
-        <div class="transition-next col-sm-10">
-          <div class="row">
+        <div class="transition-next col-sm-3 set-height">
+          <div>
+            <div class="page-content">
+              <div>
+                <span id="adventure-travel-heading" class="heading hover">
+                  <a href="http://adventuretravels.rf.gd/" class="hoverBlue">Adventure Travel</a>
+                </span>
+              </div>
 
-            <div class="col-sm-10">
-              <div class="page-content">
-                <div class="row">
-                  <div class="col-sm-4">
-                    <h1 id="adventure-travel-heading" class="heading hover"><a href="http://adventuretravels.rf.gd/" class="hoverBlue">Adventure Travel</a></h1>
-                    <div> <b>Project dates:</b> Jul ‘19 - Nov ’19 <br />
-                      <b>Type:</b> 2nd year individual project<br /> <br />
-                    </div>
-                    <div><b>Spec:</b> Full stack development of a responsive website that carries
-                      out an accomodation booking service. The site was launched and
-                      assessed from a live server.  <br /> <br />
+              <div> <b>Project dates:</b> Jul ‘19 - Nov ’19 <br />
+                <b>Type:</b> 2nd year individual project<br /> <br />
+              </div>
+              <div><b>Spec:</b> Full stack development of a responsive website that carries
+                out an accomodation booking service. The site was launched and
+                assessed from a live server.  <br /> <br />
 
-                      Adventure Travels aims to bring travellers
-                      holidays a little out of the ordinary. The website
-                      caters particulary to stunning places tucked away in nature
-                      or those found on the edges of the earth.
-                    </div>
-                  </div>
-                  <div class="col-sm-8 image-behind">
-                    <a href="http://adventuretravels.rf.gd/" ><img class="adventure-trav-img" id="adventure-trav-home" src="media/images/adventure-trav-home.png" alt="Adventure Travels webiste home screen" /></a>
-                  </div>
-                </div>
+                Adventure Travels aims to bring travellers
+                holidays a little out of the ordinary. The website
+                caters particulary to stunning places tucked away in nature
+                or those found on the edges of the earth.
               </div>
             </div>
-
-            <div class="col-sm-2">
-              <div class="more transition-fade">
-                <div class="more-up">
-                  <img class="arrow" src="media/images/up-arrow.svg" alt="Up-facing arrow"/>
-                  <a class="anchor-up hoverBlue hover" href="/2020_IMY320_LemAndLime/project1.html">prev</a>
-                </div>
-                <div class="more-down">
-                  <a class="anchor-down hoverBlue hover" href="/2020_IMY320_LemAndLime/project3.html">next</a>
-                  <img class="arrow" src="media/images/down-arrow.svg" alt="Down-facing arrow"/>
-                </div>
-              </div>
-            </div>
-
           </div>
         </div>
+
+        <div class="transition-next col-sm-5 set-height image-behind">
+          <div class="page-content">
+            <a href="http://adventuretravels.rf.gd/" ><img class="adventure-trav-img" id="adventure-trav-home" src="media/images/adventure-trav-home.png" alt="Adventure Travels webiste home screen" /></a>
+          </div>
+        </div>
+
+        <div class="col-sm-2 set-height">
+          <div class="more-proj transition-fade">
+            <div class="more-up">
+              <img class="arrow" src="media/images/up-arrow.svg" alt="Up-facing arrow"/>
+              <a class="anchor-up hoverBlue hover" href="/2020_IMY320_LemAndLime/project1.html">prev</a>
+            </div>
+            <div class="more-down">
+              <a class="anchor-down hoverBlue hover" href="/2020_IMY320_LemAndLime/project3.html">next</a>
+              <img class="arrow" src="media/images/down-arrow.svg" alt="Down-facing arrow"/>
+            </div>
+          </div>
+        </div>
+
       </div>
     </main>
   </div>
