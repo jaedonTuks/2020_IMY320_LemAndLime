@@ -45,22 +45,37 @@
 	cursor:none;
 }
 html {
-  height: 100%;
+  min-height: 100%;
+	height: 100%;
 }
 body{
   font-family: 'roboto-thin', sans-serif;
-  background-image: url('./../media/tempBackground/tempBack.jpg');
+  /* background-image: url('./../media/tempBackground/tempBack.jpg'); */
   background-size: cover;
   overflow-x: hidden;
 	overflow-y: hidden;
   min-height: 100%;
+	height: 100%;
   scrollbar-width: none;
 }
+.contianer{
+	height: inherit;
+}
+.nav-row{
+	height: 20%;
+}
+main{
+	height: 80%;
+}
+.content-row{
+	height: 100%;
+}
+
 .logo{
-  float:right;
-  margin-top:4em;
-  margin-right:4em;
-  text-align: right;
+	position: absolute;
+	top: 4em;
+	right: 35%;
+	text-align: right;
 }
 .logo div{
   color: white;
@@ -77,38 +92,47 @@ body{
 }
 .page-content{
 	color: white;
-	font-size: 85%;
 	width: 100%;
-	height: 92%;
+	height: 100%;
 	z-index:1;
-	margin-top: 8%;
+}
+.landingPageText{
+	width: 100%;
 }
 .page-indicator{
+	height: inherit;
   margin-top: 50%;
 }
 .page-indicator.small{
 	  margin-top: 80%;
 }
+.page-indicator-content{
+	margin-left: 3em;
+}
 .page-indicator ul{
   padding: 0;
+	margin: 0;
   text-align: center;
   list-style: none;
 }
 .page-indicator span{
-	font-size: 90%;
 	color: white;
 	writing-mode: vertical-rl;
   text-align: center;
 }
 .page-indicator-label{
 	position: relative;
-	left: 4em;
-	bottom: 8em;
+	left: 3em;
+	bottom: 7.5em;
 }
 .proj-indicator-label{
+	font-size: 90%;
 	position: relative;
-	left: 4em;
-	bottom: 13.5em;
+	left: 2em;
+	bottom: 11.5em;
+}
+.set-height{
+	height: inherit;
 }
 .unfilled{
   width: 16px;
@@ -120,10 +144,25 @@ body{
   width: 16px;
 }
 
-.more{
-	margin-top: 30em;
+.more-landing{
+position: absolute;
+bottom: 15%;
+right: 35%;
+
 }
-.more a{
+.more-landing a{
+	display: block;
+	font-size: 110%;
+	writing-mode: vertical-rl;
+	text-orientation: mixed;
+	color: white;
+}
+.more-proj{
+	position: absolute;
+	right: 35%;
+	bottom: 5%;
+}
+.more-proj a{
 	display: block;
 	font-size: 110%;
 	writing-mode: vertical-rl;
@@ -134,16 +173,16 @@ a:hover{
 	text-decoration: none;
 }
 .arrow{
-  width: 16%;
+  width: 24px;
 }
 .more-up{
 	position: relative;
+	right: 1.5em;
 	bottom: 2em;
 	transition:0.5s;
 }
 .more-down{
 	position: relative;
-	left: 1.5em;
 	bottom: 3em;
 }
 .more-single-link{
@@ -151,7 +190,6 @@ a:hover{
 }
 
 a.anchor-down{
-
 	font-weight: bold;
 	transition:0.5s;
 }
@@ -171,7 +209,11 @@ a.anchor-up:hover{
 
 .scroll-down-indicator{
 	margin-left: 45%;
-	margin-top: 2%;
+	margin-top: 8%;
+	filter:grayscale(100%);
+}
+.scroll-down-indicator:hover{
+	filter:grayscale(0%);
 }
 /* Index page */
 div{
@@ -181,117 +223,79 @@ div{
 	-moz-user-select: none;
 	-ms-user-select: none;
 }
-.studioName h1{
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	font-size: 12rem;
-	font-family:  'roboto', sans-serif;
-	line-height: 110%;
-}
-
-.studioName h2{
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	font-size: 5rem;
-
-	font-family:  'roboto', sans-serif;
-	line-height: 0%;
-}
-.studioName:nth-child(1){
-	margin-left:8rem;
-}
-
-.studioName:nth-child(2){
-	margin-left:26rem;
-}
-
-.studioName:nth-child(3){
-	margin-left:32rem;
-}
 /*		FUD PAGE		*/
 #fud-app-heading{
 	font-family: 'pacifico', sans-serif;
+	font-size: 4vw;
 }
 .fud-img{
 	display: inline-block;
-	height: 12%;
+	height: 100%;
+	position: relative;
+	bottom: 3em;
+	left: 2em;
 	transition: .5s ease;
 }
 .fud-img:hover{
-	height: 12.3%;
-}
-#fud-home{
-	z-index: -1;
-	position: relative;
-	bottom: 5em;
-	left: 2em;
-}
-#fud-login{
-	z-index: 0;
-	position: relative;
-	bottom: 3em;
-	right: 4em;
+	height: 101.5%;
 }
 
 /*		ADVENTURE TRAVELS		*/
-#adventure-travels-heading{
+#adventure-travel-heading{
 	  font-family: 'roboto', sans-serif;
+		font-size: 3vw;
 		font-weight: bold;
 }
 .adventure-trav-img{
 	display: inline-block;
-	height: 32%;
+	height: 70%;
 	transition: .5s ease;
 }
 .adventure-trav-img:hover{
-	height: 32.5%;
+	height: 71.5%;
 }
+
 
 /*		HEX 		*/
 #hex-heading{
-	  font-family: 'eight-bit', serif;
+		font-family: 'eight-bit', serif;
+		font-size: 4vw;
 }
 .hex-img{
 	display: inline-block;
-	height: 32%;
+	height: 70%;
 	transition: .5s ease;
 	z-index: -6!important;
 }
 .hex-img:hover{
-	height: 32.5%;
+	height: 71.5%;
 }
 /*		NEIGHBOURHOOD 		*/
-#neighbourhoood-heading{
+#neighbourhood-heading{
 	  font-family: 'digital-dream', serif;
+		font-size: 3vw;
 }
 .neighbourhoood-img{
 	display: inline-block;
-	height: 32%;
+	height: 70%;
 	transition: .5s ease;
 	z-index: -6!important;
 }
 .neighbourhoood-img:hover{
-	height: 32.5%;
+	height: 71.5%;
 }
 /*		AFTER HOURS 		*/
 #after-hours-heading{
 	  font-family: 'impact-label-reversed', serif;
+		font-size: 3vw;
 }
 .after-hours-img{
 	display: inline-block;
-	height: 32%;
+	height: 70%;
 	transition: .5s ease;
 }
 .after-hours-img:hover{
-	height: 32.5%;
+	height: 71.5%;
 }
 
 /*		WORK IN PROGRESS		*/
@@ -334,7 +338,7 @@ div{
   filter: grayscale(0%);
 }
 /* Heading hover effect */
- h1.heading a {
+ .heading a {
   color:rgb(219,219,219);
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -344,7 +348,7 @@ div{
   user-select: none;
 }
 /* hover effect adapted from https://codepen.io/francisco-risi-rosselot/pen/pogJmgV*/
- h1.heading  a:after {
+ .heading  a:after {
   bottom: 0.8rem;
   width: 0;
   content: "";
@@ -355,9 +359,34 @@ div{
   border-radius: 7px;
   transition: width 0.3s, left 0.3s;
 }
-h1.heading a.hoverBlue:after{
+.heading a.hoverBlue:after{
   background:  rgba(3, 173, 252,0.5);
 }
-h1.heading:hover a.hoverBlue{
+.heading:hover a.hoverBlue{
   color:rgb(3, 173, 252);
+}
+
+
+.limeColor,#about-jaedon b{
+	color:#69bf73!important;
+}
+
+.lemColor,#about-jono b{
+		color:#e3dd71!important;
+}
+div.blurBack{
+	position:absolute;
+	top:-10px;
+	left:-10px;
+	z-index:0;
+	background-color:rgba(20, 20, 20, .50);
+	border-radius: 5px;
+	filter:blur(5px);
+	height:90%;
+	min-width: 100%;
+
+	min-height:35%;
+}
+.aboutMore{
+	margin-top:40%;
 }

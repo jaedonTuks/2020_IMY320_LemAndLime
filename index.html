@@ -24,14 +24,13 @@
 </head>
 <body>
   <div id="loadingScreen">
-
     <svg width="200" height="200" viewBox="0 0 100 100" id="loadingAnim">
       <polyline class="line-cornered stroke-still" points="0,0 100,0 100,100" stroke-width="10" fill="none"></polyline>
       <polyline class="line-cornered stroke-still" points="0,0 0,100 100,100" stroke-width="10" fill="none"></polyline>
       <polyline class="line-cornered stroke-animation" points="0,0 100,0 100,100" stroke-width="10" fill="none"></polyline>
       <polyline class="line-cornered stroke-animation" points="0,0 0,100 100,100" stroke-width="10" fill="none"></polyline>
     </svg>
-      <h1>Lem And Lime</h1>
+    <h1>Lem And Lime</h1>
   </div>
   <img src="./media/cursor/c-black.svg" alt="" id="cursor">
   <img src="./media/cursor/c-highlightOrange.svg" alt="" id="cursorB" style="opacity:0%">
@@ -41,7 +40,6 @@
   <div id="navBack">
   </div>
   <nav>
-
     <div id="burger" class="hover">
       <div class="topLine burgerLine highlightOrange">
       </div>
@@ -58,34 +56,29 @@
       <div><a href="/2020_IMY320_LemAndLime/project4.html" id="promo" class="hoverOrange">American Authors Promotional Video</a></div>
       <div><a href="/2020_IMY320_LemAndLime/project5.html" id="horror" class="hoverOrange">Horror Short film</a></div>
       <div><a href="/2020_IMY320_LemAndLime/about.html" id="aboutBurger" class="hoverOrange">About us</a></div>
-
     </div>
-
   </nav>
-    <div class="contianer">
-      <div class="row">
 
-        <div class="col-sm-2">
-
-        </div>
-        <!-- spacing div -->
-        <div class="col-sm-8"></div>
-
-        <div class="col-sm-2">
-          <div class="logo">
-            <a href="/2020_IMY320_LemAndLime/about.html">
-              <img class="hover" src="media/images/lemAndLimeLogo.png" alt="Lem and Lime logo"/>
-              <div>Lem & Lime <br /> Studios</div>
-            </a>
-          </div>
+  <div class="contianer">
+    <div class="row nav-row">
+      <div class="col-sm-2"></div>
+      <!-- spacing div -->
+      <div class="col-sm-8"></div>
+      <div class="col-sm-2">
+        <div class="logo hover">
+          <a href="/2020_IMY320_LemAndLime/about.html">
+            <img class="hover" src="media/images/lemAndLimeLogo.png" alt="Lem and Lime logo"/>
+            <div>Lem & Lime <br /> Studios</div>
+          </a>
         </div>
       </div>
+    </div>
 
-      <main id="swup">
-
-        <div class="row">
-          <div class="transition-left col-sm-2">
-            <div class="page-indicator small">
+    <main id="swup">
+      <div class="row content-row">
+        <div class="transition-left col-sm-2">
+          <div class="page-indicator small">
+            <div class="page-indicator-content">
               <ul>
                 <li><img class="unfilled" src="media/images/unfilled-circle.svg" /></li>
                 <li><img class="line" src="media/images/line.svg" /></li>
@@ -96,43 +89,32 @@
               <span class="page-indicator-label">p a g e s</span>
             </div>
           </div>
+        </div>
 
-          <!-- main content -->
-
-          <div class="transition-next col-10">
-            <div class="row scrollBottom">
-              <div class="col-sm-10">
-                <div class="page-content indexCenter">
-                  <div id="lem" class="studioName">
-                    <h1>LEM</h1>
-                  </div>
-                  <div id="and" class="studioName">
-                    <h2>AND</h2>
-                  </div>
-                  <div id="lime" class="studioName">
-                    <h1>LIME</h1>
-                  </div>
-                </div>
-                <div class="scroll-down-indicator hover" >
-                  <a href="/2020_IMY320_LemAndLime/project1.html"><img  width="30px" src="media/images/scroll-down-indicator.gif" alt="Scroll down indicator" /></a>
-                </div>
-              </div>
-
-              <div class="col-sm-2">
-                <div class="more transition-fade">
-
-                  <div class="more-single-link hover highlightOrange">
-                    <a class="anchor-down hoverOrange hover" href="/2020_IMY320_LemAndLime/project1.html">projects</a>
-
-                    <img class="arrow" src="media/images/down-arrow.svg" alt="Down-facing arrow"/>
-                  </div>
-                </div>
-              </div>
+        <!-- main content -->
+        <div class="transition-next col-sm-8">
+          <div class="scrollBottom">
+            <div class="page-content indexCenter">
+              <img class="landingPageText" src="media/images/landing-page-text.svg" alt="Lem and Lime" />
+            </div>
+            <div class="scroll-down-indicator hover" >
+              <a href="/2020_IMY320_LemAndLime/project1.html"><img  width="30px" src="media/images/scroll-down-indicator.gif" alt="Scroll down indicator" /></a>
             </div>
           </div>
         </div>
-      </main>
-    </div>
+
+        <div class="col-sm-2">
+          <div class="more-landing transition-fade">
+            <div class="more-single-link hover highlightOrange">
+              <a class="anchor-down hoverOrange hover" href="/2020_IMY320_LemAndLime/project1.html">projects</a>
+              <img class="arrow" src="media/images/down-arrow.svg" alt="Down-facing arrow"/>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
 
 
   <!-- <div id="cursorCenter"></div> -->
@@ -149,6 +131,7 @@
   </script>
   <script src="./js/transitions/scrollTransition.js"></script>
   <script src="./js/nav/nav.js">  </script>
+  <script src="./js/preload.js">  </script>
 
   <script src="./js/3d/three/three.min.js"></script>
   <script src="./js/3d/app.js" type="module"></script>

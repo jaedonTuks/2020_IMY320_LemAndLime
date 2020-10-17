@@ -102,26 +102,26 @@ body{
   }
 }
 
-@-webkit-keyframes stroke-color {
-  0%  { stroke: #3498DB; }
-  24% { stroke: #643232; }
-  25% { stroke: #327864; }
-  49% { stroke: #327864; }
-  50% { stroke: #32326e; }
-  74% { stroke: #32326e; }
-  75% { stroke: #78325a; }
-  99% { stroke: #78325a; }
+ @-webkit-keyframes stroke-color {
+  0%  { stroke: #e3dd71; }
+  24% { stroke: #69bf73; }
+  25% { stroke: #69bf73; }
+  49% { stroke: #e3dd71; }
+  50% { stroke: #e3dd71; }
+  74% { stroke: #69bf73; }
+  75% { stroke: #69bf73; }
+  99% { stroke: #e3dd71; }
 }
 
 @keyframes stroke-color {
-  0%  { stroke: #3498DB; }
-  24% { stroke: #643232; }
-  25% { stroke: #327864; }
-  49% { stroke: #327864; }
-  50% { stroke: #32326e; }
-  74% { stroke: #32326e; }
-  75% { stroke: #78325a; }
-  99% { stroke: #78325a; }
+  0%  { stroke: #e3dd71; }
+  24% { stroke: #69bf73; }
+  25% { stroke: #69bf73; }
+  49% { stroke: #e3dd71; }
+  50% { stroke: #e3dd71; }
+  74% { stroke: #69bf73; }
+  75% { stroke: #69bf73; }
+  99% { stroke: #e3dd71; }
 }
 
 
