@@ -503,7 +503,9 @@ function changeMaterialsSwup(){
             shouldChange=true;
           break;
       default:
-        console.log("nothome");
+          bodycolor=pageInfo.p5.bodycolor;
+          particlesColor=pageInfo.p5.particleColor;
+          shouldChange=true;
         break;
     }
     //change body
