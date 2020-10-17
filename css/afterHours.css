@@ -1,0 +1,22 @@
+#shortFilm {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width:100vw;
+  min-width: 90%;
+  min-height: 100%;
+  z-index:-10!important;
+}
+#back {
+  margin-top:5%;
+  margin-left:5%;
+}
+#back a{
+
+  font-family: 'impact-label-reversed', serif;
+font-size: 2vw;
+  color:rgb(219,219,219);
+}
+#back a:hover{
+  color:rgb(255, 140, 27);
+}
