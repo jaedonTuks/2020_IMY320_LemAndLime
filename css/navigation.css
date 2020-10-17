@@ -48,7 +48,7 @@ nav{
   border-color:rgb(255, 140, 27);
   width:50px;
 }
-#burger:hover .highlightBlue{
+#burger:hover .highlightBlue,#burger:hover .highlightBlueFud{
   border-color:rgb(3, 173, 252);
   width:50px;
 }

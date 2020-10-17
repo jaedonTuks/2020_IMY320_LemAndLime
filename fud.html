@@ -8,7 +8,7 @@
   <meta name="author" content="Jaedon Heger" />
   <meta name="description" content="The official website and porfolio of Lem and Lime Studios" />
   <meta name="keywords" content="LemAndLimeStudios, Lem and Lime, studios, Jaedon Heger, Jonathan Bertram, Portfolio, Graphic design, design, designer, illustrator, modelling, animation, animator, 3D model, UI, UX, video editing, editing, video effects, South Africa, South African" />
-  <link rel="shortcut icon" href="media/logo.ico" type="image/x-icon" />
+  <link rel="shortcut icon" id="littleLogo" href="./media/logo.ico" type="image/x-icon" />
 
   <!-- styling -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="./css/navigation.css">
   <link rel="stylesheet" href="./css/transitions.css">
   <link rel="stylesheet" type="text/css" href="./css/background.css">
+  <link rel="stylesheet" href="./css/fud.css" type="text/css" id="fudStyleCss"/>
 
 </head>
 <body>
@@ -62,7 +63,7 @@
       <div class="col-sm-2">
         <div class="logo hover">
           <a href="/2020_IMY320_LemAndLime/about.html">
-            <img src="media/images/lemAndLimeLogo.png" alt="Lem and Lime logo"/>
+            <img src="./media/images/lemAndLimeLogo.png" alt="Lem and Lime logo"/>
             <div>Lem & Lime <br /> Studios</div>
           </a>
         </div>
@@ -75,65 +76,56 @@
           <div class="page-indicator">
             <div class="page-indicator-content">
               <ul>
-                <li><img class="unfilled" src="media/images/unfilled-circle.svg" /></li>
-                <li><img class="line" src="media/images/line.svg" /></li>
-                <li><a href="/2020_IMY320_LemAndLime/project2.html" class="hover"><img class="filled" src="media/images/filled-circle.svg" /></a></li>
-                <li><img class="line" src="media/images/line.svg" /></li>
-                <li><a href="/2020_IMY320_LemAndLime/project3.html" class="hover"><img  class="filled"src="media/images/filled-circle.svg" /></a></li>
-                <li><img class="line" src="media/images/line.svg" /></li>
-                <li><a href="/2020_IMY320_LemAndLime/project4.html" class="hover"><img class="filled" src="media/images/filled-circle.svg" /></a></li>
-                <li><img class="line" src="media/images/line.svg" /></li>
-                <li><a href="/2020_IMY320_LemAndLime/project5.html" class="hover"><img  class="filled"src="media/images/filled-circle.svg" /></a></li>
+                <!-- <li><img class="unfilled" src="../media/images/unfilled-circle.svg" /></li>
+                <li><img class="line" src="../media/images/line.svg" /></li>
+                <li><a href="/2020_IMY320_LemAndLime/project2.html" class="hover"><img class="filled" src="../media/images/filled-circle.svg" /></a></li>
+                <li><img class="line" src="../media/images/line.svg" /></li>
+                <li><a href="/2020_IMY320_LemAndLime/project3.html" class="hover"><img  class="filled"src="../media/images/filled-circle.svg" /></a></li>
+                <li><img class="line" src="../media/images/line.svg" /></li>
+                <li><a href="/2020_IMY320_LemAndLime/project4.html" class="hover"><img class="filled" src="../media/images/filled-circle.svg" /></a></li>
+                <li><img class="line" src="../media/images/line.svg" /></li>
+                <li><a href="/2020_IMY320_LemAndLime/project5.html" class="hover"><img  class="filled"src="../media/images/filled-circle.svg" /></a></li> -->
               </ul>
-              <span class="proj-indicator-label">p r o j e c t s</span>
             </div>
           </div>
         </div>
         <!-- main content -->
 
-          <div class="transition-next col-sm-3 set-height">
-            <div>
+          <div class="transition-next col-sm-10  smaller">
+
               <div class="page-content">
                 <div>
-                  <span id="fud-app-heading" class="heading hover">
-                    <a href="/2020_IMY320_LemAndLime/fud.html" class="hoverBlue">Fud</a>
+                  <span id="fudPageHeading" class="heading hover fudPageHeading">
+                    <a href="/2020_IMY320_LemAndLime/project1.html" class="hoverBlue">Fud</a>
                   </span>
                 </div>
 
-                <div> <b class="lemColor">Project dates:</b> Feb ‘20 - Jun ’20 <br />
-                  <b class="limeColor">Type:</b> 3rd year group project<br /> <br />
+               <div>
+                  <b class="lemColor">Project dates:</b> Feb ‘20 - Jun ’20 <br />
+                  <b class="limeColor">Type:</b> 3rd year group project in which we had to design a food application using UX methodology,<br/> iteration and user centered design.
+                  This is our final design.
+                   <br /> <br />
                 </div>
-                <div><b class="lemColor">Spec:</b> UI/UX research and user testing, used in an iterative
-                  design process. A shallow functional prototype of the app
-                  was designed in Adobe XD. <br /> <br />
+                <div class="hover downloadPdf hoverBlue">
+                  <b class="lemColor">Download:</b><a href="#"> the wireframe pdf here</a>
+                </div>
+                <div class="mb-1">
+                  <b class="limeColor">Creators:</b> Jaedon Heger,Jonothan Bertram,Carmen Janse van Rensburg
+                </div>
 
-                  We created the Fud app with the intention of
-                  revolutionising the way people are able to find and
-                  share recipes for home cooking using their mobile devices.
-                </div>
+                  <img  src="./media/fud/fud_signup.png" alt="Fud app screenshots" />
+                  <img  src="./media/fud/fud_1.png" alt="Fud app screenshots" />
+                  <img  src="./media/fud/fud_3.png" alt="Fud app screenshots" />
+                  <img  src="./media/fud/fud_2.png" alt="Fud app screenshots" />
+
+
               </div>
-            </div>
           </div>
-          <!-- main image -->
-          <div class="transition-next col-sm-5 set-height">
-            <div class="page-content">
-              <img class="fud-img" src="media/images/fud-screens.png" alt="Fud app screenshots" />
-            </div>
-          </div>
+
 
         <!-- navigation arrows -->
-        <div class="col-sm-2 set-height">
-          <div class="more-proj transition-fade">
-            <div class="more-up">
-              <img class="arrow" src="media/images/up-arrow.svg" alt="Up-facing arrow"/>
-              <a class="anchor-up hoverBlue hover" href="/2020_IMY320_LemAndLime/index.html">prev</a>
-            </div>
-            <div class="more-down">
-              <a class="anchor-down hoverBlue hover" href="/2020_IMY320_LemAndLime/project2.html">next</a>
-              <img class="arrow" src="media/images/down-arrow.svg" alt="Down-facing arrow"/>
-            </div>
-          </div>
-        </div>
+
+
 
       </div>
     </main>
@@ -149,11 +141,10 @@
   <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
   <script src="./js/cursor/follow.js">  </script>
-  <script src="./js/preload.js">  </script>
-
+  <script src="./js/SinglePages/fud.js">  </script>
   <!-- backgrounds -->
 
-  <script>
+   <script>
      const swup = new Swup();
   </script>
   <script src="./js/transitions/scrollTransition.js"></script>

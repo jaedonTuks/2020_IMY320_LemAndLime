@@ -4,6 +4,8 @@ $(()=>{
 
   $("#burgerMenuBox").hide();
   $("#burger").on("click",burgerClick);
+
+
 });
 
 
@@ -143,7 +145,10 @@ const pageInfo={
   },
   about:{
       cursorHighlightSrc:"./media/cursor/c-highlightPurple.svg"
-    }
+    },
+  singleProjects:{
+      cursorHighlightSrc:"./media/cursor/c-highlightBlue.svg"
+  }
 }
 function switchPage(){
 
@@ -153,6 +158,8 @@ function switchPage(){
   $(".hover").on("mouseenter",growCursor);
   $(".hover").on("mouseleave",shrinkCursor);
   $("a").on("click",  shrinkCursor);
+
+  $("#fudStyleCss").remove();
  // setTimeout(function(){ alreadyScrolling=false; }, 1000);
   let newCursorSrc;
   let currElement;
@@ -216,10 +223,21 @@ function switchPage(){
       $(".logo a").attr("href","/2020_IMY320_LemAndLime/index.html");
       break;
     default:
-      newCursorSrc=pageInfo.index.cursorHighlightSrc;
-      $("#burger div").addClass("highlightOrange");
-      $("#burgerMenuBox div a").addClass("hoverOrange");
-      currElement=$("#home");
+      newCursorSrc=pageInfo.singleProjects.cursorHighlightSrc;
+      $("div.burgerLine").addClass("highlightBlue");
+      $("#burgerMenuBox div a").addClass("hoverBlue");
+
+      projectPage=true;
+
+
+      $('head').append('<link rel="stylesheet" href="./css/fud.css" type="text/css" id="fudStyleCss"/>');
+      console.log("heckYeah");
+      if(currPage=="fud.html"){
+        currElement=$("#fud");
+      }else{
+        currElement=$("#horror");
+      }
+
       $(".logo a").attr("href","/2020_IMY320_LemAndLime/index.html");
       break;
   }
@@ -281,6 +299,10 @@ function setBurgerActive(currElement,projectPage){
         $("#burgerMenuBox div a").removeClass('hoverPurple');
         break;
     default:
+      if(!projectPage){
+        $("#burger div").removeClass('highlightBlue');
+        $("#burgerMenuBox div a").removeClass('hoverBlue');
+      }
       break;
   }
 

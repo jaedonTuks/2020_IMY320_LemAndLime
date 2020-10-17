@@ -1,0 +1,41 @@
+
+#fudPageHeading{
+	font-family: 'pacifico', sans-serif;
+	font-size:3vw;
+	text-align: center;
+}
+
+#fudPageHeading a{
+	margin:0 auto;
+}
+.smaller{
+	margin-top:-5%;
+}
+.page-content img{
+	width:15vw;
+	color:rgb(219,219,219);
+}
+
+
+
+
+.downloadPdf a {
+  color:rgb(219,219,219);
+  font-size: 1rem;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.downloadPdf a:hover{
+	color:rgb(3, 173, 252);
+}
+.limeColor{
+	color:#69bf73!important;
+}
+
+.lemColor{
+		color:#e3dd71!important;
+}
