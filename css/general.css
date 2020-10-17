@@ -209,7 +209,11 @@ a.anchor-up:hover{
 
 .scroll-down-indicator{
 	margin-left: 45%;
-	margin-top: 2%;
+	margin-top: 8%;
+	filter:grayscale(100%);
+}
+.scroll-down-indicator:hover{
+	filter:grayscale(0%);
 }
 /* Index page */
 div{
@@ -372,13 +376,13 @@ div{
 }
 div.blurBack{
 	position:absolute;
-	top:80px;
+	top:-10px;
 	left:-10px;
 	z-index:0;
 	background-color:rgba(20, 20, 20, .50);
 	border-radius: 5px;
 	filter:blur(5px);
-	height:42%;
+	height:90%;
 	min-width: 100%;
 
 	min-height:35%;
