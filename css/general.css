@@ -396,7 +396,7 @@ div.blurBack{
 /* phone scaling */
 @media only screen and (max-width: 576px) {
 	/* hidden elements */
-  .page-indicator,.hide-phone,#cursor,#cursorB{
+  .page-indicator,.hide-phone,#cursor,#cursorB,.about-img{
 		display:none!important;
 	}
 	.more-landing,.more-proj{
@@ -456,5 +456,18 @@ div.blurBack{
 	#loadingAnim{
 		left:50vw!important;
 		top:50vh!important;
+	}
+
+	#about-jaedon div,#about-jono div{
+		font-size:1rem;
+	}
+	#about-jaedon h3,#about-jono h3{
+		font-size:1.3rem;
+	}
+	/* #about-jono h3{
+		margin-top:3%;
+	} */
+	#about-heading{
+		font-size:1.5rem;
 	}
 }
