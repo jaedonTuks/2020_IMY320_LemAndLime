@@ -6,7 +6,6 @@ $(()=>{
 
 // let onScrollEvent=debounce(
 function onScrollEvent(event) {
-
    if(alreadyScrolling)
      return;
    alreadyScrolling=true;
@@ -18,7 +17,6 @@ function onScrollEvent(event) {
        var currClass = $('#swup').attr("class");
        $('#swup').removeClass('transition-next');
        $('#swup').addClass('transition-prev');
-
        $('.anchor-up')[0].click();
      }
      else{
