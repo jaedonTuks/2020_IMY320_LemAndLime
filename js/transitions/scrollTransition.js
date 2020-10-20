@@ -6,7 +6,6 @@ $(()=>{
 
 // let onScrollEvent=debounce(
 function onScrollEvent(event) {
-
    if(alreadyScrolling)
      return;
    alreadyScrolling=true;
@@ -18,7 +17,7 @@ function onScrollEvent(event) {
        var currClass = $('#swup').attr("class");
        $('#swup').removeClass('transition-next');
        $('#swup').addClass('transition-prev');
-
+       console.log($('.anchor-up')[0]);
        $('.anchor-up')[0].click();
      }
      else{
@@ -31,6 +30,7 @@ function onScrollEvent(event) {
        $('#swup').removeClass('transition-prev');
        $('#swup').addClass('transition-next');
 
+       console.log($('.anchor-down')[0]);
        $('.anchor-down')[0].click();
      }
      else{

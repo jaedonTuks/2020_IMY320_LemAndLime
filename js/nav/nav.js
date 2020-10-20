@@ -24,8 +24,12 @@ $("nav #burgerMenuBox div a").on("click",hide);
 
 
 function showMenu(){
+  let backSize="50%";
+  if($(window).width() < 576){
+    backSize="100%";
+  }
 
-    $("#burgerMenuBox").show();
+  $("#burgerMenuBox").show();
   $(".page-indicator").hide();
 //
   $("#cursor,#cursorB").css({
@@ -33,7 +37,7 @@ function showMenu(){
   });
   $("#navBack")
   .animate({
-      "min-width":"50%"
+      "min-width":`${backSize}`
     },200,"linear",
     ()=>{
       console.log("this anim finished next one");
@@ -55,7 +59,6 @@ function hide(){
     width:"0%",
     top:"0"
   },200,"linear",()=>{
-    console.log("backnow");
     $("#navBack").css({
       "min-width":"0%"
     });
@@ -247,6 +250,7 @@ function switchPage(){
   setBurgerActive(currElement,projectPage);
 
 
+    console.log("backnow");
 
 }
 function setBurgerActive(currElement,projectPage){
