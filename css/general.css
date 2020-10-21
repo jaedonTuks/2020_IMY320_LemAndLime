@@ -394,7 +394,7 @@ div.blurBack{
 /* Scaling css  */
 /* ========================= */
 /* phone scaling */
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 768px) {
 	/* hidden elements */
   .page-indicator,.hide-phone,#cursor,#cursorB,.about-img{
 		display:none!important;
@@ -428,8 +428,8 @@ div.blurBack{
 		background-color:rgb(0,0,0)!important;
 	}
 	.page-content{
-		padding-left:2%;
-		padding-right:2%;
+		padding-left:8%;
+		padding-right:8%;
 	}
 	.page-content div{
 
@@ -443,7 +443,7 @@ div.blurBack{
 	html{
 		overflow-y: hidden;
 	}
-	#fud-app-heading,#adventure-travel-heading,#hex-heading,#neighbourhood-heading,#after-hours-heading{
+	#fud-app-heading,#fudPageHeading a,#adventure-travel-heading,#hex-heading,#neighbourhood-heading,#after-hours-heading{
 		font-size:2em;
 	}
 	.adventure-trav-img,.hex-img,.neighbourhoood-img,.after-hours-img{
@@ -463,6 +463,13 @@ div.blurBack{
 	}
 	#about-jaedon h3,#about-jono h3{
 		font-size:1.3rem;
+	}
+	.smaller{
+		margin-top:10vh!important;
+	}
+	.smaller img{
+		width:22vw!important;
+		color:rgb(219,219,219);
 	}
 	/* #about-jono h3{
 		margin-top:3%;
