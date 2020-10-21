@@ -461,8 +461,12 @@ function changeMaterial(event){
 
 function changeMaterialsSwup(){
     //decide what color to switch tolet
-    let currPage=document.location.pathname.match(/[^\/]+$/)[0];
-
+    let currPage=document.location.pathname.match(/[^\/]+$/);
+    if(currPage!=null){
+     currPage=document.location.pathname.match(/[^\/]+$/)[0];
+    }else{
+      currPage="index.html";
+    }
     let bodycolor,tentaclesColor,particlesColor;
     let shouldChange=false;
 
