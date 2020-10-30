@@ -10,8 +10,9 @@ $(()=>{
 
 
 
-function burgerClick(e){
-  highlight.css({left: e.clientX,top:e.clientY });
+function burgerClick(){
+  console.log("burger");
+  // highlight.css({left: e.clientX,top:e.clientY });
   if(!canClick){return;}
 
   canClick=false;
@@ -25,7 +26,7 @@ $("nav #burgerMenuBox div a").on("click",hide);
 
 function showMenu(){
   let backSize="50%";
-  if($(window).width() < 576){
+  if($(window).width() <= 768){
     backSize="100%";
   }
 
@@ -242,6 +243,7 @@ function switchPage(){
       }
 
       $(".logo a").attr("href","/2020_IMY320_LemAndLime/index.html");
+      console.log("heckYeah");
       break;
   }
 
@@ -312,4 +314,22 @@ function setBurgerActive(currElement,projectPage){
 
   $(".active").attr("href",newLink).removeClass("active");
   currElement.attr("href","").addClass("active");
+}
+
+
+// Cell phone interactivity
+function touchDrag(verticalScroll,difference){
+  if(verticalScroll){
+    if(startY<endY){
+      scrollUp();
+    }else if(startY>endY){
+      scrollDown();
+    }
+  }else{
+    if(endX-startX>0 && !open){
+      burgerClick();
+    }else if(endX-startX<0 && open){
+      burgerClick();
+    }
+  }
 }

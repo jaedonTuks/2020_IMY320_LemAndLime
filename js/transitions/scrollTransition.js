@@ -1,27 +1,27 @@
 let alreadyScrolling=false;
 let startY;
 let endY;
+let startX;
+let endX;
 $(()=>{
   $(window).bind('wheel',onScrollEvent);
 
   // document.body.addEventListener('touchmove',touchDrag);
   document.body.addEventListener('touchstart',(e)=>{
     startY=e.touches[0].clientY;
-
+    startX=e.touches[0].clientX;
   });
   document.body.addEventListener('touchend',(e)=>{
     endY=e.changedTouches[0].clientY;
-    touchDrag();
+    endX=e.changedTouches[0].clientX;
+    let vertical=true;
+    if(Math.abs(endX-startX)>Math.abs(endY-startY))
+      vertical=false;
+
+    touchDrag(vertical,endX-startX);
   });
 });
-function touchDrag(){
-  
-  if(startY<endY){
-    scrollUp();
-  }else if(startY>endY){
-    scrollDown();
-  }
-}
+
 // let onScrollEvent=debounce(
 function onScrollEvent(event) {
    if(alreadyScrolling)
