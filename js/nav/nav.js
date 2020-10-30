@@ -243,6 +243,7 @@ function switchPage(){
       }
 
       $(".logo a").attr("href","/2020_IMY320_LemAndLime/index.html");
+      console.log("heckYeah");
       break;
   }
 
