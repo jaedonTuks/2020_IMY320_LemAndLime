@@ -1,0 +1,11 @@
+FINAL CHANGES:
+
+- Fud project page image doesn't pre-load
+- Project titles on every project page should fade to blue, not switch instantly()
+- About Us images need to be smaller and preloaded.
+- Clicking the middle project dot from the About Us page links to th()e Hex (middle) project, no the first project.
+Same with clicking middle dot from home page.														SPeak with jono on this
+- Project section dots are not the same colour as the cursor hihglight ring
+
+- Add loading page to all indiv project pages as well				speak jono
+- fix back button on After Hours trailer to make it more clickable

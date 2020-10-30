@@ -139,6 +139,7 @@ main{
 }
 .line{
   width: 32px;
+	filter:grayscale(100%)!important;
 }
 .filled{
   width: 16px;
@@ -337,6 +338,8 @@ div{
 .social-media-container a img:hover{
   filter: grayscale(0%);
 }
+
+
 /* Heading hover effect */
  .heading a {
   color:rgb(219,219,219);
@@ -346,6 +349,7 @@ div{
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+	transition:0.5s;
 }
 /* hover effect adapted from https://codepen.io/francisco-risi-rosselot/pen/pogJmgV*/
  .heading  a:after {
