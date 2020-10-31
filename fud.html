@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Lem & Lime Studios</title>
+
+  <meta charset="utf-8">
+  <meta name="author" content="Jonathan Bertram" />
+  <meta name="author" content="Jaedon Heger" />
+  <meta name="description" content="The official website and porfolio of Lem and Lime Studios" />
+  <meta name="keywords" content="LemAndLimeStudios, Lem and Lime, studios, Jaedon Heger, Jonathan Bertram, Portfolio, Graphic design, design, designer, illustrator, modelling, animation, animator, 3D model, UI, UX, video editing, editing, video effects, South Africa, South African" />
+  <link rel="shortcut icon" id="littleLogo" href="./media/logo.ico" type="image/x-icon" />
+
+  <!-- styling -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="./css/general.css">
+  <link rel="stylesheet" href="./css/cursor.css">
+  <link rel="stylesheet" href="./css/navigation.css">
+  <link rel="stylesheet" href="./css/transitions.css">
+  <link rel="stylesheet" type="text/css" href="./css/background.css">
+  <link rel="stylesheet" href="./css/fud.css" type="text/css" id="fudStyleCss"/>
+
+</head>
+<body>
+  <div id="loadingScreen">
+    <svg width="200" height="200" viewBox="0 0 100 100" id="loadingAnim">
+      <polyline class="line-cornered stroke-still" points="0,0 100,0 100,100" stroke-width="10" fill="none"></polyline>
+      <polyline class="line-cornered stroke-still" points="0,0 0,100 100,100" stroke-width="10" fill="none"></polyline>
+      <polyline class="line-cornered stroke-animation" points="0,0 100,0 100,100" stroke-width="10" fill="none"></polyline>
+      <polyline class="line-cornered stroke-animation" points="0,0 0,100 100,100" stroke-width="10" fill="none"></polyline>
+    </svg>
+    <h1>Lem And Lime</h1>
+  </div>
+  <div class="scene"></div>
+  <div id="navBack"></div>
+  <nav>
+    <div id="burger" class="hover">
+      <div class="topLine burgerLine highlightBlue">
+      </div>
+      <div class="midLine burgerLine highlightBlue">
+      </div>
+      <div class="botLine burgerLine highlightBlue">
+      </div>
+    </div>
+    <div id="burgerMenuBox" class="hover">
+      <div><a href="/2020_IMY320_LemAndLime/index.html" id="home" class="hoverBlue">Home</a></div>
+      <div><a id="fud" class="active hoverBlue">Fud Application Design</a></div>
+      <div><a href="/2020_IMY320_LemAndLime/project2.html" id="adventure" class="hoverBlue">Adventure Travel Website</a></div>
+      <div><a href="/2020_IMY320_LemAndLime/project3.html" id="hex" class="hoverBlue">Hex Game</a></div>
+      <div><a href="/2020_IMY320_LemAndLime/project4.html" id="promo" class="hoverBlue">American Authors Promotional Video</a></div>
+      <div><a href="/2020_IMY320_LemAndLime/project5.html" id="horror" class="hoverBlue">Horror Short film</a></div>
+      <div><a href="/2020_IMY320_LemAndLime/about.html" id="aboutBurger" class="hoverBlue">About us</a></div>
+    </div>
+  </nav>
+
+  <div class="contianer">
+    <div class="row nav-row">
+      <div class="col-sm-2 hide-phone"></div>
+      <!-- spacing div -->
+      <div class="col-sm-8 hide-phone"></div>
+      <div class="col-sm-2">
+        <div class="logo hover">
+          <a href="/2020_IMY320_LemAndLime/about.html">
+            <img src="./media/images/lemAndLimeLogo.png" alt="Lem and Lime logo"/>
+            <div>Lem & Lime <br /> Studios</div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <main id="swup" >
+      <div class="row content-row">
+        <div class="transition-left col-sm-2 set-height hide-phone">
+          <div class="page-indicator">
+            <div class="page-indicator-content">
+              <ul>
+                <!-- <li><img class="unfilled" src="../media/images/unfilled-circle.svg" /></li>
+                <li><img class="line" src="../media/images/line.svg" /></li>
+                <li><a href="/2020_IMY320_LemAndLime/project2.html" class="hover"><img class="filled" src="../media/images/filled-circle.svg" /></a></li>
+                <li><img class="line" src="../media/images/line.svg" /></li>
+                <li><a href="/2020_IMY320_LemAndLime/project3.html" class="hover"><img  class="filled"src="../media/images/filled-circle.svg" /></a></li>
+                <li><img class="line" src="../media/images/line.svg" /></li>
+                <li><a href="/2020_IMY320_LemAndLime/project4.html" class="hover"><img class="filled" src="../media/images/filled-circle.svg" /></a></li>
+                <li><img class="line" src="../media/images/line.svg" /></li>
+                <li><a href="/2020_IMY320_LemAndLime/project5.html" class="hover"><img  class="filled"src="../media/images/filled-circle.svg" /></a></li> -->
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- main content -->
+
+          <div class="transition-next col-sm-10  smaller">
+
+              <div class="page-content">
+                <div>
+                  <span id="fudPageHeading" class="heading hover fudPageHeading">
+                    <a href="/2020_IMY320_LemAndLime/project1.html" class="hoverBlue">Fud</a>
+                  </span>
+                </div>
+
+               <div>
+                  <b class="lemColor">Project dates:</b> Feb ‘20 - Jun ’20 <br />
+                  <b class="limeColor">Type:</b> 3rd year group project in which we had to design a food application using UX methodology,<br/> iteration and user centered design.
+                  This is our final design.
+                   <br /> <br />
+                </div>
+                <div class=" downloadPdf hoverBlue">
+                  <b class="lemColor">Download:</b><a class="hover" href="./media/wireframe/fud_wireframe.pdf" download="fud_wireframe"> the wireframe pdf here</a>
+                </div>
+                <div class="mb-1  downloadPdf hoverBlue">
+                  <b class="limeColor">Creators:</b> <a class="hover" href="/2020_IMY320_LemAndLime/about.html">Jaedon Heger</a>,<a class="hover" href="/2020_IMY320_LemAndLime/about.html">Jonothan Bertram</a>,<a class="hover" href="https://carmenjvr.github.io/">Carmen Janse van Rensburg</a>
+                </div>
+
+                  <img  src="./media/fud/fud_signup.png" alt="Fud app screenshots" />
+                  <img  src="./media/fud/fud_1.png" alt="Fud app screenshots" />
+                  <img  src="./media/fud/fud_3.png" alt="Fud app screenshots" />
+                  <img  src="./media/fud/fud_2.png" alt="Fud app screenshots" />
+
+
+              </div>
+          </div>
+
+
+        <!-- navigation arrows -->
+
+
+
+      </div>
+    </main>
+  </div>
+
+
+  <img src="./media/cursor/c-black.svg" alt="" id="cursor">
+  <img src="./media/cursor/c-highlightBlue.svg" alt="" id="cursorB" style="opacity:0%">
+
+    <!-- <div id="cursorCenter"></div> -->
+
+  <!--javascript-->
+  <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="./js/cursor/follow.js">  </script>
+  <script src="./js/preload.js">  </script>
+  <!-- backgrounds -->
+
+   <script>
+     const swup = new Swup();
+  </script>
+  <script src="./js/transitions/scrollTransition.js"></script>
+
+  <script src="./js/nav/nav.js">  </script>
+
+  <script src="./js/3d/three/three.min.js"></script>
+  <script src="./js/3d/app.js" type="module"></script>
+</body>
+</html>

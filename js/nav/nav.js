@@ -4,12 +4,15 @@ $(()=>{
 
   $("#burgerMenuBox").hide();
   $("#burger").on("click",burgerClick);
+
+
 });
 
 
 
-function burgerClick(e){
-  highlight.css({left: e.clientX,top:e.clientY });
+function burgerClick(){
+  console.log("burger");
+  // highlight.css({left: e.clientX,top:e.clientY });
   if(!canClick){return;}
 
   canClick=false;
@@ -22,8 +25,12 @@ $("nav #burgerMenuBox div a").on("click",hide);
 
 
 function showMenu(){
+  let backSize="50%";
+  if($(window).width() <= 768){
+    backSize="100%";
+  }
 
-    $("#burgerMenuBox").show();
+  $("#burgerMenuBox").show();
   $(".page-indicator").hide();
 //
   $("#cursor,#cursorB").css({
@@ -31,7 +38,7 @@ function showMenu(){
   });
   $("#navBack")
   .animate({
-      "min-width":"50%"
+      "min-width":`${backSize}`
     },200,"linear",
     ()=>{
       console.log("this anim finished next one");
@@ -53,7 +60,6 @@ function hide(){
     width:"0%",
     top:"0"
   },200,"linear",()=>{
-    console.log("backnow");
     $("#navBack").css({
       "min-width":"0%"
     });
@@ -143,7 +149,10 @@ const pageInfo={
   },
   about:{
       cursorHighlightSrc:"./media/cursor/c-highlightPurple.svg"
-    }
+    },
+  singleProjects:{
+      cursorHighlightSrc:"./media/cursor/c-highlightBlue.svg"
+  }
 }
 function switchPage(){
 
@@ -153,6 +162,8 @@ function switchPage(){
   $(".hover").on("mouseenter",growCursor);
   $(".hover").on("mouseleave",shrinkCursor);
   $("a").on("click",  shrinkCursor);
+
+  $("#fudStyleCss").remove();
  // setTimeout(function(){ alreadyScrolling=false; }, 1000);
   let newCursorSrc;
   let currElement;
@@ -216,11 +227,23 @@ function switchPage(){
       $(".logo a").attr("href","/2020_IMY320_LemAndLime/index.html");
       break;
     default:
-      newCursorSrc=pageInfo.index.cursorHighlightSrc;
-      $("#burger div").addClass("highlightOrange");
-      $("#burgerMenuBox div a").addClass("hoverOrange");
-      currElement=$("#home");
+      newCursorSrc=pageInfo.singleProjects.cursorHighlightSrc;
+      $("div.burgerLine").addClass("highlightBlue");
+      $("#burgerMenuBox div a").addClass("hoverBlue");
+
+      projectPage=true;
+
+
+      $('head').append('<link rel="stylesheet" href="./css/fud.css" type="text/css" id="fudStyleCss"/>');
+      console.log("heckYeah");
+      if(currPage=="fud.html"){
+        currElement=$("#fud");
+      }else{
+        currElement=$("#horror");
+      }
+
       $(".logo a").attr("href","/2020_IMY320_LemAndLime/index.html");
+      console.log("heckYeah");
       break;
   }
 
@@ -229,6 +252,7 @@ function switchPage(){
   setBurgerActive(currElement,projectPage);
 
 
+    console.log("backnow");
 
 }
 function setBurgerActive(currElement,projectPage){
@@ -281,9 +305,31 @@ function setBurgerActive(currElement,projectPage){
         $("#burgerMenuBox div a").removeClass('hoverPurple');
         break;
     default:
+      if(!projectPage){
+        $("#burger div").removeClass('highlightBlue');
+        $("#burgerMenuBox div a").removeClass('hoverBlue');
+      }
       break;
   }
 
   $(".active").attr("href",newLink).removeClass("active");
   currElement.attr("href","").addClass("active");
+}
+
+
+// Cell phone interactivity
+function touchDrag(verticalScroll,difference){
+  if(verticalScroll){
+    if(startY<endY){
+      scrollUp();
+    }else if(startY>endY){
+      scrollDown();
+    }
+  }else{
+    if(endX-startX>0 && !open){
+      burgerClick();
+    }else if(endX-startX<0 && open){
+      burgerClick();
+    }
+  }
 }

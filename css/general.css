@@ -50,7 +50,7 @@ html {
 }
 body{
   font-family: 'roboto-thin', sans-serif;
-  background-image: url('./../media/tempBackground/tempBack.jpg');
+  /* background-image: url('./../media/tempBackground/tempBack.jpg'); */
   background-size: cover;
   overflow-x: hidden;
 	overflow-y: hidden;
@@ -139,6 +139,7 @@ main{
 }
 .line{
   width: 32px;
+	filter:grayscale(100%)!important;
 }
 .filled{
   width: 16px;
@@ -209,7 +210,11 @@ a.anchor-up:hover{
 
 .scroll-down-indicator{
 	margin-left: 45%;
-	margin-top: 2%;
+	margin-top: 8%;
+	filter:grayscale(100%);
+}
+.scroll-down-indicator:hover{
+	filter:grayscale(0%);
 }
 /* Index page */
 div{
@@ -333,6 +338,8 @@ div{
 .social-media-container a img:hover{
   filter: grayscale(0%);
 }
+
+
 /* Heading hover effect */
  .heading a {
   color:rgb(219,219,219);
@@ -342,6 +349,7 @@ div{
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+	transition:0.5s;
 }
 /* hover effect adapted from https://codepen.io/francisco-risi-rosselot/pen/pogJmgV*/
  .heading  a:after {
@@ -360,4 +368,156 @@ div{
 }
 .heading:hover a.hoverBlue{
   color:rgb(3, 173, 252);
+}
+
+
+.limeColor,#about-jaedon b{
+	color:#69bf73!important;
+}
+
+.lemColor,#about-jono b{
+		color:#e3dd71!important;
+}
+div.blurBack{
+	position:absolute;
+	top:-10px;
+	left:-10px;
+	z-index:0;
+	background-color:rgba(20, 20, 20, .50);
+	border-radius: 5px;
+	filter:blur(5px);
+	height:90%;
+	min-width: 100%;
+
+	min-height:35%;
+}
+.aboutMore{
+	margin-top:40%;
+}
+/* ========================= */
+/* Scaling css  */
+/* ========================= */
+
+
+/* //tablets */
+@media only screen and (max-width: 768px) {
+	/* hidden elements */
+	.hide-phone{
+				display:none!important;
+	}
+  .page-indicator,#cursor,#cursorB,.about-img{
+		display:none!important;
+	}
+	.more-landing,.more-proj{
+
+		right:-50%;
+		z-index:-10000;
+	}
+	.set-height{
+		height:auto;
+	}
+
+	.logo{
+		right:10%;
+	}
+	#burger{
+		margin-left:1em!important;
+	}
+	#burgerMenuBox div{
+	  margin-left:0!important;
+	}
+	#burgerMenuBox div a {
+		font-size: 1rem!important;
+		padding-left:0!important;
+	}
+	body{
+		max-height: 100vh!important;
+		max-height: 100%!important;
+  	overflow-y: hidden!important;
+		background-color:rgb(0,0,0)!important;
+	}
+	.page-content{
+		padding-left:8%;
+		padding-right:8%;
+	}
+
+	.page-content div{
+
+		font-size:1em;
+	}
+	#fud-app-heading,#fudPageHeading a,#adventure-travel-heading,#hex-heading,#neighbourhood-heading,#after-hours-heading{
+		font-size:3em;
+	}
+	/* fud page */
+	.fud-img{
+		width:65vw;
+		margin-top:3em;
+	}
+	.adventure-trav-img,.hex-img,.neighbourhoood-img,.after-hours-img{
+		width:70vw;
+	}
+	html{
+		overflow-y: hidden!important;
+		overflow-x: hidden!important;
+	}
+
+
+	#loadingAnim{
+		width:150px!important;
+		height:150px!important;
+	}
+	#loadingAnim{
+		left:50vw!important;
+		top:50vh!important;
+	}
+
+	#about-jaedon div,#about-jono div{
+		font-size:1rem;
+	}
+	#about-jaedon h3,#about-jono h3{
+		font-size:1.3rem;
+	}
+	.smaller{
+		margin-top:10vh!important;
+	}
+	.smaller img{
+		width:15vw!important;
+		color:rgb(219,219,219);
+	}
+	/* #about-jono h3{
+		margin-top:3%;
+	} */
+	#about-heading{
+		font-size:3.4rem;
+	}
+}
+/* phone scaling */
+@media only screen and (max-width: 576px){
+	.hide-phone{
+				display:none!important;
+	}
+	.logo{
+		right:10%!important;
+	}
+	#fud-app-heading,#fudPageHeading a,#adventure-travel-heading,#hex-heading,#neighbourhood-heading,#after-hours-heading{
+		font-size:2em;
+	}
+	#about-heading{
+		font-size:3.4rem;
+	}
+	.transition-next{
+		vertical-align: middle;
+		padding-top:0vh;
+	}
+	.page-content div{
+
+		font-size:0.8em;
+	}
+	.fud-img{
+		width:65vw;
+		margin-top:3em;
+	}
+	.adventure-trav-img,.hex-img,.neighbourhoood-img,.after-hours-img{
+		width:90vw;
+	}
 }
