@@ -28,7 +28,7 @@ nav{
 
 .burgerLine{
     border:1px solid white;
-    border:2px solid rgb(219,219,219);
+    border:2px solid #8F8F8F;
     margin-top:0.5em;
     transition:0.5s;
     border-radius:3px;
@@ -86,7 +86,7 @@ nav{
   padding-top: 5%;
 }
 #burgerMenuBox div a {
-  color:rgb(219,219,219);
+  color:#8F8F8F; /*rgb(219,219,219)*/
   font-size: 1.4rem;
   padding: 15px 20px;
   position: relative;
