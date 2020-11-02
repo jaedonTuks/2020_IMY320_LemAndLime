@@ -179,6 +179,12 @@ a:hover{
 }
 .arrow{
   width: 24px;
+	margin-right:0.75rem;
+	transition:0.5s;
+	filter:grayscale(100%);
+}
+.more-up:hover .arrow,.more-down:hover .arrow,.more-single-link:hover .arrow{
+	filter:grayscale(0%);
 }
 .more-up{
 	position: relative;
@@ -193,24 +199,30 @@ a:hover{
 .more-single-link{
 	margin-left: 20%;
 }
+.more-up a,.more-down a{
+	text-align: center;
+}
+.more-up:hover a,.more-down:hover a{
+  color:rgb(3, 173, 252);
+}
+.more-up.aboutUp:hover a{
+	color: rgb(223, 3, 252);
+}
+a.anchor-down,a.anchor-up{
+	font-weight: bold;
+	color:#8F8F8F;
+	transition:0.5s;
+}
+a.anchor-down-home:hover{
+	color: rgb(223, 3, 252);
+}
+a.anchor-down-home:hover{
+	color: rgb(223, 3, 252);
+}
 
-a.anchor-down{
-	font-weight: bold;
-	transition:0.5s;
-}
-a.anchor-down-home:hover{
+/*problem a.anchor-up:hover{
 	color: rgb(223, 3, 252);
-}
-a.anchor-down-home:hover{
-	color: rgb(223, 3, 252);
-}
-a.anchor-up{
-	font-weight: bold;
-	transition:0.5s;
-}
-a.anchor-up:hover{
-	color: rgb(223, 3, 252);
-}
+} */
 
 .scroll-down-indicator{
 	margin-left: 45%;
