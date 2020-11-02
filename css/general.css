@@ -240,9 +240,11 @@ div{
 	bottom: 3em;
 	left: 2em;
 	transition: .5s ease;
+	filter:grayscale(85%);
 }
 .fud-img:hover{
 	height: 101.5%;
+	filter:grayscale(0%);
 }
 
 /*		ADVENTURE TRAVELS		*/
@@ -255,9 +257,13 @@ div{
 	display: inline-block;
 	height: 70%;
 	transition: .5s ease;
+
+	filter:grayscale(85%);
 }
 .adventure-trav-img:hover{
 	height: 71.5%;
+
+	filter:grayscale(0%);
 }
 
 
@@ -271,9 +277,13 @@ div{
 	height: 70%;
 	transition: .5s ease;
 	z-index: -6!important;
+
+	filter:grayscale(85%);
 }
 .hex-img:hover{
 	height: 71.5%;
+
+	filter:grayscale(0%);
 }
 /*		NEIGHBOURHOOD 		*/
 #neighbourhood-heading{
@@ -285,9 +295,13 @@ div{
 	height: 70%;
 	transition: .5s ease;
 	z-index: -6!important;
+
+	filter:grayscale(85%);
 }
 .neighbourhoood-img:hover{
 	height: 71.5%;
+
+	filter:grayscale(0%);
 }
 /*		AFTER HOURS 		*/
 #after-hours-heading{
@@ -298,9 +312,12 @@ div{
 	display: inline-block;
 	height: 70%;
 	transition: .5s ease;
+
+	filter:grayscale(85%);
 }
 .after-hours-img:hover{
 	height: 71.5%;
+	filter:grayscale(0%);
 }
 
 /*		WORK IN PROGRESS		*/
