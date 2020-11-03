@@ -291,13 +291,13 @@ div{
 }
 .adventure-trav-img{
 	display: inline-block;
-	height: 70%;
+	height: 65%;
 	transition: .5s ease;
 
 	filter:grayscale(85%);
 }
 .adventure-trav-img:hover{
-	height: 71.5%;
+	height: 66.5%;
 
 	filter:grayscale(0%);
 }
@@ -310,14 +310,13 @@ div{
 }
 .hex-img{
 	display: inline-block;
-	height: 70%;
+	height: 55%;
 	transition: .5s ease;
 	z-index: -6!important;
-
 	filter:grayscale(85%);
 }
 .hex-img:hover{
-	height: 71.5%;
+	height: 56.5%;
 
 	filter:grayscale(0%);
 }
@@ -350,14 +349,14 @@ div{
 }
 .neighbourhoood-img{
 	display: inline-block;
-	height: 70%;
+	height: 65%;
 	transition: .5s ease;
 	z-index: -6!important;
 
 	filter:grayscale(85%);
 }
 .neighbourhoood-img:hover{
-	height: 71.5%;
+	height: 66.5%;
 
 	filter:grayscale(0%);
 }
@@ -368,13 +367,13 @@ div{
 }
 .after-hours-img{
 	display: inline-block;
-	height: 70%;
+	height: 56%;
 	transition: .5s ease;
 
 	filter:grayscale(85%);
 }
 .after-hours-img:hover{
-	height: 71.5%;
+	height: 56.5%;
 	filter:grayscale(0%);
 }
 
