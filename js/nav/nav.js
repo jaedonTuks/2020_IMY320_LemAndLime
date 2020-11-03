@@ -25,35 +25,42 @@ $("nav #burgerMenuBox div a").on("click",hide);
 
 
 function showMenu(){
-  let backSize="50%";
-  if($(window).width() <= 768){
-    backSize="100%";
-  }
-
-  $("#burgerMenuBox").show();
-  $(".page-indicator").hide();
-//
-  $("#cursor,#cursorB").css({
-    "z-index":10
-  });
-  $("#navBack")
-  .animate({
-      "min-width":`${backSize}`
-    },200,"linear",
-    ()=>{
-      console.log("this anim finished next one");
-      $("#burgerMenuBox").animate({
-        width:"100%"
-      },200);
+    let backSize="50%";
+    if($(window).width() <= 768){
+      backSize="100%";
     }
-  );
-  burgerCross();
-  //  $(".burgerLine").addClass("open"); //problem here
-  setTimeout(()=>{
-    canClick=true;
-  },1000);
+
+    $("#burgerMenuBox").show();
+    $(".page-indicator").hide();
+  //
+    $("#cursor,#cursorB").css({
+      "z-index":10
+    });
+    $("#navBack")
+    .animate({
+        "min-width":`${backSize}`
+      },200,"linear",
+      ()=>{
+        console.log("this anim finished next one");
+        $("#burgerMenuBox").animate({
+          width:"100%"
+        },200);
+      }
+    );
+    burgerCross();
+    //  $(".burgerLine").addClass("open"); //problem here
+    setTimeout(()=>{
+      canClick=true;
+    },1000);
+
+
     open=true;
-  }
+    if($(window).width() > 768)
+      $(window).on("click",clickOutBurger);
+}
+
+
+
 function hide(){
   $("#burgerMenuBox").hide();
   $("#burgerMenuBox").animate({
@@ -76,7 +83,18 @@ function hide(){
   },1000);
 
   open=false;
+  if($(window).width() > 768)
+    $(window).off("click",clickOutBurger);
 }
+
+function clickOutBurger(e){
+  if(e.target.id!="burgerMenuBox")
+    burgerClick();
+  
+}
+
+
+
 function burgerCross(){
   console.log("makignCross");
   $(".topLine").css({
@@ -101,7 +119,6 @@ function burgerCross(){
     "opactiy":"0"
   });
 }
-
 function burgerNormal(){
   $(".topLine").css({
     "-webkit-transform": "rotate(0deg)",

@@ -20,7 +20,6 @@ nav{
 #burger{
   margin-top:4em;
   margin-left:4em;
-  /* //margin-bottom:4em; */
   max-width:2em;
   margin-right: 0;
   z-index:0;
@@ -28,7 +27,7 @@ nav{
 
 .burgerLine{
     border:1px solid white;
-    border:2px solid rgb(219,219,219);
+    border:2px solid #8F8F8F;
     margin-top:0.5em;
     transition:0.5s;
     border-radius:3px;
@@ -63,17 +62,13 @@ nav{
   margin-top: 0;
   left:-15rem;
   width:150%;
-  z-index:100;
   transition: 1s;
-  /* display:none; */
-
   z-index:0;
   width:0%;
-  /* transition:width 1s; */
 }
 #burgerMenuBox div{
   display:block;
-  margin:3rem;
+  margin:4vh;
   margin-left:4em;
 
   text-transform: uppercase;

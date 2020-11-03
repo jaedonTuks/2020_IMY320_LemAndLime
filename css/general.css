@@ -77,18 +77,13 @@ main{
 	right: 35%;
 	text-align: right;
 }
+
 .logo div{
-  color: white;
+  color: #8F8F8F;
 }
 
 .logo img{
-  filter: grayscale(100%);
-  transition:1s;
   width: 50px;
-}
-
-.logo img:hover{
-  filter: grayscale(50%);
 }
 .page-content{
 	color: white;
@@ -179,6 +174,12 @@ a:hover{
 }
 .arrow{
   width: 24px;
+	margin-right:0.75rem;
+	transition:0.5s;
+	filter:grayscale(100%);
+}
+.more-up:hover .arrow,.more-down:hover .arrow,.more-single-link:hover .arrow{
+	filter:grayscale(0%);
 }
 .more-up{
 	position: relative;
@@ -193,33 +194,43 @@ a:hover{
 .more-single-link{
 	margin-left: 20%;
 }
+.more-up a,.more-down a{
+	text-align: center;
+}
+.more-up:hover a,.more-down:hover a{
+  color:rgb(3, 173, 252);
+}
+.more-up.aboutUp:hover a{
+	color: rgb(223, 3, 252);
+}
+a.anchor-down,a.anchor-up{
+	font-weight: bold;
+	color:#8F8F8F;
+	transition:0.5s;
+}
+a.anchor-down-home:hover{
+	color: rgb(223, 3, 252);
+}
+a.anchor-down-home:hover{
+	color: rgb(223, 3, 252);
+}
 
-a.anchor-down{
-	font-weight: bold;
-	transition:0.5s;
-}
-a.anchor-down-home:hover{
+/*problem a.anchor-up:hover{
 	color: rgb(223, 3, 252);
-}
-a.anchor-down-home:hover{
-	color: rgb(223, 3, 252);
-}
-a.anchor-up{
-	font-weight: bold;
-	transition:0.5s;
-}
-a.anchor-up:hover{
-	color: rgb(223, 3, 252);
-}
+
+
+} */
 
 .scroll-down-indicator{
-	margin-left: 45%;
-	margin-top: 8%;
+	text-align: center;
+	margin-left: 0 auto;
+	margin-top:5%;
 	filter:grayscale(100%);
 }
 .scroll-down-indicator:hover{
 	filter:grayscale(0%);
 }
+
 /* Index page */
 div{
 	-webkit-touch-callout: none;
@@ -228,6 +239,31 @@ div{
 	-moz-user-select: none;
 	-ms-user-select: none;
 }
+.play-icon{
+	width: 42px;
+
+}
+.external-link{
+	color: rgb(219, 219, 219);
+	filter:grayscale(100%);
+	transition: 0.4s;
+}
+.external-link:hover{
+	color:rgb(3, 173, 252);
+	filter:grayscale(0%);
+}
+#about-logo-link.external-link:hover{
+	color:rgb(223, 3, 252);
+	filter:grayscale(0%);
+}
+#home-logo-link.external-link:hover{
+	color:rgb(255, 140, 27);
+	filter:grayscale(0%);
+}
+.back-arrow{
+	width: 4vw !important;
+}
+
 /*		FUD PAGE		*/
 #fud-app-heading{
 	font-family: 'pacifico', sans-serif;
@@ -235,14 +271,16 @@ div{
 }
 .fud-img{
 	display: inline-block;
-	height: 100%;
+	height: 90%;
 	position: relative;
 	bottom: 3em;
 	left: 2em;
 	transition: .5s ease;
+	filter:grayscale(85%);
 }
 .fud-img:hover{
-	height: 101.5%;
+	height: 91.5%;
+	filter:grayscale(0%);
 }
 
 /*		ADVENTURE TRAVELS		*/
@@ -253,28 +291,57 @@ div{
 }
 .adventure-trav-img{
 	display: inline-block;
-	height: 70%;
+	height: 55%;
 	transition: .5s ease;
+
+	filter:grayscale(85%);
 }
 .adventure-trav-img:hover{
-	height: 71.5%;
+	height: 56.5%;
+
+	filter:grayscale(0%);
 }
 
 
 /*		HEX 		*/
 #hex-heading{
 		font-family: 'eight-bit', serif;
-		font-size: 4vw;
+		font-size: 3.5vw;
 }
 .hex-img{
 	display: inline-block;
-	height: 70%;
+	height: 55%;
 	transition: .5s ease;
 	z-index: -6!important;
+	filter:grayscale(85%);
 }
 .hex-img:hover{
-	height: 71.5%;
+	height: 56.5%;
+
+	filter:grayscale(0%);
 }
+
+#hex-back-button{
+	background-color: grey;
+	border-radius: 20px;
+	position: absolute;
+	top:2em;
+	left:2em;
+	z-index: 100;
+	transition: 0.2s;
+}
+#hex-back-button img{
+	margin-top: 15px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+#hex-back-button:hover{
+	background-color: darkgrey;
+}
+#hex-back-button a{
+	text-decoration: none;
+}
+
 /*		NEIGHBOURHOOD 		*/
 #neighbourhood-heading{
 	  font-family: 'digital-dream', serif;
@@ -282,12 +349,16 @@ div{
 }
 .neighbourhoood-img{
 	display: inline-block;
-	height: 70%;
+	height: 55%;
 	transition: .5s ease;
 	z-index: -6!important;
+
+	filter:grayscale(85%);
 }
 .neighbourhoood-img:hover{
-	height: 71.5%;
+	height: 56.5%;
+
+	filter:grayscale(0%);
 }
 /*		AFTER HOURS 		*/
 #after-hours-heading{
@@ -296,11 +367,14 @@ div{
 }
 .after-hours-img{
 	display: inline-block;
-	height: 70%;
+	height: 56%;
 	transition: .5s ease;
+
+	filter:grayscale(85%);
 }
 .after-hours-img:hover{
-	height: 71.5%;
+	height: 56.5%;
+	filter:grayscale(0%);
 }
 
 /*		WORK IN PROGRESS		*/
@@ -314,6 +388,7 @@ div{
 
 /*		ABOUT 		*/
 #about-heading{
+	color: white !important;
 	font-weight: bold;
 }
 .about-list{
@@ -386,8 +461,8 @@ div.blurBack{
 	position:absolute;
 	top:-10px;
 	left:-10px;
-	z-index:0;
-	background-color:rgba(20, 20, 20, .50);
+	z-index:-6;
+	background-color:rgba(20, 20, 20, .6);
 	border-radius: 5px;
 	filter:blur(5px);
 	height:90%;
@@ -431,6 +506,7 @@ div.blurBack{
 	}
 	#burgerMenuBox div{
 	  margin-left:0!important;
+		margin-top:4rem!important;
 	}
 	#burgerMenuBox div a {
 		font-size: 1rem!important;

@@ -3,8 +3,8 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 162 460" style="enable-background:new 0 0 162 460;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:none;stroke:#03adfc;stroke-width:12;stroke-linecap:square;stroke-linejoin:bevel;}
-	.st1{fill:none;stroke:#03adfc;stroke-width:12;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:10;}
+	.st0{fill:none;stroke:#b021ed;stroke-width:12;stroke-linecap:square;stroke-linejoin:bevel;}
+	.st1{fill:none;stroke:#b021ed;stroke-width:12;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:10;}
 </style>
 <polyline class="st0" points="81.5,65.5 81.5,419.5 139,362 "/>
 <line class="st1" x1="81" y1="419" x2="24" y2="362"/>
