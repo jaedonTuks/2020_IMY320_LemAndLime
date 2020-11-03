@@ -17,9 +17,7 @@
   color:rgb(219,219,219);
   transition: 0.2s;
 }
-.a-h-button a:hover{
-  color:rgb(255, 140, 27);
-}
+
 .a-h-back-arrow{
 	width: 2vw !important;
 }

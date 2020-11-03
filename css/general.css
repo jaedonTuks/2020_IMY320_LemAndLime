@@ -77,18 +77,8 @@ main{
 	right: 35%;
 	text-align: right;
 }
-.logo div{
-  color: white;
-}
-
 .logo img{
-  filter: grayscale(100%);
-  transition:1s;
   width: 50px;
-}
-
-.logo img:hover{
-  filter: grayscale(50%);
 }
 .page-content{
 	color: white;
@@ -231,8 +221,25 @@ div{
 }
 .play-icon{
 	width: 42px;
-}
 
+}
+.external-link{
+	color: rgb(219, 219, 219);
+	filter:grayscale(100%);
+	transition: 0.4s;
+}
+.external-link:hover{
+	color:rgb(3, 173, 252);
+	filter:grayscale(0%);
+}
+#about-logo-link.external-link:hover{
+	color:rgb(223, 3, 252);
+	filter:grayscale(0%);
+}
+#home-logo-link.external-link:hover{
+	color:rgb(255, 140, 27);
+	filter:grayscale(0%);
+}
 .back-arrow{
 	width: 4vw !important;
 }
