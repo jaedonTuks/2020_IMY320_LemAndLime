@@ -32,9 +32,11 @@ function onScrollEvent(event) {
    if(event.originalEvent.deltaY <= 0) {
      console.log('Scroll up');
      scrollUp();
+     checkNextPage();
    }
-   else {
+   else{
     scrollDown();
+    checkNextPage();
    }
  }
  // ,300,true);
@@ -75,4 +77,26 @@ function debounce(func, wait, immediate) {
 		timeout = setTimeout(later, wait);
 		if (callNow) func.apply(context, args);
 	};
-};
+}
+
+function checkPage(){
+  if($("a.anchor-up").length == false && $("a.anchor-down").length){
+    $('div.logo > a').removeAttr('id');
+    $('div.logo > a').attr('id','home-logo-link');
+  }
+  else if($("a.anchor-up").length && $("a.anchor-down").length){
+    $('div.logo > a').removeAttr('id');
+  }
+  else if($("a.anchor-up").length && $("a.anchor-down").length == false){
+    $('div.logo > a').removeAttr('id');
+    $('div.logo > a').attr('id','about-logo-link');
+
+  }
+  $(this).dequeue();
+}
+
+function checkNextPage(){
+  $(this).delay(900).queue(checkPage);
+}
+
+checkPage();

@@ -77,18 +77,13 @@ main{
 	right: 35%;
 	text-align: right;
 }
+
 .logo div{
   color: #8F8F8F;
 }
 
 .logo img{
-  filter: grayscale(100%);
-  transition:1s;
   width: 50px;
-}
-
-.logo img:hover{
-  filter: grayscale(50%);
 }
 .page-content{
 	color: white;
@@ -222,16 +217,20 @@ a.anchor-down-home:hover{
 
 /*problem a.anchor-up:hover{
 	color: rgb(223, 3, 252);
+
+
 } */
 
 .scroll-down-indicator{
-	margin-left: 45%;
-	margin-top: 8%;
+	text-align: center;
+	margin-left: 0 auto;
+	margin-top:5%;
 	filter:grayscale(100%);
 }
 .scroll-down-indicator:hover{
 	filter:grayscale(0%);
 }
+
 /* Index page */
 div{
 	-webkit-touch-callout: none;
@@ -240,6 +239,31 @@ div{
 	-moz-user-select: none;
 	-ms-user-select: none;
 }
+.play-icon{
+	width: 42px;
+
+}
+.external-link{
+	color: rgb(219, 219, 219);
+	filter:grayscale(100%);
+	transition: 0.4s;
+}
+.external-link:hover{
+	color:rgb(3, 173, 252);
+	filter:grayscale(0%);
+}
+#about-logo-link.external-link:hover{
+	color:rgb(223, 3, 252);
+	filter:grayscale(0%);
+}
+#home-logo-link.external-link:hover{
+	color:rgb(255, 140, 27);
+	filter:grayscale(0%);
+}
+.back-arrow{
+	width: 4vw !important;
+}
+
 /*		FUD PAGE		*/
 #fud-app-heading{
 	font-family: 'pacifico', sans-serif;
@@ -282,7 +306,7 @@ div{
 /*		HEX 		*/
 #hex-heading{
 		font-family: 'eight-bit', serif;
-		font-size: 4vw;
+		font-size: 3.5vw;
 }
 .hex-img{
 	display: inline-block;
@@ -297,6 +321,28 @@ div{
 
 	filter:grayscale(0%);
 }
+
+#hex-back-button{
+	background-color: grey;
+	border-radius: 20px;
+	position: absolute;
+	top:2em;
+	left:2em;
+	z-index: 100;
+	transition: 0.2s;
+}
+#hex-back-button img{
+	margin-top: 15px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+#hex-back-button:hover{
+	background-color: darkgrey;
+}
+#hex-back-button a{
+	text-decoration: none;
+}
+
 /*		NEIGHBOURHOOD 		*/
 #neighbourhood-heading{
 	  font-family: 'digital-dream', serif;
@@ -343,6 +389,7 @@ div{
 
 /*		ABOUT 		*/
 #about-heading{
+	color: white !important;
 	font-weight: bold;
 }
 .about-list{
@@ -415,8 +462,8 @@ div.blurBack{
 	position:absolute;
 	top:-10px;
 	left:-10px;
-	z-index:0;
-	background-color:rgba(20, 20, 20, .50);
+	z-index:-6;
+	background-color:rgba(20, 20, 20, .6);
 	border-radius: 5px;
 	filter:blur(5px);
 	height:90%;

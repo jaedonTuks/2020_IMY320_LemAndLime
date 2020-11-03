@@ -11,12 +11,19 @@
   margin-top:5%;
   margin-left:5%;
 }
-#back a{
-
+.a-h-button a{
   font-family: 'impact-label-reversed', serif;
-font-size: 2vw;
+  font-size: 2vw;
   color:rgb(219,219,219);
+  transition: 0.2s;
 }
-#back a:hover{
-  color:rgb(255, 140, 27);
+
+.a-h-back-arrow{
+	width: 2vw !important;
+}
+#watch-now{
+  position: absolute;
+  bottom: 40%;
+  left: 39%;
+  display: none;
 }
