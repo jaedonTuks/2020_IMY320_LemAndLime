@@ -24,8 +24,6 @@
 
 
 .downloadPdf a {
-  color:rgb(219,219,219);
-  font-size: 1rem;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -33,14 +31,12 @@
   -ms-user-select: none;
   user-select: none;
 }
-.downloadPdf a:hover{
-	color:rgb(3, 173, 252);
+
+.downloadPdf a:visited{
+	cursor:none;
 }
 .limeColor{
 	color:#69bf73!important;
-}
-.downloadPdf a:visited{
-	cursor:none;
 }
 .lemColor{
 		color:#e3dd71!important;
