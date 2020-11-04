@@ -77,6 +77,11 @@ main{
 	right: 35%;
 	text-align: right;
 }
+
+.logo div{
+  color: #8F8F8F;
+}
+
 .logo img{
   width: 50px;
 }
@@ -169,6 +174,12 @@ a:hover{
 }
 .arrow{
   width: 24px;
+	margin-right:0.75rem;
+	transition:0.5s;
+	filter:grayscale(100%);
+}
+.more-up:hover .arrow,.more-down:hover .arrow,.more-single-link:hover .arrow{
+	filter:grayscale(0%);
 }
 .more-up{
 	position: relative;
@@ -183,24 +194,33 @@ a:hover{
 .more-single-link{
 	margin-left: 20%;
 }
+.more-up a,.more-down a{
+	text-align: center;
+}
+.more-up:hover a,.more-down:hover a{
+  color:rgb(3, 173, 252);
+}
+.more-up.aboutUp:hover a{
+	color: rgb(223, 3, 252);
+}
+a.anchor-down,a.anchor-up{
+	font-weight: bold;
+	color:#8F8F8F;
+	transition:0.5s;
+}
+a.anchor-down-home:hover{
+	color: rgb(223, 3, 252);
+}
+a.anchor-down-home:hover{
+	color: rgb(223, 3, 252);
+}
 
-a.anchor-down{
-	font-weight: bold;
-	transition:0.5s;
-}
-a.anchor-down-home:hover{
+/*problem a.anchor-up:hover{
 	color: rgb(223, 3, 252);
-}
-a.anchor-down-home:hover{
-	color: rgb(223, 3, 252);
-}
-a.anchor-up{
-	font-weight: bold;
-	transition:0.5s;
-}
-a.anchor-up:hover{
-	color: rgb(223, 3, 252);
-}
+
+
+} */
+
 .scroll-down-indicator{
 	text-align: center;
 	margin-left: 0 auto;
@@ -251,14 +271,16 @@ div{
 }
 .fud-img{
 	display: inline-block;
-	height: 100%;
+	height: 90%;
 	position: relative;
 	bottom: 3em;
 	left: 2em;
 	transition: .5s ease;
+	filter:grayscale(85%);
 }
 .fud-img:hover{
-	height: 101.5%;
+	height: 91.5%;
+	filter:grayscale(0%);
 }
 
 /*		ADVENTURE TRAVELS		*/
@@ -269,11 +291,15 @@ div{
 }
 .adventure-trav-img{
 	display: inline-block;
-	height: 70%;
+	height: 55%;
 	transition: .5s ease;
+
+	filter:grayscale(85%);
 }
 .adventure-trav-img:hover{
-	height: 71.5%;
+	height: 56.5%;
+
+	filter:grayscale(0%);
 }
 
 
@@ -284,12 +310,15 @@ div{
 }
 .hex-img{
 	display: inline-block;
-	height: 70%;
+	height: 55%;
 	transition: .5s ease;
 	z-index: -6!important;
+	filter:grayscale(85%);
 }
 .hex-img:hover{
-	height: 71.5%;
+	height: 56.5%;
+
+	filter:grayscale(0%);
 }
 
 #hex-back-button{
@@ -320,12 +349,16 @@ div{
 }
 .neighbourhoood-img{
 	display: inline-block;
-	height: 70%;
+	height: 55%;
 	transition: .5s ease;
 	z-index: -6!important;
+
+	filter:grayscale(85%);
 }
 .neighbourhoood-img:hover{
-	height: 71.5%;
+	height: 56.5%;
+
+	filter:grayscale(0%);
 }
 /*		AFTER HOURS 		*/
 #after-hours-heading{
@@ -334,11 +367,14 @@ div{
 }
 .after-hours-img{
 	display: inline-block;
-	height: 70%;
+	height: 56%;
 	transition: .5s ease;
+
+	filter:grayscale(85%);
 }
 .after-hours-img:hover{
-	height: 71.5%;
+	height: 56.5%;
+	filter:grayscale(0%);
 }
 
 /*		WORK IN PROGRESS		*/
@@ -470,6 +506,7 @@ div.blurBack{
 	}
 	#burgerMenuBox div{
 	  margin-left:0!important;
+		margin-top:4rem!important;
 	}
 	#burgerMenuBox div a {
 		font-size: 1rem!important;
