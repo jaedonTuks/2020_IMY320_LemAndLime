@@ -90,7 +90,7 @@ function hide(){
 function clickOutBurger(e){
   if(e.target.id!="burgerMenuBox")
     burgerClick();
-  
+
 }
 
 
@@ -187,7 +187,7 @@ function switchPage(){
   let projectPage=false;
   // switch cursor
   let currPage=document.location.pathname.match(/[^\/]+$/)[0];
-
+  let iconColor=1;
   switch(currPage){
     case "index.html":
       newCursorSrc=pageInfo.index.cursorHighlightSrc;
@@ -195,6 +195,7 @@ function switchPage(){
       $("#burgerMenuBox div a").addClass("hoverOrange");
       currElement=$("#home");
       $(".logo a").attr("href","/2020_IMY320_LemAndLime/about.html");
+      iconColor=0;
       break;
     case "project1.html":
       newCursorSrc=pageInfo.p1.cursorHighlightSrc;
@@ -242,6 +243,7 @@ function switchPage(){
       $("#burgerMenuBox div a").addClass("hoverPurple");
       currElement=$("#aboutBurger");
       $(".logo a").attr("href","/2020_IMY320_LemAndLime/index.html");
+      iconColor=2;
       break;
     default:
       newCursorSrc=pageInfo.singleProjects.cursorHighlightSrc;
@@ -268,8 +270,7 @@ function switchPage(){
 
   setBurgerActive(currElement,projectPage);
 
-
-    console.log("backnow");
+  changeIcons(iconColor);
 
 }
 function setBurgerActive(currElement,projectPage){
@@ -332,7 +333,36 @@ function setBurgerActive(currElement,projectPage){
   $(".active").attr("href",newLink).removeClass("active");
   currElement.attr("href","").addClass("active");
 }
+//color passed through as 0 for orange, 1 for blue and 2 for purple
+//follows order of colors present in page
+function changeIcons(colorID){
 
+  if(colorID==0){
+    //orange
+    $('div.logo > a').removeAttr('id');
+    $('div.logo > a').attr('id','home-logo-link');
+    $('img#burger-fud-icon').attr('src','./media/images/mobile-solid-o.svg');
+    $('img#burger-travel-icon').attr('src','./media/images/newspaper-regular-o.svg');
+    $('img#burger-hex-icon').attr('src','./media/images/gamepad-solid-o.svg');
+    $('img.burger-film-icon').attr('src','./media/images/film-solid-o.svg');
+  }else if(colorID==1){
+    //blue
+    $('div.logo > a').removeAttr('id');
+    $('img#burger-fud-icon').attr('src','./media/images/mobile-solid-b.svg');
+    $('img#burger-travel-icon').attr('src','./media/images/newspaper-regular-b.svg');
+    $('img#burger-hex-icon').attr('src','./media/images/gamepad-solid-b.svg');
+    $('img.burger-film-icon').attr('src','./media/images/film-solid-b.svg');
+  }else{
+    //purple
+    $('div.logo > a').removeAttr('id');
+    $('div.logo > a').attr('id','about-logo-link');
+
+    $('img#burger-fud-icon').attr('src','./media/images/mobile-solid-p.svg');
+    $('img#burger-travel-icon').attr('src','./media/images/newspaper-regular-p.svg');
+    $('img#burger-hex-icon').attr('src','./media/images/gamepad-solid-p.svg');
+    $('img.burger-film-icon').attr('src','./media/images/film-solid-p.svg');
+  }
+}
 
 // Cell phone interactivity
 function touchDrag(verticalScroll,difference){
