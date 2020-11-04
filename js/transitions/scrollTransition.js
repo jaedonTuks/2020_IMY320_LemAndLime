@@ -114,7 +114,7 @@ function checkPage(){
 
 function checkNextPage(){
   console.log("checkNextPage() called");
-  $(this).delay(900).queue(checkPage);
+//  $(this).delay(900).queue(checkPage);
 }
 
 checkPage();
