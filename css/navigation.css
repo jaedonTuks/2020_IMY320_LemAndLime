@@ -82,6 +82,7 @@ nav{
 }
 #burgerMenuBox div a {
   color:rgb(219,219,219);
+  filter:grayscale(100%);
   font-size: 1.4rem;
   padding: 15px 20px;
   position: relative;
@@ -121,23 +122,35 @@ nav{
 
 
 a.active.hoverOrange{
+  filter:grayscale(0%) !important;
   color:rgba(255, 140, 27,0.8) !important;
 }
 a.active.hoverBlue{
+  filter:grayscale(0%) !important;
   color:rgba(3, 173, 252,0.8) !important;
 }
 a.active.hoverPurple{
+  filter:grayscale(0%) !important;
   color:rgba(223, 3, 252,0.8) !important;
 }
 
 #burgerMenuBox div:hover a.hoverOrange{
   color:rgb(255, 140, 27);
+  filter:grayscale(0%);
 }
 #burgerMenuBox div:hover a.hoverBlue{
   color:rgb(3, 173, 252);
+  filter:grayscale(0%);
 }
 #burgerMenuBox div:hover a.hoverPurple{
   color:rgb(223, 3, 252);
+  filter:grayscale(0%);
+}
+
+.burger-icons{
+  width: 1.1em;
+  height: 1.1em;
+  margin-right: 1em;
 }
 
 a.hoverOrange:hover{
